@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "updatedAt": "2026-01-16",
+  "trails": [
+    {
+      "id": "trail_chisinau_blue",
+      "cityId": "chisinau",
+      "name": "Blue Flow Line",
+      "suitable": "Trail / Enduro",
+      "difficulty": "blue",
+      "desc": "Flow, без жёстких дропов. После дождя на корнях и глине скользко.",
+      "gpxUrl": "https://raw.githubusercontent.com/ТВОЙ_НИК/trailatlas-data/main/gpx/chisinau_blue.gpx",
+      "startLat": 47.0101,
+      "startLon": 28.8601
+    }
+  ]
+}
