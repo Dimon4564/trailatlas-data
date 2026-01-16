@@ -5,11 +5,23 @@
     {
       "id": "trail_chisinau_blue",
       "cityId": "chisinau",
-      "name": "Blue Flow Line",
-      "suitable": "Trail / Enduro",
+      "name": {
+        "ru": "Blue Flow Line",
+        "ro": "Blue Flow Line",
+        "uk": "Blue Flow Line"
+      },
+      "suitable": {
+        "ru": "Trail / Enduro",
+        "ro": "Trail / Enduro",
+        "uk": "Trail / Enduro"
+      },
       "difficulty": "blue",
-      "desc": "Самая первая трасса в Кишиневе для MTB, все еще в рабочем состоянии, так же есть трамплины которые можно обьехать или прыгнуть.",
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/refs/heads/main/gpx/chisinau_blue.gpx",
+      "desc": {
+        "ru": "Самая первая трасса в Кишиневе для MTB, всё ещё в рабочем состоянии. Есть трамплины — их можно объехать или прыгнуть.",
+        "ro": "Primul traseu MTB din Chișinău, încă este într-o stare bună. Există trambuline — le poți ocoli sau sări.",
+        "uk": "Найперший трейл у Кишиневі для MTB, досі в робочому стані. Є трампліни — їх можна об’їхати або стрибнути."
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/chisinau_blue.gpx",
       "startLat": 47.011792,
       "startLon": 28.798959
     }
