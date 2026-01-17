@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updatedAt": "2026-01-16",
   "trails": [
     {
@@ -46,6 +46,28 @@
         "ru": "Самый опасный трейл в Молдове, сейчас он находиться в процессе постройки, но уже есть трамплин который поражает своими размерами, только для истенных профессионалов.",
         "ro": "Cea mai periculoasă pistă din Moldova este în construcție, dar există deja o saltă impresionantă prin dimensiunile sale, doar pentru adevărații profesioniști.",
         "uk": "Найнебезпечніший трейл у Молдові, зараз він перебуває в процесі будівництва, але вже є трамплін, який вражає своїми розмірами, тільки для професіоналів."
+      },
+      {
+      "id": "scate_park",
+      "cityId": "chisinau",
+      "difficulty": "green",
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/scate_park",
+      "startLat": 47.005607,
+      "startLon": 28.852453,
+      "name": {
+        "ru": "ScatePark",
+        "ro": "ScatePark",
+        "uk": "ScatePark"
+      },
+      "suitable": {
+        "ru": "BMX / Dirt",
+        "ro": "BMX / Dirt",
+        "uk": "BMX / Dirt"
+      },
+      "desc": {
+        "ru": "Самый крутой и развитый скейт парк для велосипедов в Молдове, здесь можно хорошо провести время с друзьями.",
+        "ro": "Cel mai cool și mai dezvoltat skate park pentru biciclete din Moldova, unde te poți distra de minune cu prietenii.",
+        "uk": "Найкрутіший і найрозвиненіший скейт парк для велосипедів у Молдові, тут можна добре провести час із друзями."
       }
     }
   ]
