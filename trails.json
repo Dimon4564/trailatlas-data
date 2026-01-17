@@ -43,11 +43,12 @@
         "uk": "HardEnduro / Downhill"
       },
       "desc": {
-        "ru": "Самый опасный трейл в Молдове, сейчас он находиться в процессе постройки, но уже есть трамплин который поражает своими размерами, только для истенных профессионалов.",
-        "ro": "Cea mai periculoasă pistă din Moldova este în construcție, dar există deja o saltă impresionantă prin dimensiunile sale, doar pentru adevărații profesioniști.",
+        "ru": "Самый опасный трейл в Молдове, сейчас он находится в процессе постройки, но уже есть трамплин который поражает своими размерами, только для истинных профессионалов.",
+        "ro": "Cea mai periculoasă pistă din Moldova este în construcție, dar există deja o săritură impresionantă prin dimensiunile sale, doar pentru adevărații profesioniști.",
         "uk": "Найнебезпечніший трейл у Молдові, зараз він перебуває в процесі будівництва, але вже є трамплін, який вражає своїми розмірами, тільки для професіоналів."
-      },
-      {
+      }
+    },
+    {
       "id": "scate_park",
       "cityId": "chisinau",
       "difficulty": "green",
@@ -70,4 +71,5 @@
         "uk": "Найкрутіший і найрозвиненіший скейт парк для велосипедів у Молдові, тут можна добре провести час із друзями."
       }
     }
-  }
+  ]
+}
