@@ -6,14 +6,14 @@
       "id": "trail_chisinau_blue",
       "cityId": "chisinau",
       "name": {
-        "ru": "Blue Flow Line",
-        "ro": "Blue Flow Line",
-        "uk": "Blue Flow Line"
+        "ru": "Morilor trail 1",
+        "ro": "Morilor trail 1",
+        "uk": "Morilor trail 1"
       },
       "suitable": {
-        "ru": "Trail / Enduro",
-        "ro": "Trail / Enduro",
-        "uk": "Trail / Enduro"
+        "ru": "All Mountains",
+        "ro": "All Mountains",
+        "uk": "All Mountains"
       },
       "difficulty": "blue",
       "desc": {
