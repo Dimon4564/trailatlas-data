@@ -29,7 +29,7 @@
       "id": "trail_park_codru",
       "cityId": "chisinau",
       "difficulty": "black",
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/refs/heads/main/gpx/trail_park_codru.gpx",
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_park_codru.gpx",
       "startLat": 46.977926,
       "startLon": 28.837567,
       "name": {
