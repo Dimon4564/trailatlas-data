@@ -70,6 +70,29 @@
         "ro": "Cel mai cool și mai dezvoltat skate park pentru biciclete din Moldova, unde te poți distra de minune cu prietenii.",
         "uk": "Найкрутіший і найрозвиненіший скейт парк для велосипедів у Молдові, тут можна добре провести час із друзями."
       }
+    },
+    {
+      "id": "cycle_path_morilor",
+      "cityId": "chisinau",
+      "difficulty": "green",
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/cycle_path_morilor.gpx",
+      "startLat": 47.019943,
+      "startLon": 28.809972,
+      "name": {
+        "ru": "Велодорожка Morilor",
+        "ro": "Pista de biciclete Morilor",
+        "uk": "Велодорожка Morilor"
+      },
+      "suitable": {
+        "ru": "All Bikes",
+        "ro": "All Bikes",
+        "uk": "All Bikes"
+      },
+      "desc": {
+        "ru": "Отличная велодорожка для велосипедистов, можно наматывать круги часами.",
+        "ro": "O pistă de biciclete excelentă pentru bicicliști, poți merge în jurul ei ore întregi.",
+        "uk": "Відмінна велодоріжка для велосипедистів, можна намотувати круги годинами."
+      }
     }
   ]
 }
