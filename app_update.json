@@ -1,6 +1,6 @@
 {
-  "minVersionCode": 3,
-  "latestVersionCode": 3,
+  "minVersionCode": 999,
+  "latestVersionCode": 999,
   "updateUrl": "market://details?id=com.trailatlas.app",
   "message": "Вышло новое обновление. Пожалуйста, обновите приложение, чтобы продолжить."
 }
