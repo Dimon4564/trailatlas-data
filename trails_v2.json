@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 5,
   "updatedAt": "2026-01-16",
   "trails": [
     {
@@ -115,6 +115,29 @@
         "ru": "Достаточно хороший PumpTrack, сделан из бетона.",
         "ro": "Un PumpTrack destul de bun, făcut din beton.",
         "uk": "Досить хороший PumpTrack, зроблений із бетону."
+      }
+    },
+    {
+      "id": "valea_trandafirilor_small_skijumps",
+      "cityId": "chisinau",
+      "difficulty": "blue",
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_trandafirilor_small_skijumps.gpx",
+      "startLat": 47.005535,
+      "startLon": 28.853795,
+      "name": {
+        "ru": "Учебные трамплины Долина Роз",
+        "ro": "Valea Trandafirilor antrenament sarituri cu schiurile",
+        "uk": "PumpTrack Долина Роз"
+      },
+      "suitable": {
+        "ru": "All Mountains / Dirt",
+        "ro": "All Mountains / Dirt",
+        "uk": "All Mountains / Dirt"
+      },
+      "desc": {
+        "ru": "Начальные трамплины, не сложны в технике но требуют ее.",
+        "ro": "Săriturile inițiale nu sunt dificile din punct de vedere tehnic, dar o necesită.",
+        "uk": "Початкові трампліни, не складні в техніці, але вимагають її."
       }
     }
   ]
