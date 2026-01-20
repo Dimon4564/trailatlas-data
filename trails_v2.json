@@ -93,6 +93,29 @@
         "ro": "O pistă de biciclete excelentă pentru bicicliști, poți merge în jurul ei ore întregi.",
         "uk": "Відмінна велодоріжка для велосипедистів, можна намотувати круги годинами."
       }
+    },
+    {
+      "id": "valea_trandafirilor_pumptrack",
+      "cityId": "chisinau",
+      "difficulty": "green",
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_trandafirilor_pumptrack.gpx",
+      "startLat": 47.00560150561455,
+      "startLon": 28.854068612186126,
+      "name": {
+        "ru": "PumpTrack Долина Роз",
+        "ro": "PumpTrack Valea Trandafirilor",
+        "uk": "PumpTrack Долина Роз"
+      },
+      "suitable": {
+        "ru": "All Bikes / Street / BMX / Dirt",
+        "ro": "All Bikes / Street / BMX / Dirt",
+        "uk": "All Bikes / Street / BMX / Dirt"
+      },
+      "desc": {
+        "ru": "Достаточно хороший PumpTrack, сделан из бетона.",
+        "ro": "Un PumpTrack destul de bun, făcut din beton.",
+        "uk": "Досить хороший PumpTrack, зроблений із бетону."
+      }
     }
   ]
 }
