@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 7,
   "updatedAt": "2026-01-16",
   "trails": [
     {
@@ -138,6 +138,29 @@
         "ru": "Начальные трамплины, не сложны в технике но требуют ее.",
         "ro": "Săriturile inițiale nu sunt dificile din punct de vedere tehnic, dar o necesită.",
         "uk": "Початкові трампліни, не складні в техніці, але вимагають її."
+      }
+    },
+    {
+      "id": "valea_morilor_pumptrack",
+      "cityId": "chisinau",
+      "difficulty": "green",
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_morilor_pumptrack.gpx",
+      "startLat": 47.01270585585567,
+      "startLon": 28.79996547817379,
+      "name": {
+        "ru": "PumpTrack Парк Морилор",
+        "ro": "PumpTrack Valea_Morilor",
+        "uk": "PumpTrack Парк Морилор"
+      },
+      "suitable": {
+        "ru": "All Mountains / Dirt",
+        "ro": "All Mountains / Dirt",
+        "uk": "All Mountains / Dirt"
+      },
+      "desc": {
+        "ru": "Самый популярный PumpTrack в Кишиневе, маловат но из земли.",
+        "ro": "Cel mai popular PumpTrack din Chișinău, mic, dar construit din pământ.",
+        "uk": "Найпопулярніший PumpTrack у Кишиневі, замало але із землі."
       }
     }
   ]
