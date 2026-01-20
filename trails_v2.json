@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "updatedAt": "2026-01-16",
   "trails": [
     {
@@ -161,6 +161,29 @@
         "ru": "Самый популярный PumpTrack в Кишиневе, маловат но из земли.",
         "ro": "Cel mai popular PumpTrack din Chișinău, mic, dar construit din pământ.",
         "uk": "Найпопулярніший PumpTrack у Кишиневі, замало але із землі."
+      }
+    },
+    {
+      "id": "trail_butoiash",
+      "cityId": "chisinau",
+      "difficulty": "green",
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_butoiash.gpx",
+      "startLat": 47.03635947515713,
+      "startLon": 28.786231041836402,
+      "name": {
+        "ru": "Small Trail Butoiaș",
+        "ro": "Small Trail Butoiaș",
+        "uk": "Small Trail Butoiaș"
+      },
+      "suitable": {
+        "ru": "All Mountains",
+        "ro": "All Mountains",
+        "uk": "All Mountains"
+      },
+      "desc": {
+        "ru": "Не сложный для начинающих трейл, есть маленькие трамплины которые можно обьехать.",
+        "ro": "Traseul nu este dificil pentru începători; există mici sărituri care pot fi evitate.",
+        "uk": "Не складний для трейл-початківців, є маленькі трампліни які можна об'їхати."
       }
     }
   ]
