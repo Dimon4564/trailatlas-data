@@ -5,6 +5,7 @@
     {
       "id": "trail_chisinau_blue",
       "cityId": "chisinau",
+      "styles": ["mtb", "downhill"]
       "name": {
         "ru": "Morilor trail 1",
         "ro": "Morilor trail 1",
@@ -29,6 +30,7 @@
       "id": "trail_park_codru",
       "cityId": "chisinau",
       "difficulty": "black",
+      "styles": ["mtb", "downhill"]
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_park_codru.gpx",
       "startLat": 46.977926,
       "startLon": 28.837567,
@@ -52,6 +54,7 @@
       "id": "scate_park",
       "cityId": "chisinau",
       "difficulty": "blue",
+      "styles": ["mtb", "dirt"]
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/scate_park.gpx",
       "startLat": 47.005607,
       "startLon": 28.852453,
@@ -75,6 +78,7 @@
       "id": "cycle_path_morilor",
       "cityId": "chisinau",
       "difficulty": "green",
+      "styles": ["road", "dirt", "fixed"]
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/cycle_path_morilor.gpx",
       "startLat": 47.019943,
       "startLon": 28.809972,
@@ -98,6 +102,7 @@
       "id": "valea_trandafirilor_pumptrack",
       "cityId": "chisinau",
       "difficulty": "green",
+      "styles": ["mtb", "dirt"]
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_trandafirilor_pumptrack.gpx",
       "startLat": 47.00560150561455,
       "startLon": 28.854068612186126,
@@ -121,6 +126,7 @@
       "id": "valea_trandafirilor_small_skijumps",
       "cityId": "chisinau",
       "difficulty": "blue",
+      "styles": ["mtb", "dirt"]
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_trandafirilor_small_skijumps.gpx",
       "startLat": 47.005535,
       "startLon": 28.853795,
@@ -144,6 +150,7 @@
       "id": "valea_morilor_pumptrack",
       "cityId": "chisinau",
       "difficulty": "green",
+      "styles": ["mtb", "dirt"]
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_morilor_pumptrack.gpx",
       "startLat": 47.01270585585567,
       "startLon": 28.79996547817379,
@@ -167,6 +174,7 @@
       "id": "trail_butoiash",
       "cityId": "chisinau",
       "difficulty": "green",
+      "styles": ["mtb"]
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_butoiash.gpx",
       "startLat": 47.03635947515713,
       "startLon": 28.786231041836402,
