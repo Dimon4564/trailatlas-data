@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "updatedAt": "2026-01-16",
   "trails": [
     {
@@ -7,9 +7,9 @@
       "cityId": "chisinau",
       "styles": ["mtb", "downhill"],
       "name": {
-        "ru": "Morilor trail 1",
-        "ro": "Morilor trail 1",
-        "uk": "Morilor trail 1"
+        "ru": "TrailPark Morilor 1",
+        "ro": "TrailPark Morilor 1",
+        "uk": "TrailPark Morilor 1"
       },
       "suitable": {
         "ru": "All Mountains",
@@ -216,6 +216,30 @@
         "ru": "Считаеться отрывком третей части трейла, на данный момент ее можно катать но в конце все залило водой и глиной.",
         "ro": "Este considerată o secțiune din a treia parte a traseului; momentan este schiabilă, dar la final totul a fost inundat de apă și argilă.",
         "uk": "Вважається уривком третьою частиною трейлу, на даний момент її можна катати, але в кінці все залило водою і глиною."
+      }
+    },
+    {
+      "id": "morilor_trail_2",
+      "cityId": "chisinau",
+      "difficulty": "blue",
+      "styles": ["mtb", "DH"],
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/refs/heads/main/gpx/morilor_trail_2.gpx",
+      "startLat": 47.011795,
+      "startLon": 28.798955,
+      "name": {
+        "ru": "TrailPark Morilor 2",
+        "ro": "TrailPark Morilor 2",
+        "uk": "TrailPark Morilor 2"
+      },
+      "suitable": {
+        "ru": "Enduro / Downhill",
+        "ro": "Enduro / Downhill",
+        "uk": "Enduro / Downhill"
+      },
+      "desc": {
+        "ru": "Самый популярный трейл в Кишиневе, очень быстрый и приятный, есть маленькие и большие трамплины, которые можно обьехать, почти такая же как первая трасса.",
+        "ro": "Cel mai popular traseu din Chișinău, foarte rapid și plăcut, cu sărituri mici și mari pe care le poți ocoli, aproape la fel ca primul traseu.",
+        "uk": "Найпопулярніший трейл у Кишиневі, дуже швидкий та приємний, є маленькі та великі трампліни, які можна об'їхати, майже така сама як перша траса."
       }
     }
   ]
