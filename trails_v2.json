@@ -193,6 +193,30 @@
         "ro": "Traseul nu este dificil pentru începători; există mici sărituri care pot fi evitate.",
         "uk": "Не складний для трейл-початківців, є маленькі трампліни які можна об'їхати."
       }
+    },
+    {
+      "id": "resita",
+      "cityId": "chisinau",
+      "difficulty": "green",
+      "styles": ["mtb", "DH"],
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/refs/heads/main/gpx/resita.gpx",
+      "startLat": 47.01232,
+      "startLon": 28.79862,
+      "name": {
+        "ru": "TrailPark Morilor 3",
+        "ro": "TrailPark Morilor 3",
+        "uk": "TrailPark Morilor 3"
+      },
+      "suitable": {
+        "ru": "Enduro / Downhill",
+        "ro": "Enduro / Downhill",
+        "uk": "Enduro / Downhill"
+      },
+      "desc": {
+        "ru": "Считаеться отрывком третей частью трейла, на данный момент ее можно катать но в конце все залило водой и глиной.",
+        "ro": "Este considerată o secțiune din a treia parte a traseului; momentan este schiabilă, dar la final totul a fost inundat de apă și argilă.",
+        "uk": "Вважається уривком третьою частиною трейлу, на даний момент її можна катати, але в кінці все залило водою і глиною."
+      }
     }
   ]
 }
