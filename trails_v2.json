@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "updatedAt": "2026-01-16",
   "trails": [
     {
@@ -197,7 +197,7 @@
     {
       "id": "resita",
       "cityId": "chisinau",
-      "difficulty": "green",
+      "difficulty": "red",
       "styles": ["mtb", "DH"],
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/refs/heads/main/gpx/resita.gpx",
       "startLat": 47.01232,
