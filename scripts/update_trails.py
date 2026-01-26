@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
+# ------------------ helpers ------------------
 def utc_now_iso():
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -33,6 +34,8 @@ def parse_gpx_points(gpx_path: Path):
     def q(tag): return f"{{{ns}}}{tag}" if ns else tag
 
     pts = []
+
+    # Track points
     for trk in root.findall(q("trk")):
         for seg in trk.findall(f".//{q('trkseg')}"):
             for pt in seg.findall(q("trkpt")):
@@ -44,6 +47,7 @@ def parse_gpx_points(gpx_path: Path):
                 ele = safe_float(ele_el.text) if ele_el is not None else None
                 pts.append((lat, lon, ele))
 
+    # Fallback: route points
     if not pts:
         for rte in root.findall(q("rte")):
             for pt in rte.findall(q("rtept")):
@@ -77,8 +81,10 @@ def compute_stats(points):
 
         if prev[2] is not None and cur[2] is not None:
             d = cur[2] - prev[2]
-            if d > 0: ascent += d
-            else: descent += -d
+            if d > 0:
+                ascent += d
+            else:
+                descent += -d
             eles.append(cur[2])
 
         prev = cur
@@ -99,8 +105,10 @@ def compute_stats(points):
         "descent_m": int(round(descent)),
         "min_ele_m": None if min_ele is None else int(round(min_ele)),
         "max_ele_m": None if max_ele is None else int(round(max_ele)),
-        "start": {"lat": points[0][0], "lon": points[0][1]},
-        "end": {"lat": points[-1][0], "lon": points[-1][1]},
+        "startLat": points[0][0],
+        "startLon": points[0][1],
+        "endLat": points[-1][0],
+        "endLon": points[-1][1],
         "bbox": bbox,
     }
 
@@ -109,73 +117,82 @@ def scan_gpx_files(gpx_dir: Path):
         return []
     return sorted([p for p in gpx_dir.rglob("*.gpx") if p.is_file()])
 
-def trail_id_from_relpath(rel_gpx_path: str):
-    p = rel_gpx_path.replace("\\", "/")
-    return p[:-4] if p.lower().endswith(".gpx") else p
-
-def load_json_any(path: Path):
+def load_json(path: Path):
     if not path.exists():
         return []
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
 
-def save_json_any(path: Path, obj):
+def save_json(path: Path, data):
     with path.open("w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, indent=2)
+        json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
 
-def get_trails_container(root_obj):
-    if isinstance(root_obj, list):
-        return root_obj, None
-    if isinstance(root_obj, dict) and isinstance(root_obj.get("trails"), list):
-        return root_obj["trails"], root_obj
-    return [], root_obj
+def default_i18n(name: str):
+    return {"ru": name, "ro": name, "uk": name}
 
-def find_existing_index(trails_list):
-    idx = {}
-    for item in trails_list:
-        if not isinstance(item, dict):
-            continue
-        tid = item.get("id")
-        if tid:
-            idx[tid] = item
-    return idx
-
-def upsert(gpx_dir: Path, json_path: Path, verified_flag: bool):
-    root = load_json_any(json_path) if json_path.exists() else []
-    trails_list, container = get_trails_container(root)
-    existing_by_id = find_existing_index(trails_list)
+def upsert_trails(gpx_dir: Path, json_path: Path, gpx_folder_name: str, raw_base: str):
+    """
+    Writes list of trail objects in YOUR format.
+    Preserves manual fields if they already exist.
+    """
+    existing = load_json(json_path)
+    existing_by_id = {t.get("id"): t for t in existing if isinstance(t, dict) and t.get("id")}
 
     now = utc_now_iso()
-    new_trails = []
+    new_list = []
 
     for gpx_file in scan_gpx_files(gpx_dir):
-        rel_path = gpx_file.as_posix()
-        tid = trail_id_from_relpath(rel_path)
+        stem = gpx_file.stem  # scate_park
+        tid = stem
 
         prev = existing_by_id.get(tid, {})
-        item = dict(prev) if isinstance(prev, dict) else {}
 
-        item["id"] = tid
-        item["gpx_path"] = rel_path
-        item["verified"] = verified_flag
-        item["updated_at"] = now
+        # Build gpxUrl
+        # Example: https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/scate_park.gpx
+        gpx_url = f"{raw_base}/{gpx_folder_name}/{gpx_file.name}"
 
         points = parse_gpx_points(gpx_file)
-        item["stats"] = compute_stats(points)
+        stats = compute_stats(points)
 
-        new_trails.append(item)
+        # Start coords
+        start_lat = stats["startLat"] if stats else prev.get("startLat")
+        start_lon = stats["startLon"] if stats else prev.get("startLon")
 
-    if container is None and isinstance(root, list):
-        save_json_any(json_path, new_trails)
-        return
+        # --- preserve manual fields if exist, otherwise defaults ---
+        city_id = prev.get("cityId", "")                 
+        difficulty = prev.get("difficulty", "")          
+        styles = prev.get("styles", [])                  
 
-    if isinstance(container, dict):
-        container["trails"] = new_trails
-        save_json_any(json_path, container)
-        return
+        name = prev.get("name") if isinstance(prev.get("name"), dict) else default_i18n(stem)
+        suitable = prev.get("suitable") if isinstance(prev.get("suitable"), dict) else default_i18n("")
+        desc = prev.get("desc") if isinstance(prev.get("desc"), dict) else default_i18n("")
 
-    save_json_any(json_path, new_trails)
+        item = {
+            "id": tid,
+            "cityId": city_id,
+            "difficulty": difficulty,
+            "styles": styles,
+            "gpxUrl": gpx_url,
+            "startLat": start_lat,
+            "startLon": start_lon,
+
+            "name": name,
+            "suitable": suitable,
+            "desc": desc,
+
+            "stats": stats,
+            "updatedAt": now
+        }
+
+        owned = set(item.keys())
+        for k, v in prev.items():
+            if k not in owned:
+                item[k] = v
+
+        new_list.append(item)
+
+    save_json(json_path, new_list)
 
 def main():
     ap = argparse.ArgumentParser()
@@ -183,10 +200,11 @@ def main():
     ap.add_argument("--verified-json", required=True)
     ap.add_argument("--unverified-gpx-dir", required=True)
     ap.add_argument("--unverified-json", required=True)
+    ap.add_argument("--raw-base", default="https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main")
     args = ap.parse_args()
 
-    upsert(Path(args.verified_gpx_dir), Path(args.verified_json), True)
-    upsert(Path(args.unverified_gpx_dir), Path(args.unverified_json), False)
+    upsert_trails(Path(args.verified_gpx_dir), Path(args.verified_json), "gpx", args.raw_base)
+    upsert_trails(Path(args.unverified_gpx_dir), Path(args.unverified_json), "gpx_unverified", args.raw_base)
 
 if __name__ == "__main__":
     main()
