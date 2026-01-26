@@ -30,7 +30,8 @@ jobs:
             --verified-gpx-dir gpx \
             --verified-json trails_v2.json \
             --unverified-gpx-dir gpx_unverified \
-            --unverified-json trails_unverified.json
+            --unverified-json trails_unverified.json \
+            --raw-base https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main
 
       - name: Commit changes (if any)
         run: |
