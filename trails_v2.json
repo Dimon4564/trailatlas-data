@@ -5,7 +5,6 @@
     {
       "id": "chisinau_blue",
       "cityId": "chisinau",
-      "difficulty": "",
       "styles": [],
       "name": {
         "ru": "chisinau_blue",
@@ -17,6 +16,7 @@
         "ro": "",
         "uk": ""
       },
+      "difficulty": "green",
       "desc": {
         "ru": "",
         "ro": "",
@@ -28,8 +28,7 @@
     },
     {
       "id": "cycle_path_morilor",
-      "cityId": "",
-      "difficulty": "",
+      "cityId": "chisinau",
       "styles": [],
       "name": {
         "ru": "cycle_path_morilor",
@@ -41,6 +40,7 @@
         "ro": "",
         "uk": ""
       },
+      "difficulty": "red",
       "desc": {
         "ru": "",
         "ro": "",
@@ -52,8 +52,7 @@
     },
     {
       "id": "morilor_trail_2",
-      "cityId": "",
-      "difficulty": "",
+      "cityId": "chisinau",
       "styles": [],
       "name": {
         "ru": "morilor_trail_2",
@@ -65,6 +64,7 @@
         "ro": "",
         "uk": ""
       },
+      "difficulty": "red",
       "desc": {
         "ru": "",
         "ro": "",
@@ -76,8 +76,7 @@
     },
     {
       "id": "resita",
-      "cityId": "",
-      "difficulty": "",
+      "cityId": "chisinau",
       "styles": [],
       "name": {
         "ru": "resita",
@@ -89,6 +88,7 @@
         "ro": "",
         "uk": ""
       },
+      "difficulty": "green",
       "desc": {
         "ru": "",
         "ro": "",
@@ -100,8 +100,7 @@
     },
     {
       "id": "scate_park",
-      "cityId": "",
-      "difficulty": "",
+      "cityId": "chisinau",
       "styles": [],
       "name": {
         "ru": "scate_park",
@@ -113,6 +112,7 @@
         "ro": "",
         "uk": ""
       },
+      "difficulty": "black",
       "desc": {
         "ru": "",
         "ro": "",
@@ -124,8 +124,7 @@
     },
     {
       "id": "trail_butoiash",
-      "cityId": "",
-      "difficulty": "",
+      "cityId": "chisinau",
       "styles": [],
       "name": {
         "ru": "trail_butoiash",
@@ -137,6 +136,7 @@
         "ro": "",
         "uk": ""
       },
+      "difficulty": "red",
       "desc": {
         "ru": "",
         "ro": "",
@@ -148,8 +148,7 @@
     },
     {
       "id": "trail_park_codru",
-      "cityId": "",
-      "difficulty": "",
+      "cityId": "chisinau",
       "styles": [],
       "name": {
         "ru": "trail_park_codru",
@@ -161,6 +160,7 @@
         "ro": "",
         "uk": ""
       },
+      "difficulty": "green",
       "desc": {
         "ru": "",
         "ro": "",
@@ -172,8 +172,7 @@
     },
     {
       "id": "valea_morilor_pumptrack",
-      "cityId": "",
-      "difficulty": "",
+      "cityId": "chisinau",
       "styles": [],
       "name": {
         "ru": "valea_morilor_pumptrack",
@@ -185,6 +184,7 @@
         "ro": "",
         "uk": ""
       },
+      "difficulty": "black",
       "desc": {
         "ru": "",
         "ro": "",
@@ -196,8 +196,7 @@
     },
     {
       "id": "valea_trandafirilor_pumptrack",
-      "cityId": "",
-      "difficulty": "",
+      "cityId": "chisinau",
       "styles": [],
       "name": {
         "ru": "valea_trandafirilor_pumptrack",
@@ -209,6 +208,7 @@
         "ro": "",
         "uk": ""
       },
+      "difficulty": "red",
       "desc": {
         "ru": "",
         "ro": "",
@@ -220,8 +220,7 @@
     },
     {
       "id": "valea_trandafirilor_small_skijumps",
-      "cityId": "",
-      "difficulty": "",
+      "cityId": "chisinau",
       "styles": [],
       "name": {
         "ru": "valea_trandafirilor_small_skijumps",
@@ -233,6 +232,7 @@
         "ro": "",
         "uk": ""
       },
+      "difficulty": "red",
       "desc": {
         "ru": "",
         "ro": "",

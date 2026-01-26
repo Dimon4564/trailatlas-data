@@ -4,8 +4,7 @@
   "trails": [
     {
       "id": "morilor_down",
-      "cityId": "",
-      "difficulty": "",
+      "cityId": "chisinau",
       "styles": [],
       "name": {
         "ru": "morilor_down",
@@ -17,6 +16,7 @@
         "ro": "",
         "uk": ""
       },
+      "difficulty": "red",
       "desc": {
         "ru": "",
         "ro": "",
