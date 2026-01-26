@@ -3,243 +3,273 @@
   "updatedAt": "2026-01-16",
   "trails": [
     {
-      "id": "trail_chisinau_blue",
-      "cityId": "chisinau",
-      "styles": ["mtb", "downhill"],
-      "name": {
-        "ru": "TrailPark Morilor 1",
-        "ro": "TrailPark Morilor 1",
-        "uk": "TrailPark Morilor 1"
-      },
-      "suitable": {
-        "ru": "All Mountains",
-        "ro": "All Mountains",
-        "uk": "All Mountains"
-      },
-      "difficulty": "blue",
-      "desc": {
-        "ru": "Самая первая трасса в Кишиневе для MTB, всё ещё в рабочем состоянии. Есть трамплины — их можно объехать или прыгнуть.",
-        "ro": "Primul traseu MTB din Chișinău, încă este într-o stare bună. Există trambuline — le poți ocoli sau sări.",
-        "uk": "Найперший трейл у Кишиневі для MTB, досі в робочому стані. Є трампліни — їх можна об’їхати або стрибнути."
-      },
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/chisinau_blue.gpx",
-      "startLat": 47.011792,
-      "startLon": 28.798959
-    },
-    {
-      "id": "trail_park_codru",
-      "cityId": "chisinau",
-      "difficulty": "black",
-      "styles": ["mtb", "downhill"],
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_park_codru.gpx",
-      "startLat": 46.977926,
-      "startLon": 28.837567,
-      "name": {
-        "ru": "TrailParkCodru",
-        "ro": "TrailParkCodru",
-        "uk": "TrailParkCodru"
-      },
-      "suitable": {
-        "ru": "HardEnduro / Downhill",
-        "ro": "HardEnduro / Downhill",
-        "uk": "HardEnduro / Downhill"
-      },
-      "desc": {
-        "ru": "Самый опасный трейл в Молдове, сейчас он находится в процессе постройки, но уже есть трамплин который поражает своими размерами, только для истинных профессионалов.",
-        "ro": "Cea mai periculoasă pistă din Moldova este în construcție, dar există deja o săritură impresionantă prin dimensiunile sale, doar pentru adevărații profesioniști.",
-        "uk": "Найнебезпечніший трейл у Молдові, зараз він перебуває в процесі будівництва, але вже є трамплін, який вражає своїми розмірами, тільки для професіоналів."
+      "id": "gpx/chisinau_blue",
+      "gpx_path": "gpx/chisinau_blue.gpx",
+      "verified": true,
+      "updated_at": "2026-01-26T13:03:30Z",
+      "stats": {
+        "length_m": 815,
+        "ascent_m": 6,
+        "descent_m": 90,
+        "min_ele_m": 91,
+        "max_ele_m": 175,
+        "start": {
+          "lat": 47.011792,
+          "lon": 28.798959
+        },
+        "end": {
+          "lat": 47.015264,
+          "lon": 28.80483
+        },
+        "bbox": {
+          "min_lat": 47.011792,
+          "min_lon": 28.79845,
+          "max_lat": 47.015264,
+          "max_lon": 28.80483
+        }
       }
     },
     {
-      "id": "scate_park",
-      "cityId": "chisinau",
-      "difficulty": "blue",
-      "styles": ["mtb", "dirt"],
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/scate_park.gpx",
-      "startLat": 47.005607,
-      "startLon": 28.852453,
-      "name": {
-        "ru": "SkatePark",
-        "ro": "SkatePark",
-        "uk": "SkatePark"
-      },
-      "suitable": {
-        "ru": "BMX / Dirt",
-        "ro": "BMX / Dirt",
-        "uk": "BMX / Dirt"
-      },
-      "desc": {
-        "ru": "Самый крутой и развитый скейт парк для велосипедов в Молдове, здесь можно хорошо провести время с друзьями.",
-        "ro": "Cel mai cool și mai dezvoltat skate park pentru biciclete din Moldova, unde te poți distra de minune cu prietenii.",
-        "uk": "Найкрутіший і найрозвиненіший скейт парк для велосипедів у Молдові, тут можна добре провести час із друзями."
+      "id": "gpx/cycle_path_morilor",
+      "gpx_path": "gpx/cycle_path_morilor.gpx",
+      "verified": true,
+      "updated_at": "2026-01-26T13:03:30Z",
+      "stats": {
+        "length_m": 2303,
+        "ascent_m": 45,
+        "descent_m": 42,
+        "min_ele_m": 70,
+        "max_ele_m": 84,
+        "start": {
+          "lat": 47.019943,
+          "lon": 28.809972
+        },
+        "end": {
+          "lat": 47.017999,
+          "lon": 28.806552
+        },
+        "bbox": {
+          "min_lat": 47.015246,
+          "min_lon": 28.806552,
+          "max_lat": 47.021685,
+          "max_lon": 28.819306
+        }
       }
     },
     {
-      "id": "cycle_path_morilor",
-      "cityId": "chisinau",
-      "difficulty": "green",
-      "styles": ["road", "dirt", "fixed"],
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/cycle_path_morilor.gpx",
-      "startLat": 47.019943,
-      "startLon": 28.809972,
-      "name": {
-        "ru": "Велодорожка Morilor",
-        "ro": "Pista de biciclete Morilor",
-        "uk": "Велодорожка Morilor"
-      },
-      "suitable": {
-        "ru": "All Bikes",
-        "ro": "All Bikes",
-        "uk": "All Bikes"
-      },
-      "desc": {
-        "ru": "Отличная велодорожка для велосипедистов, можно наматывать круги часами.",
-        "ro": "O pistă de biciclete excelentă pentru bicicliști, poți merge în jurul ei ore întregi.",
-        "uk": "Відмінна велодоріжка для велосипедистів, можна намотувати круги годинами."
+      "id": "gpx/morilor_trail_2",
+      "gpx_path": "gpx/morilor_trail_2.gpx",
+      "verified": true,
+      "updated_at": "2026-01-26T13:03:30Z",
+      "stats": {
+        "length_m": 763,
+        "ascent_m": 5,
+        "descent_m": 92,
+        "min_ele_m": 88,
+        "max_ele_m": 175,
+        "start": {
+          "lat": 47.011795,
+          "lon": 28.798955
+        },
+        "end": {
+          "lat": 47.01533,
+          "lon": 28.804994
+        },
+        "bbox": {
+          "min_lat": 47.011795,
+          "min_lon": 28.79845,
+          "max_lat": 47.01533,
+          "max_lon": 28.804994
+        }
       }
     },
     {
-      "id": "valea_trandafirilor_pumptrack",
-      "cityId": "chisinau",
-      "difficulty": "green",
-      "styles": ["mtb", "dirt"],
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_trandafirilor_pumptrack.gpx",
-      "startLat": 47.00560150561455,
-      "startLon": 28.854068612186126,
-      "name": {
-        "ru": "PumpTrack Долина Роз",
-        "ro": "PumpTrack Valea Trandafirilor",
-        "uk": "PumpTrack Долина Роз"
-      },
-      "suitable": {
-        "ru": "All Bikes / Street / BMX / Dirt",
-        "ro": "All Bikes / Street / BMX / Dirt",
-        "uk": "All Bikes / Street / BMX / Dirt"
-      },
-      "desc": {
-        "ru": "Достаточно хороший PumpTrack, сделан из бетона.",
-        "ro": "Un PumpTrack destul de bun, făcut din beton.",
-        "uk": "Досить хороший PumpTrack, зроблений із бетону."
+      "id": "gpx/resita",
+      "gpx_path": "gpx/resita.gpx",
+      "verified": true,
+      "updated_at": "2026-01-26T13:03:30Z",
+      "stats": {
+        "length_m": 907,
+        "ascent_m": 6,
+        "descent_m": 96,
+        "min_ele_m": 79,
+        "max_ele_m": 169,
+        "start": {
+          "lat": 47.01232,
+          "lon": 28.79862
+        },
+        "end": {
+          "lat": 47.01536,
+          "lon": 28.80725
+        },
+        "bbox": {
+          "min_lat": 47.01232,
+          "min_lon": 28.7985,
+          "max_lat": 47.01536,
+          "max_lon": 28.80732
+        }
       }
     },
     {
-      "id": "valea_trandafirilor_small_skijumps",
-      "cityId": "chisinau",
-      "difficulty": "blue",
-      "styles": ["mtb", "dirt"],
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_trandafirilor_small_skijumps.gpx",
-      "startLat": 47.005535,
-      "startLon": 28.853795,
-      "name": {
-        "ru": "Учебные трамплины Долина Роз",
-        "ro": "Valea Trandafirilor antrenament sarituri cu schiurile",
-        "uk": "PumpTrack Долина Роз"
-      },
-      "suitable": {
-        "ru": "All Mountains / Dirt",
-        "ro": "All Mountains / Dirt",
-        "uk": "All Mountains / Dirt"
-      },
-      "desc": {
-        "ru": "Начальные трамплины, не сложны в технике но требуют ее.",
-        "ro": "Săriturile inițiale nu sunt dificile din punct de vedere tehnic, dar o necesită.",
-        "uk": "Початкові трампліни, не складні в техніці, але вимагають її."
+      "id": "gpx/scate_park",
+      "gpx_path": "gpx/scate_park.gpx",
+      "verified": true,
+      "updated_at": "2026-01-26T13:03:30Z",
+      "stats": {
+        "length_m": 15,
+        "ascent_m": 0,
+        "descent_m": 0,
+        "min_ele_m": 79,
+        "max_ele_m": 79,
+        "start": {
+          "lat": 47.005607,
+          "lon": 28.852453
+        },
+        "end": {
+          "lat": 47.005671,
+          "lon": 28.852626
+        },
+        "bbox": {
+          "min_lat": 47.005607,
+          "min_lon": 28.852453,
+          "max_lat": 47.005671,
+          "max_lon": 28.852626
+        }
       }
     },
     {
-      "id": "valea_morilor_pumptrack",
-      "cityId": "chisinau",
-      "difficulty": "green",
-      "styles": ["mtb", "dirt"],
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_morilor_pumptrack.gpx",
-      "startLat": 47.01270585585567,
-      "startLon": 28.79996547817379,
-      "name": {
-        "ru": "PumpTrack Парк Морилор",
-        "ro": "PumpTrack Valea_Morilor",
-        "uk": "PumpTrack Парк Морилор"
-      },
-      "suitable": {
-        "ru": "All Mountains / Dirt",
-        "ro": "All Mountains / Dirt",
-        "uk": "All Mountains / Dirt"
-      },
-      "desc": {
-        "ru": "Самый популярный PumpTrack в Кишиневе, маловат но из земли.",
-        "ro": "Cel mai popular PumpTrack din Chișinău, mic, dar construit din pământ.",
-        "uk": "Найпопулярніший PumpTrack у Кишиневі, замало але із землі."
+      "id": "gpx/trail_butoiash",
+      "gpx_path": "gpx/trail_butoiash.gpx",
+      "verified": true,
+      "updated_at": "2026-01-26T13:03:30Z",
+      "stats": {
+        "length_m": 196,
+        "ascent_m": 2,
+        "descent_m": 12,
+        "min_ele_m": 107,
+        "max_ele_m": 118,
+        "start": {
+          "lat": 47.03635947515713,
+          "lon": 28.786231041836402
+        },
+        "end": {
+          "lat": 47.03787153620755,
+          "lon": 28.787248026546678
+        },
+        "bbox": {
+          "min_lat": 47.03635947515713,
+          "min_lon": 28.786231041836402,
+          "max_lat": 47.03787153620755,
+          "max_lon": 28.787248026546678
+        }
       }
     },
     {
-      "id": "trail_butoiash",
-      "cityId": "chisinau",
-      "difficulty": "green",
-      "styles": ["mtb"],
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_butoiash.gpx",
-      "startLat": 47.03635947515713,
-      "startLon": 28.786231041836402,
-      "name": {
-        "ru": "Small Trail Butoiaș",
-        "ro": "Small Trail Butoiaș",
-        "uk": "Small Trail Butoiaș"
-      },
-      "suitable": {
-        "ru": "All Mountains",
-        "ro": "All Mountains",
-        "uk": "All Mountains"
-      },
-      "desc": {
-        "ru": "Не сложный для начинающих трейл, есть маленькие трамплины которые можно обьехать.",
-        "ro": "Traseul nu este dificil pentru începători; există mici sărituri care pot fi evitate.",
-        "uk": "Не складний для трейл-початківців, є маленькі трампліни які можна об'їхати."
+      "id": "gpx/trail_park_codru",
+      "gpx_path": "gpx/trail_park_codru.gpx",
+      "verified": true,
+      "updated_at": "2026-01-26T13:03:30Z",
+      "stats": {
+        "length_m": 120,
+        "ascent_m": 0,
+        "descent_m": 28,
+        "min_ele_m": 140,
+        "max_ele_m": 168,
+        "start": {
+          "lat": 46.977926,
+          "lon": 28.837567
+        },
+        "end": {
+          "lat": 46.977251,
+          "lon": 28.838797
+        },
+        "bbox": {
+          "min_lat": 46.977251,
+          "min_lon": 28.837567,
+          "max_lat": 46.977926,
+          "max_lon": 28.838797
+        }
       }
     },
     {
-      "id": "resita",
-      "cityId": "chisinau",
-      "difficulty": "red",
-      "styles": ["mtb", "DH"],
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/refs/heads/main/gpx/resita.gpx",
-      "startLat": 47.01232,
-      "startLon": 28.79862,
-      "name": {
-        "ru": "TrailPark Morilor 4",
-        "ro": "TrailPark Morilor 4",
-        "uk": "TrailPark Morilor 4"
-      },
-      "suitable": {
-        "ru": "Enduro / Downhill",
-        "ro": "Enduro / Downhill",
-        "uk": "Enduro / Downhill"
-      },
-      "desc": {
-        "ru": "Считаеться отрывком третей части трейла, на данный момент ее можно катать но в конце все залило водой и глиной.",
-        "ro": "Este considerată o secțiune din a treia parte a traseului; momentan este schiabilă, dar la final totul a fost inundat de apă și argilă.",
-        "uk": "Вважається уривком третьою частиною трейлу, на даний момент її можна катати, але в кінці все залило водою і глиною."
+      "id": "gpx/valea_morilor_pumptrack",
+      "gpx_path": "gpx/valea_morilor_pumptrack.gpx",
+      "verified": true,
+      "updated_at": "2026-01-26T13:03:30Z",
+      "stats": {
+        "length_m": 75,
+        "ascent_m": 3,
+        "descent_m": 3,
+        "min_ele_m": 157,
+        "max_ele_m": 160,
+        "start": {
+          "lat": 47.01270585585567,
+          "lon": 28.79996547817379
+        },
+        "end": {
+          "lat": 47.01270748366832,
+          "lon": 28.799982189944444
+        },
+        "bbox": {
+          "min_lat": 47.01258051412461,
+          "min_lon": 28.799657504115658,
+          "max_lat": 47.01271073929382,
+          "max_lon": 28.8000561992138
+        }
       }
     },
     {
-      "id": "morilor_trail_2",
-      "cityId": "chisinau",
-      "difficulty": "blue",
-      "styles": ["mtb", "DH"],
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/refs/heads/main/gpx/morilor_trail_2.gpx",
-      "startLat": 47.011795,
-      "startLon": 28.798955,
-      "name": {
-        "ru": "TrailPark Morilor 2",
-        "ro": "TrailPark Morilor 2",
-        "uk": "TrailPark Morilor 2"
-      },
-      "suitable": {
-        "ru": "All Mountain / Enduro / Downhill",
-        "ro": "Enduro / Downhill",
-        "uk": "Enduro / Downhill"
-      },
-      "desc": {
-        "ru": "Самый популярный трейл в Кишиневе, очень быстрый и приятный, есть маленькие и большие трамплины, которые можно обьехать, почти такая же как первая трасса.",
-        "ro": "Cel mai popular traseu din Chișinău, foarte rapid și plăcut, cu sărituri mici și mari pe care le poți ocoli, aproape la fel ca primul traseu.",
-        "uk": "Найпопулярніший трейл у Кишиневі, дуже швидкий та приємний, є маленькі та великі трампліни, які можна об'їхати, майже така сама як перша траса."
+      "id": "gpx/valea_trandafirilor_pumptrack",
+      "gpx_path": "gpx/valea_trandafirilor_pumptrack.gpx",
+      "verified": true,
+      "updated_at": "2026-01-26T13:03:30Z",
+      "stats": {
+        "length_m": 217,
+        "ascent_m": 7,
+        "descent_m": 11,
+        "min_ele_m": 72,
+        "max_ele_m": 78,
+        "start": {
+          "lat": 47.00560150561455,
+          "lon": 28.854068612186126
+        },
+        "end": {
+          "lat": 47.00539726416051,
+          "lon": 28.854486636162022
+        },
+        "bbox": {
+          "min_lat": 47.00519083683125,
+          "min_lon": 28.854068612186126,
+          "max_lat": 47.00565174687378,
+          "max_lon": 28.854765325888536
+        }
+      }
+    },
+    {
+      "id": "gpx/valea_trandafirilor_small_skijumps",
+      "gpx_path": "gpx/valea_trandafirilor_small_skijumps.gpx",
+      "verified": true,
+      "updated_at": "2026-01-26T13:03:30Z",
+      "stats": {
+        "length_m": 133,
+        "ascent_m": 0,
+        "descent_m": 10,
+        "min_ele_m": 67,
+        "max_ele_m": 77,
+        "start": {
+          "lat": 47.005535,
+          "lon": 28.853795
+        },
+        "end": {
+          "lat": 47.004903,
+          "lon": 28.85521
+        },
+        "bbox": {
+          "min_lat": 47.004903,
+          "min_lon": 28.853795,
+          "max_lat": 47.005535,
+          "max_lon": 28.85521
+        }
       }
     }
   ]
