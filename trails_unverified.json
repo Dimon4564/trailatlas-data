@@ -5,22 +5,22 @@
     {
       "id": "morilor_down",
       "cityId": "chisinau",
-      "styles": [],
+      "styles": ["mtb"],
       "name": {
-        "ru": "morilor_down",
-        "ro": "morilor_down",
-        "uk": "morilor_down"
+        "ru": "morilor down",
+        "ro": "morilor down",
+        "uk": "morilor down"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "All Mountains",
+        "ro": "All Mountains",
+        "uk": "All Mountains"
       },
-      "difficulty": "red",
+      "difficulty": "green",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Обычная сьежалка возле парка Морилор.",
+        "ro": "Un teleschi obișnuit lângă Parcul Morilor.",
+        "uk": "Звичайна сіджалка біля парку Морілор."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/morilor_down.gpx",
       "startLat": 47.0042995,
