@@ -5,7 +5,10 @@
     {
       "id": "chisinau_blue",
       "cityId": "chisinau",
-      "styles": ["mtb", "downhill"],
+      "styles": [
+        "mtb",
+        "downhill"
+      ],
       "name": {
         "ru": "TrailPark Morilor 1",
         "ro": "TrailPark Morilor 1",
@@ -29,7 +32,11 @@
     {
       "id": "cycle_path_morilor",
       "cityId": "chisinau",
-      "styles": ["road", "dirt", "fixed"],
+      "styles": [
+        "road",
+        "dirt",
+        "fixed"
+      ],
       "name": {
         "ru": "Велодорожка Morilor",
         "ro": "Pista de biciclete Morilor",
@@ -53,7 +60,10 @@
     {
       "id": "morilor_trail_2",
       "cityId": "chisinau",
-      "styles": ["mtb", "DH"],
+      "styles": [
+        "mtb",
+        "DH"
+      ],
       "name": {
         "ru": "TrailPark Morilor 2",
         "ro": "TrailPark Morilor 2",
@@ -77,7 +87,10 @@
     {
       "id": "resita",
       "cityId": "chisinau",
-      "styles": ["mtb", "DH"],
+      "styles": [
+        "mtb",
+        "DH"
+      ],
       "name": {
         "ru": "TrailPark Morilor 4",
         "ro": "TrailPark Morilor 4",
@@ -101,7 +114,10 @@
     {
       "id": "scate_park",
       "cityId": "chisinau",
-      "styles": ["mtb", "dirt"],
+      "styles": [
+        "mtb",
+        "dirt"
+      ],
       "name": {
         "ru": "SkatePark",
         "ro": "SkatePark",
@@ -125,7 +141,9 @@
     {
       "id": "trail_butoiash",
       "cityId": "chisinau",
-      "styles": ["mtb"],
+      "styles": [
+        "mtb"
+      ],
       "name": {
         "ru": "Small Trail Butoiaș",
         "ro": "Small Trail Butoiaș",
@@ -149,7 +167,10 @@
     {
       "id": "trail_park_codru",
       "cityId": "chisinau",
-      "styles": ["mtb", "downhill"],
+      "styles": [
+        "mtb",
+        "downhill"
+      ],
       "name": {
         "ru": "TrailParkCodru",
         "ro": "TrailParkCodru",
@@ -173,7 +194,10 @@
     {
       "id": "valea_morilor_pumptrack",
       "cityId": "chisinau",
-      "styles": ["mtb", "dirt"],
+      "styles": [
+        "mtb",
+        "dirt"
+      ],
       "name": {
         "ru": "PumpTrack Парк Морилор",
         "ro": "PumpTrack Valea Morilor",
@@ -197,7 +221,10 @@
     {
       "id": "valea_trandafirilor_pumptrack",
       "cityId": "chisinau",
-      "styles": ["mtb", "dirt"],
+      "styles": [
+        "mtb",
+        "dirt"
+      ],
       "name": {
         "ru": "PumpTrack Долина Роз",
         "ro": "PumpTrack Valea Trandafirilor",
@@ -221,7 +248,10 @@
     {
       "id": "valea_trandafirilor_small_skijumps",
       "cityId": "chisinau",
-      "styles": ["mtb", "dirt"],
+      "styles": [
+        "mtb",
+        "dirt"
+      ],
       "name": {
         "ru": "Учебные трамплины Долина Роз",
         "ro": "Valea Trandafirilor antrenament sarituri cu schiurile",

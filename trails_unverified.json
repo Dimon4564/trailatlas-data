@@ -5,7 +5,9 @@
     {
       "id": "morilor_down",
       "cityId": "chisinau",
-      "styles": ["mtb"],
+      "styles": [
+        "mtb"
+      ],
       "name": {
         "ru": "morilor down",
         "ro": "morilor down",
@@ -25,6 +27,30 @@
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/morilor_down.gpx",
       "startLat": 47.0042995,
       "startLon": 28.8068067
+    },
+    {
+      "id": "vosmerka",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "vosmerka",
+        "ro": "vosmerka",
+        "uk": "vosmerka"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "difficulty": "black",
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/vosmerka.gpx",
+      "startLat": 46.9612762,
+      "startLon": 28.8629924
     }
   ]
 }
