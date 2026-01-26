@@ -33,20 +33,20 @@
       "cityId": "chisinau",
       "styles": [],
       "name": {
-        "ru": "vosmerka",
-        "ro": "vosmerka",
-        "uk": "vosmerka"
+        "ru": "Лес Восьмерка",
+        "ro": "Pădurea Opt",
+        "uk": "Ліс Вісімка"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "All Mountains",
+        "ro": "All Mountains",
+        "uk": "All Mountains"
       },
-      "difficulty": "black",
+      "difficulty": "blue",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Достаточно большой лес с разными тропинками, идеально подходит для Кросс Кантри.",
+        "ro": "O pădure destul de mare cu diferite poteci, ideală pentru Cross Country.",
+        "uk": "Досить великий ліс з різними стежками, ідеально підходить для Крос Кантрі."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/vosmerka.gpx",
       "startLat": 46.9612762,
