@@ -1,44 +1,30 @@
-[
-  {
-    "id": "morilor_down",
-    "cityId": "",
-    "difficulty": "",
-    "styles": [],
-    "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/morilor_down.gpx",
-    "startLat": 47.0042995,
-    "startLon": 28.8068067,
-    "name": {
-      "ru": "morilor_down",
-      "ro": "morilor_down",
-      "uk": "morilor_down"
-    },
-    "suitable": {
-      "ru": "",
-      "ro": "",
-      "uk": ""
-    },
-    "desc": {
-      "ru": "",
-      "ro": "",
-      "uk": ""
-    },
-    "stats": {
-      "length_m": 580,
-      "ascent_m": 0,
-      "descent_m": 0,
-      "min_ele_m": null,
-      "max_ele_m": null,
+{
+  "version": 1,
+  "updatedAt": "2026-01-26",
+  "trails": [
+    {
+      "id": "morilor_down",
+      "cityId": "",
+      "difficulty": "",
+      "styles": [],
+      "name": {
+        "ru": "morilor_down",
+        "ro": "morilor_down",
+        "uk": "morilor_down"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/morilor_down.gpx",
       "startLat": 47.0042995,
-      "startLon": 28.8068067,
-      "endLat": 47.0086367,
-      "endLon": 28.8094958,
-      "bbox": {
-        "min_lat": 47.0042995,
-        "min_lon": 28.8068067,
-        "max_lat": 47.0086367,
-        "max_lon": 28.8100798
-      }
-    },
-    "updatedAt": "2026-01-26T13:13:28Z"
-  }
-]
+      "startLon": 28.8068067
+    }
+  ]
+}
