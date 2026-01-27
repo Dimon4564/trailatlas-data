@@ -72,9 +72,9 @@
       },
       "difficulty": "black",
       "desc": {
-        "ru": "Отличный трейл возле вулкана, требуется отличная техника",
-        "ro": "Traseu minunat lângă vulcan, necesită echipament excelent",
-        "uk": "Відмінний трейл біля вулкана, потрібна відмінна техніка"
+        "ru": "Отличный трейл возле вулкана, требуется отличная техника.",
+        "ro": "Traseu minunat lângă vulcan, necesită echipament excelent.",
+        "uk": "Відмінний трейл біля вулкана, потрібна відмінна техніка."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/pasul_vulcan_flow_trail.gpx",
       "startLat": 45.32668,
@@ -83,23 +83,23 @@
     },
     {
       "id": "mtb_tour",
-      "cityId": "chisinau",
-      "styles": [],
+      "countryId": "ro",
+      "styles": ["MTB"],
       "name": {
-        "ru": "mtb_tour",
-        "ro": "mtb_tour",
-        "uk": "mtb_tour"
+        "ru": "mtb tour",
+        "ro": "mtb tour",
+        "uk": "mtb tour"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "MTB / Cross Country",
+        "ro": "MTB / Cross Country",
+        "uk": "MTB / Cross Country"
       },
-      "difficulty": "green",
+      "difficulty": "blue",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Отличное место чтоб провести велосипедный тур, приятные тропинки в горах и многое другое.",
+        "ro": "Un loc minunat pentru o excursie cu bicicleta, trasee montane plăcute și multe altele.",
+        "uk": "Відмінне місце щоб провести велосипедний тур, приємні стежки в горах та багато іншого."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/mtb_tour.gpx",
       "startLat": 46.946979,
