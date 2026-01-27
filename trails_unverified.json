@@ -54,7 +54,7 @@
     },
     {
       "id": "pasul_vulcan_flow_trail",
-      "countryid": "ro",
+      "countryId": "ro",
       "styles": ["DH"],
       "name": {
         "ru": "Pasul Vulcan Flow Trail",
