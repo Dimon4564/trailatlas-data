@@ -110,8 +110,10 @@
     },
     {
       "id": "waldfischbach_burgalben",
-      "countryId": "de",
-      "styles": ["MTB"],
+      "cityId": "chisinau",
+      "styles": [
+        "MTB"
+      ],
       "name": {
         "ru": "Waldfischbach Burgalben",
         "ro": "Waldfischbach Burgalben",
@@ -130,7 +132,8 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/waldfischbach_burgalben.gpx",
       "startLat": 49.288187,
-      "startLon": 7.652407
+      "startLon": 7.652407,
+      "countryId": "de"
     }
   ]
 }

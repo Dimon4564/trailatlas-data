@@ -1,6 +1,6 @@
 {
   "version": 10,
-  "updatedAt": "2026-01-26",
+  "updatedAt": "2026-01-27",
   "trails": [
     {
       "id": "chisinau_blue",
@@ -271,6 +271,30 @@
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_trandafirilor_small_skijumps.gpx",
       "startLat": 47.005535,
       "startLon": 28.853795
+    },
+    {
+      "id": "dh_lux",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "dh_lux",
+        "ro": "dh_lux",
+        "uk": "dh_lux"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "difficulty": "black",
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/dh_lux.gpx",
+      "startLat": 50.251812,
+      "startLon": 16.807371
     }
   ]
 }
