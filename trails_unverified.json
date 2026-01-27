@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-01-26",
+  "updatedAt": "2026-01-27",
   "trails": [
     {
       "id": "morilor_down",
@@ -51,6 +51,30 @@
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/vosmerka.gpx",
       "startLat": 46.9612762,
       "startLon": 28.8629924
+    },
+    {
+      "id": "pasul_vulcan_flow_trail",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "pasul_vulcan_flow_trail",
+        "ro": "pasul_vulcan_flow_trail",
+        "uk": "pasul_vulcan_flow_trail"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "difficulty": "black",
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/pasul_vulcan_flow_trail.gpx",
+      "startLat": 45.32668,
+      "startLon": 23.292156
     }
   ]
 }
