@@ -55,22 +55,22 @@
     {
       "id": "pasul_vulcan_flow_trail",
       "cityId": "chisinau",
-      "styles": [],
+      "styles": ["DH"],
       "name": {
-        "ru": "pasul_vulcan_flow_trail",
-        "ro": "pasul_vulcan_flow_trail",
-        "uk": "pasul_vulcan_flow_trail"
+        "ru": "Pasul Vulcan Flow Trail",
+        "ro": "Pasul Vulcan Flow Trail",
+        "uk": "Pasul Vulcan Flow Trail"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Downhill / Freeride",
+        "ro": "Downhill / Freeride",
+        "uk": "Downhill / Freeride"
       },
       "difficulty": "black",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Отличный трейл возле вулкана, требуется отличная техника",
+        "ro": "Traseu minunat lângă vulcan, necesită echipament excelent",
+        "uk": "Відмінний трейл біля вулкана, потрібна відмінна техніка"
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/pasul_vulcan_flow_trail.gpx",
       "startLat": 45.32668,
