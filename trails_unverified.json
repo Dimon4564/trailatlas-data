@@ -83,8 +83,10 @@
     },
     {
       "id": "mtb_tour",
-      "countryId": "ro",
-      "styles": ["MTB"],
+      "cityId": "chisinau",
+      "styles": [
+        "MTB"
+      ],
       "name": {
         "ru": "mtb tour",
         "ro": "mtb tour",
@@ -103,7 +105,32 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/mtb_tour.gpx",
       "startLat": 46.946979,
-      "startLon": 22.675176
+      "startLon": 22.675176,
+      "countryId": "ro"
+    },
+    {
+      "id": "waldfischbach_burgalben",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "waldfischbach_burgalben",
+        "ro": "waldfischbach_burgalben",
+        "uk": "waldfischbach_burgalben"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "difficulty": "blue",
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/waldfischbach_burgalben.gpx",
+      "startLat": 49.288187,
+      "startLon": 7.652407
     }
   ]
 }
