@@ -274,23 +274,23 @@
     },
     {
       "id": "dh_lux",
-      "cityId": "chisinau",
-      "styles": [],
+      "countryId": "pl",
+      "styles": ["DH"],
       "name": {
-        "ru": "dh_lux",
-        "ro": "dh_lux",
-        "uk": "dh_lux"
+        "ru": "Dh Lux",
+        "ro": "Dh Lux",
+        "uk": "Dh Lux"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Downhill / Freeride",
+        "ro": "Downhill / Freeride",
+        "uk": "Downhill / Freeride"
       },
       "difficulty": "black",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Трейл для самых серьезных, очень сложен в исполнении, есть корни камни и много еще чего.",
+        "ro": "Această potecă este pentru cei mai experimentați drumeți, foarte dificil de parcurs, cu rădăcini, pietre și multe altele.",
+        "uk": "Трейл для найсерйозніших, дуже складний у виконанні, є коріння каміння та багато чого."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/dh_lux.gpx",
       "startLat": 50.251812,
