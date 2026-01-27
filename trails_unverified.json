@@ -4,7 +4,7 @@
   "trails": [
     {
       "id": "morilor_down",
-      "countryid": "md",
+      "cityId": "chisinau",
       "styles": [
         "mtb"
       ],
@@ -26,11 +26,12 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/morilor_down.gpx",
       "startLat": 47.0042995,
-      "startLon": 28.8068067
+      "startLon": 28.8068067,
+      "countryid": "md"
     },
     {
       "id": "vosmerka",
-      "countryid": "md",
+      "cityId": "chisinau",
       "styles": [],
       "name": {
         "ru": "Лес Восьмерка",
@@ -50,12 +51,15 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/vosmerka.gpx",
       "startLat": 46.9612762,
-      "startLon": 28.8629924
+      "startLon": 28.8629924,
+      "countryid": "md"
     },
     {
       "id": "pasul_vulcan_flow_trail",
-      "countryId": "ro",
-      "styles": ["DH"],
+      "cityId": "chisinau",
+      "styles": [
+        "DH"
+      ],
       "name": {
         "ru": "Pasul Vulcan Flow Trail",
         "ro": "Pasul Vulcan Flow Trail",
@@ -74,7 +78,32 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/pasul_vulcan_flow_trail.gpx",
       "startLat": 45.32668,
-      "startLon": 23.292156
+      "startLon": 23.292156,
+      "countryId": "ro"
+    },
+    {
+      "id": "mtb_tour",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "mtb_tour",
+        "ro": "mtb_tour",
+        "uk": "mtb_tour"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "difficulty": "green",
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/mtb_tour.gpx",
+      "startLat": 46.946979,
+      "startLon": 22.675176
     }
   ]
 }
