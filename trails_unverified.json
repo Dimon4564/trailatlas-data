@@ -110,23 +110,23 @@
     },
     {
       "id": "waldfischbach_burgalben",
-      "cityId": "chisinau",
-      "styles": [],
+      "countryId": "de",
+      "styles": ["MTB"],
       "name": {
-        "ru": "waldfischbach_burgalben",
-        "ro": "waldfischbach_burgalben",
-        "uk": "waldfischbach_burgalben"
+        "ru": "Waldfischbach Burgalben",
+        "ro": "Waldfischbach Burgalben",
+        "uk": "Waldfischbach Burgalben"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "MTB / Cross Country",
+        "ro": "MTB / Cross Country",
+        "uk": "MTB / Cross Country"
       },
-      "difficulty": "blue",
+      "difficulty": "black",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Одна из офизиальных трасс по кросс кантри в германии, достаточно сложная.",
+        "ro": "Una dintre traseele oficiale de schi fond din Germania, destul de dificilă.",
+        "uk": "Одна з офізіальних трас по крос кантрі в Німеччині, досить складна."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/waldfischbach_burgalben.gpx",
       "startLat": 49.288187,
