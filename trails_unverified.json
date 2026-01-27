@@ -54,7 +54,7 @@
     },
     {
       "id": "pasul_vulcan_flow_trail",
-      "cityId": "chisinau",
+      "countryid": "ro",
       "styles": ["DH"],
       "name": {
         "ru": "Pasul Vulcan Flow Trail",
