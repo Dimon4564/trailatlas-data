@@ -4,7 +4,7 @@
   "trails": [
     {
       "id": "morilor_down",
-      "cityId": "chisinau",
+      "countryid": "md",
       "styles": [
         "mtb"
       ],
@@ -30,7 +30,7 @@
     },
     {
       "id": "vosmerka",
-      "cityId": "chisinau",
+      "countryid": "md",
       "styles": [],
       "name": {
         "ru": "Лес Восьмерка",
