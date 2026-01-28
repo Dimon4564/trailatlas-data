@@ -328,8 +328,11 @@
     },
     {
       "id": "milkyway",
-      "countryId": "pl",
-      "styles": ["MTB", "DH"],
+      "cityId": "chisinau",
+      "styles": [
+        "MTB",
+        "DH"
+      ],
       "name": {
         "ru": "Milkyway",
         "ro": "Milkyway",
@@ -348,7 +351,8 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/milkyway.gpx",
       "startLat": 50.252065,
-      "startLon": 16.807272
+      "startLon": 16.807272,
+      "countryId": "pl"
     }
   ]
 }
