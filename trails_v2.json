@@ -301,23 +301,23 @@
     },
     {
       "id": "kalifornia",
-      "cityId": "chisinau",
-      "styles": [],
+      "countryId": "pl",
+      "styles": ["DH"],
       "name": {
-        "ru": "kalifornia",
-        "ro": "kalifornia",
-        "uk": "kalifornia"
+        "ru": "Kalifornia",
+        "ro": "Kalifornia",
+        "uk": "Kalifornia"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Freeride / Downhill",
+        "ro": "Freeride / Downhill",
+        "uk": "Freeride / Downhill"
       },
-      "difficulty": "blue",
+      "difficulty": "black",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Почти такая же как и Dh Lux, но тут уже природные дропы сильные спуски корни и камни, идеально подойдет для Freeride.",
+        "ro": "Aproape la fel ca Dh Lux, dar aici există prăpăstii naturale, coborâri puternice, rădăcini și stânci, ideale pentru Freeride.",
+        "uk": "Майже така ж як і Dh Lux, але тут вже природні дропи сильні спуски коріння та каміння, ідеально підійде для Freeride."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/kalifornia.gpx",
       "startLat": 50.251869,
