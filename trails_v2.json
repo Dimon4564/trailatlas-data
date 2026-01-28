@@ -1,6 +1,6 @@
 {
   "version": 10,
-  "updatedAt": "2026-01-27",
+  "updatedAt": "2026-01-28",
   "trails": [
     {
       "id": "chisinau_blue",
@@ -274,8 +274,10 @@
     },
     {
       "id": "dh_lux",
-      "countryId": "pl",
-      "styles": ["DH"],
+      "cityId": "chisinau",
+      "styles": [
+        "DH"
+      ],
       "name": {
         "ru": "Dh Lux",
         "ro": "Dh Lux",
@@ -294,7 +296,32 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/dh_lux.gpx",
       "startLat": 50.251812,
-      "startLon": 16.807371
+      "startLon": 16.807371,
+      "countryId": "pl"
+    },
+    {
+      "id": "kalifornia",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "kalifornia",
+        "ro": "kalifornia",
+        "uk": "kalifornia"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "difficulty": "blue",
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/kalifornia.gpx",
+      "startLat": 50.251869,
+      "startLon": 16.807425
     }
   ]
 }
