@@ -328,23 +328,23 @@
     },
     {
       "id": "milkyway",
-      "cityId": "chisinau",
-      "styles": [],
+      "countryId": "pl",
+      "styles": ["MTB", "DH"],
       "name": {
-        "ru": "milkyway",
-        "ro": "milkyway",
-        "uk": "milkyway"
+        "ru": "Milkyway",
+        "ro": "Milkyway",
+        "uk": "Milkyway"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Cross Country / Downhill / Enduro",
+        "ro": "Cross Country / Downhill / Enduro",
+        "uk": "Cross Country / Downhill / Enduro"
       },
-      "difficulty": "red",
+      "difficulty": "blue",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Интересная и простая трасса, подойдет начинающим и тем кто уже хорошо катаеться.",
+        "ro": "O pistă interesantă și simplă, potrivită atât pentru începători, cât și pentru cei care se pricep deja la schi.",
+        "uk": "Цікава і проста траса, підійде початківцям і тим, хто вже добре катається."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/milkyway.gpx",
       "startLat": 50.252065,
