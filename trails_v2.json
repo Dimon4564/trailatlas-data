@@ -301,8 +301,10 @@
     },
     {
       "id": "kalifornia",
-      "countryId": "pl",
-      "styles": ["DH"],
+      "cityId": "chisinau",
+      "styles": [
+        "DH"
+      ],
       "name": {
         "ru": "Kalifornia",
         "ro": "Kalifornia",
@@ -321,7 +323,32 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/kalifornia.gpx",
       "startLat": 50.251869,
-      "startLon": 16.807425
+      "startLon": 16.807425,
+      "countryId": "pl"
+    },
+    {
+      "id": "milkyway",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "milkyway",
+        "ro": "milkyway",
+        "uk": "milkyway"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "difficulty": "red",
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/milkyway.gpx",
+      "startLat": 50.252065,
+      "startLon": 16.807272
     }
   ]
 }
