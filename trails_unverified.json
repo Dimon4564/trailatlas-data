@@ -137,23 +137,23 @@
     },
     {
       "id": "hochschwarzwald_seen_und_bergen",
-      "cityId": "chisinau",
-      "styles": [],
+      "countryId": "de",
+      "styles": ["MTB"],
       "name": {
-        "ru": "hochschwarzwald_seen_und_bergen",
-        "ro": "hochschwarzwald_seen_und_bergen",
-        "uk": "hochschwarzwald_seen_und_bergen"
+        "ru": "Hochschwarzwald Seen und Bergen",
+        "ro": "Hochschwarzwald Seen und Bergen",
+        "uk": "Hochschwarzwald Seen und Bergen"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "All Mountains / Cross Country",
+        "ro": "All Mountains / Cross Country",
+        "uk": "All Mountains / Cross Country"
       },
-      "difficulty": "green",
+      "difficulty": "blue",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Отличный трейл для путешествия, можно посмотреть на горы повстречать животных и ручьи.",
+        "ro": "O potecă minunată de parcurs, poți vedea munți, întâlni animale și pâraie.",
+        "uk": "Відмінний трейл для подорожі, можна подивитися на гори зустріти тварин та струмки."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/hochschwarzwald_seen_und_bergen.gpx",
       "startLat": 47.81691,
