@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-01-28",
+  "updatedAt": "2026-01-30",
   "trails": [
     {
       "id": "morilor_down",
@@ -137,8 +137,10 @@
     },
     {
       "id": "hochschwarzwald_seen_und_bergen",
-      "countryId": "de",
-      "styles": ["MTB"],
+      "cityId": "chisinau",
+      "styles": [
+        "MTB"
+      ],
       "name": {
         "ru": "Hochschwarzwald Seen und Bergen",
         "ro": "Hochschwarzwald Seen und Bergen",
@@ -157,7 +159,8 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/hochschwarzwald_seen_und_bergen.gpx",
       "startLat": 47.81691,
-      "startLon": 8.177427
+      "startLon": 8.177427,
+      "countryId": "de"
     }
   ]
 }
