@@ -356,7 +356,7 @@
     },
     {
       "id": "trail_park_st",
-      "cityId": "chisinau",
+      "countryId": "md",
       "styles": [
         "MTB",
         "DH"
