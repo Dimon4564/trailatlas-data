@@ -192,23 +192,23 @@
     },
     {
       "id": "trail_park_dealul_leului",
-      "cityId": "chisinau",
-      "styles": [],
+      "countryId": "md",
+      "styles": ["MTB", "DH"],
       "name": {
-        "ru": "trail_park_dealul_leului",
-        "ro": "trail_park_dealul_leului",
-        "uk": "trail_park_dealul_leului"
+        "ru": "Trail Park Dealul Leului",
+        "ro": "Trail Park Dealul Leului",
+        "uk": "Trail Park Dealul Leului"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Enduro / Cross Country / Downhill",
+        "ro": "Enduro / Cross Country / Downhill",
+        "uk": "Enduro / Cross Country / Downhill"
       },
       "difficulty": "blue",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Интерестный лесной трейл, восновном мало трамплинов и они маленькие, поэтому подойдем всем кто любит каться на горном велике по спускам но в безопасности.",
+        "ro": "O potecă forestieră interesantă, în mare parte cu puține sărituri și unele mici, deci potrivită pentru oricine se bucură de ciclismul montan la vale, dar în siguranță.",
+        "uk": "Цікавий лісовий трейл, в основному мало трамплінів і вони маленькі, тому підійдемо всім хто любить катися на гірському велику спусками але в безпеці."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/trail_park_dealul_leului.gpx",
       "startLat": 46.90596257278116,
