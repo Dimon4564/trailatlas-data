@@ -164,23 +164,23 @@
     },
     {
       "id": "trail_park_nisporeni",
-      "cityId": "chisinau",
-      "styles": [],
+      "countryId": "md",
+      "styles": ["MTB", "DH"],
       "name": {
-        "ru": "trail_park_nisporeni",
-        "ro": "trail_park_nisporeni",
-        "uk": "trail_park_nisporeni"
+        "ru": "Trail Park Nisporeni",
+        "ro": "Trail Park Nisporeni",
+        "uk": "Trail Park Nisporeni"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Enduro / Cross Country / Downhill",
+        "ro": "Enduro / Cross Country / Downhill",
+        "uk": "Enduro / Cross Country / Downhill"
       },
-      "difficulty": "red",
+      "difficulty": "blue",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Отличный трейл в Ниспоренах, достаточно приятный трейл и долгий, есть разные по размерам трамплины, корни, камни, можно провести весело время с друзьями.",
+        "ro": "Nisporeni are un traseu minunat, destul de frumos și lung, cu sărituri de diferite dimensiuni, rădăcini și pietre, perfect pentru a petrece timpul cu prietenii.",
+        "uk": "Відмінний трейл у Ніспоренах, досить приємний трейл та довгий, є різні за розмірами трампліни, коріння, каміння, можна провести весело час із друзями."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/trail_park_nisporeni.gpx",
       "startLat": 47.091038,
