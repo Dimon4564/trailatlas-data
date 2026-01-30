@@ -161,6 +161,30 @@
       "startLat": 47.81691,
       "startLon": 8.177427,
       "countryId": "de"
+    },
+    {
+      "id": "trail_park_nisporeni",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "trail_park_nisporeni",
+        "ro": "trail_park_nisporeni",
+        "uk": "trail_park_nisporeni"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "difficulty": "red",
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/trail_park_nisporeni.gpx",
+      "startLat": 47.091038,
+      "startLon": 28.186056
     }
   ]
 }

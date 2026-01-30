@@ -357,7 +357,10 @@
     {
       "id": "trail_park_st",
       "cityId": "chisinau",
-      "styles": ["MTB", "DH"],
+      "styles": [
+        "MTB",
+        "DH"
+      ],
       "name": {
         "ru": "Trail Park St",
         "ro": "Trail Park St",
