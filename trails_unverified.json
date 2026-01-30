@@ -164,8 +164,11 @@
     },
     {
       "id": "trail_park_nisporeni",
-      "countryId": "md",
-      "styles": ["MTB", "DH"],
+      "cityId": "chisinau",
+      "styles": [
+        "MTB",
+        "DH"
+      ],
       "name": {
         "ru": "Trail Park Nisporeni",
         "ro": "Trail Park Nisporeni",
@@ -184,7 +187,32 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/trail_park_nisporeni.gpx",
       "startLat": 47.091038,
-      "startLon": 28.186056
+      "startLon": 28.186056,
+      "countryId": "md"
+    },
+    {
+      "id": "trail_park_dealul_leului",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "trail_park_dealul_leului",
+        "ro": "trail_park_dealul_leului",
+        "uk": "trail_park_dealul_leului"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "difficulty": "blue",
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/trail_park_dealul_leului.gpx",
+      "startLat": 46.90596257278116,
+      "startLon": 28.9648239567706
     }
   ]
 }

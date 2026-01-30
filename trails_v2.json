@@ -356,7 +356,7 @@
     },
     {
       "id": "trail_park_st",
-      "countryId": "md",
+      "cityId": "chisinau",
       "styles": [
         "MTB",
         "DH"
@@ -379,7 +379,8 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_park_st.gpx",
       "startLat": 47.13581666119788,
-      "startLon": 28.632730301668573
+      "startLon": 28.632730301668573,
+      "countryId": "md"
     }
   ]
 }
