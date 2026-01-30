@@ -357,22 +357,22 @@
     {
       "id": "trail_park_st",
       "cityId": "chisinau",
-      "styles": [],
+      "styles": ["MTB", "DH"],
       "name": {
-        "ru": "trail_park_st",
-        "ro": "trail_park_st",
-        "uk": "trail_park_st"
+        "ru": "Trail Park St",
+        "ro": "Trail Park St",
+        "uk": "Trail Park St"
       },
       "suitable": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Enduro / Dirt / Downhill",
+        "ro": "Enduro / Dirt / Downhill",
+        "uk": "Enduro / Dirt / Downhill"
       },
-      "difficulty": "red",
+      "difficulty": "blue",
       "desc": {
-        "ru": "",
-        "ro": "",
-        "uk": ""
+        "ru": "Отличный трейл в Страшенах, есть трейл и 2 небольших трамплина, единственный трейл на Страшенах.",
+        "ro": "Traseu excelent în Strășeni, există o potecă și 2 sărituri mici, singurul traseu din Strășeni.",
+        "uk": "Відмінний трейл у Страшенах, є трейл і 2 невеликі трампліни, єдиний трейл на Страшенах."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_park_st.gpx",
       "startLat": 47.13581666119788,
