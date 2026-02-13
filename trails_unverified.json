@@ -192,8 +192,11 @@
     },
     {
       "id": "trail_park_dealul_leului",
-      "countryId": "md",
-      "styles": ["MTB", "DH"],
+      "cityId": "chisinau",
+      "styles": [
+        "MTB",
+        "DH"
+      ],
       "name": {
         "ru": "Trail Park Dealul Leului",
         "ro": "Trail Park Dealul Leului",
@@ -212,7 +215,8 @@
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/trail_park_dealul_leului.gpx",
       "startLat": 46.90596257278116,
-      "startLon": 28.9648239567706
+      "startLon": 28.9648239567706,
+      "countryId": "md"
     }
   ]
 }
