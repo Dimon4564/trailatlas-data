@@ -159,11 +159,7 @@
         "ru": "Не сложный для начинающих трейл, есть маленькие трамплины которые можно обьехать.",
         "ro": "Traseul nu este dificil pentru începători; există mici sărituri care pot fi evitate.",
         "uk": "Не складний для трейл-початківців, є маленькі трампліни які можна об'їхати."
-      },
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_park_codru.gpx",
-      "startLat": 46.977926,
-      "startLon": 28.837567
-    },
+      },  
     {
       "id": "valea_morilor_pumptrack",
       "cityId": "chisinau",
