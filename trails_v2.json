@@ -160,33 +160,6 @@
         "ro": "Traseul nu este dificil pentru începători; există mici sărituri care pot fi evitate.",
         "uk": "Не складний для трейл-початківців, є маленькі трампліни які можна об'їхати."
       },
-      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_butoiash.gpx",
-      "startLat": 47.03635947515713,
-      "startLon": 28.786231041836402
-    },
-    {
-      "id": "trail_park_codru",
-      "cityId": "chisinau",
-      "styles": [
-        "mtb",
-        "downhill"
-      ],
-      "name": {
-        "ru": "TrailParkCodru",
-        "ro": "TrailParkCodru",
-        "uk": "TrailParkCodru"
-      },
-      "suitable": {
-        "ru": "HardEnduro / Downhill",
-        "ro": "HardEnduro / Downhill",
-        "uk": "HardEnduro / Downhill"
-      },
-      "difficulty": "black",
-      "desc": {
-        "ru": "Самый опасный трейл в Молдове, сейчас он находится в процессе постройки, но уже есть трамплин который поражает своими размерами, только для истинных профессионалов.",
-        "ro": "Cea mai periculoasă pistă din Moldova este în construcție, dar există deja o săritură impresionantă prin dimensiunile sale, doar pentru adevărații profesioniști.",
-        "uk": "Найнебезпечніший трейл у Молдові, зараз він перебуває в процесі будівництва, але вже є трамплін, який вражає своїми розмірами, тільки для професіоналів."
-      },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_park_codru.gpx",
       "startLat": 46.977926,
       "startLon": 28.837567
