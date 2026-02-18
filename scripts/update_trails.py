@@ -42,11 +42,36 @@ TRAIL_TYPE_NAMES = {
 
 # Trail type descriptions in Russian
 TRAIL_TYPE_DESCRIPTIONS = {
-    "xc": "Кросс-кантри трейл с плавными подъемами",
-    "trail": "Трейловая трасса с техническими секциями",
-    "enduro": "Эндуро трасса с крутыми спусками и техническими участками",
-    "dh": "Даунхилл трасса с интенсивным спуском",
-    "flow": "Флоу-трейл с плавными виражами и прыжками"
+    "xc": {
+        "green": "Кросс-кантри трейл с плавными подъемами",
+        "blue": "Кросс-кантри трейл с умеренными подъемами",
+        "red": "Технический кросс-кантри трейл",
+        "black": "Экстремальный технический трейл"
+    },
+    "trail": {
+        "green": "Лесная тропа с несложными участками",
+        "blue": "Трейловая трасса с техническими секциями",
+        "red": "Технически сложная трейловая трасса",
+        "black": "Экстремальная трейловая трасса с высокой технической сложностью"
+    },
+    "enduro": {
+        "green": "Эндуро трасса начального уровня",
+        "blue": "Эндуро трасса с чередованием подъемов и спусков",
+        "red": "Эндуро трасса с крутыми спусками и техническими участками",
+        "black": "Экстремальная эндуро трасса с очень крутыми и техническими секциями"
+    },
+    "dh": {
+        "green": "Даунхилл трасса для начинающих",
+        "blue": "Даунхилл трасса среднего уровня",
+        "red": "Технический даунхилл с крутыми спусками",
+        "black": "Экстремальный даунхилл с очень крутыми и опасными участками"
+    },
+    "flow": {
+        "green": "Флоу-трейл с плавными виражами",
+        "blue": "Флоу-трейл с прыжками и виражами",
+        "red": "Технический флоу-трейл с большими прыжками",
+        "black": "Экстремальный флоу-трейл для профессионалов"
+    }
 }
 
 # Surface type descriptions in Russian
@@ -60,9 +85,9 @@ SURFACE_DESCRIPTIONS = {
 # Difficulty recommendations in Russian
 DIFFICULTY_DESCRIPTIONS = {
     "green": "Подходит для начинающих райдеров",
-    "blue": "Требует базовых навыков катания",
-    "red": "Рекомендуется для опытных райдеров",
-    "black": "Только для экспертов с отличной техникой"
+    "blue": "Требует базовых навыков катания и хорошей физической подготовки",
+    "red": "Рекомендуется для опытных райдеров с хорошей технической подготовкой",
+    "black": "ТОЛЬКО для экспертов! Требует отличной техники, опыта и специального оборудования"
 }
 
 # ------------------ helpers ------------------
@@ -148,7 +173,7 @@ def should_process_track(trk_elem, gpx_root, ns: str) -> Tuple[bool, str]:
         stats = calculate_elevation_stats(pts)
         length = stats.get("total_distance", 0)
         
-        if length < 200:
+        if length < 900:
             return (False, f"too short ({length:.0f}m)")
         
         if length > 50000:
@@ -438,16 +463,19 @@ def generate_description(gpx_path: Path, stats: Dict[str, float], difficulty: st
     
     # 1. Basic length and elevation
     if stats.get("has_elevation", False):
-        if elevation_loss > elevation_gain:
+        if elevation_loss > elevation_gain * 1.2:
             parts.append(f"Трейл протяженностью {distance_km:.1f} км с перепадом высоты {elevation_loss:.0f} м")
         else:
             parts.append(f"Трейл протяженностью {distance_km:.1f} км с набором высоты {elevation_gain:.0f} м")
     else:
         parts.append(f"Трейл протяженностью {distance_km:.1f} км")
     
-    # 2. Trail type description
-    if trail_type in TRAIL_TYPE_DESCRIPTIONS:
-        parts.append(TRAIL_TYPE_DESCRIPTIONS[trail_type])
+    # 2. Trail type description - MATCH with difficulty properly
+    if trail_type in TRAIL_TYPE_DESCRIPTIONS and difficulty in TRAIL_TYPE_DESCRIPTIONS[trail_type]:
+        parts.append(TRAIL_TYPE_DESCRIPTIONS[trail_type][difficulty])
+    else:
+        # Fallback generic descriptions
+        parts.append("Горный велосипедный трейл")
     
     # 3. Surface type if available
     if surface and surface in SURFACE_DESCRIPTIONS:
@@ -612,8 +640,11 @@ def generate_smart_name(gpx_path: Path, stats: Dict, trail_type: str) -> Optiona
     except Exception:
         return None
 
-def determine_trail_type(gpx_path: Path, stats: Dict[str, float]) -> str:
-    """Determine trail type from OSM tags or characteristics"""
+def determine_trail_type(gpx_path: Path, stats: Dict[str, float], difficulty: str = "green") -> str:
+    """
+    Determine trail type from OSM tags, characteristics, AND difficulty.
+    Black/Red trails should never be classified as XC.
+    """
     try:
         tree = ET.parse(gpx_path)
         root = tree.getroot()
@@ -627,7 +658,7 @@ def determine_trail_type(gpx_path: Path, stats: Dict[str, float]) -> str:
                 if child.text:
                     osm_tags[tag_name] = child.text
         
-        # Check mtb:scale
+        # Check mtb:scale (most reliable)
         if 'mtb:scale' in osm_tags:
             try:
                 scale = int(osm_tags['mtb:scale'])
@@ -645,24 +676,49 @@ def determine_trail_type(gpx_path: Path, stats: Dict[str, float]) -> str:
         # Check highway type
         if 'highway' in osm_tags:
             highway = osm_tags['highway']
-            if highway == 'path' and 'mtb:scale:uphill' in osm_tags:
-                return "enduro"
-            elif highway == 'path':
-                return "trail"
+            if highway == 'path':
+                # Paths with difficulty should not be XC
+                if difficulty in ["black", "red"]:
+                    return "enduro"
+                elif difficulty == "blue":
+                    return "trail"
         
         # Fallback to gradient-based detection
         if not stats.get("has_elevation", False):
-            return "xc"
+            # No elevation data, but check difficulty
+            if difficulty == "black":
+                return "dh"  # Black without elevation = assume DH
+            elif difficulty == "red":
+                return "enduro"
+            else:
+                return "trail"
         
         avg_gradient = stats.get("avg_gradient", 0)
         elevation_loss = stats.get("elevation_loss", 0)
         elevation_gain = stats.get("elevation_gain", 0)
         
-        # Check if primarily downhill
-        if elevation_loss > elevation_gain * 2 and elevation_loss > 100:
+        # Priority 1: Check if primarily downhill (DH indicator)
+        if elevation_loss > elevation_gain * 1.5 and elevation_loss > 100:
             return "dh"
-        elif avg_gradient > 10:
-            return "enduro"
+        
+        # Priority 2: Difficulty-based classification
+        # Black difficulty should NEVER be XC
+        if difficulty == "black":
+            if avg_gradient > 15 or elevation_loss > 200:
+                return "dh"
+            else:
+                return "enduro"
+        
+        # Red difficulty should be at least trail/enduro
+        if difficulty == "red":
+            if avg_gradient > 12:
+                return "enduro"
+            else:
+                return "trail"
+        
+        # Blue/Green can be XC or trail
+        if avg_gradient > 8:
+            return "trail"
         elif avg_gradient > 5:
             return "trail"
         else:
@@ -843,7 +899,7 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                     name = auto_translate_i18n(osm_name, "en")
                 elif is_unverified and stats.get("total_distance", 0) > 0:
                     # Priority 3: Generate smart name from geolocation + characteristics
-                    trail_type = determine_trail_type(gpx_path, stats) if gpx_path else "xc"
+                    trail_type = determine_trail_type(gpx_path, stats, difficulty) if gpx_path else "xc"
                     smart_name = generate_smart_name(gpx_path, stats, trail_type)
                     
                     if smart_name:
@@ -873,7 +929,7 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                 name = auto_translate_i18n(osm_name, "en")
             elif is_unverified and stats.get("total_distance", 0) > 0:
                 # Priority 3: Generate smart name from geolocation + characteristics
-                trail_type = determine_trail_type(gpx_path, stats) if gpx_path else "xc"
+                trail_type = determine_trail_type(gpx_path, stats, difficulty) if gpx_path else "xc"
                 smart_name = generate_smart_name(gpx_path, stats, trail_type)
                 
                 if smart_name:
@@ -925,14 +981,14 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                     desc[lang] = prev_desc.get("ru") or next((v for v in prev_desc.values() if v), "")
         elif is_unverified and country_id:
             # Auto-generate enhanced description for unverified trails
-            trail_type = determine_trail_type(gpx_path, stats) if gpx_path else "xc"
+            trail_type = determine_trail_type(gpx_path, stats, difficulty) if gpx_path else "xc"
             desc_text = generate_description(gpx_path, stats, difficulty, country_id, trail_type)
             desc = auto_translate_i18n(desc_text, "ru")
         else:
             desc = default_i18n("")
     elif is_unverified and country_id:
         # Auto-generate enhanced description for unverified trails
-        trail_type = determine_trail_type(gpx_path, stats) if gpx_path else "xc"
+        trail_type = determine_trail_type(gpx_path, stats, difficulty) if gpx_path else "xc"
         desc_text = generate_description(gpx_path, stats, difficulty, country_id, trail_type)
         desc = auto_translate_i18n(desc_text, "ru")
     else:
