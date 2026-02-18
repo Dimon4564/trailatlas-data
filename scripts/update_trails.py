@@ -48,9 +48,44 @@ def sanitize_filename(name: str) -> str:
     name = name.lower().strip('_')
     return name if name else "unnamed"
 
+def convert_route_to_track(rte_elem, ns: str):
+    """
+    Convert a <rte> element to a <trk> element.
+    Routes contain <rtept> elements directly, tracks contain <trkseg> with <trkpt> elements.
+    """
+    def q(tag): return f"{{{ns}}}{tag}" if ns else tag
+    
+    # Create new track element
+    trk = ET.Element(q("trk"))
+    
+    # Copy name if exists
+    name_elem = rte_elem.find(q("name"))
+    if name_elem is not None:
+        new_name = ET.SubElement(trk, q("name"))
+        new_name.text = name_elem.text
+    
+    # Copy other metadata (desc, cmt, etc.)
+    for child in rte_elem:
+        if child.tag in [q("name"), q("rtept")]:
+            continue  # Skip name (already copied) and route points (will be converted)
+        trk.append(child)
+    
+    # Create track segment
+    trkseg = ET.SubElement(trk, q("trkseg"))
+    
+    # Convert route points to track points
+    for rtept in rte_elem.findall(q("rtept")):
+        trkpt = ET.SubElement(trkseg, q("trkpt"), rtept.attrib)
+        # Copy all children (ele, time, etc.)
+        for child in rtept:
+            trkpt.append(child)
+    
+    return trk
+
 def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
     """
-    Split a GPX file with multiple <trk> elements into individual GPX files.
+    Split a GPX file with multiple <trk> or <rte> elements into individual GPX files.
+    Routes are automatically converted to tracks in output.
     Returns list of created file paths.
     """
     try:
@@ -63,16 +98,26 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
         def q(tag): return f"{{{ns}}}{tag}" if ns else tag
         
         tracks = root.findall(q("trk"))
+        routes = root.findall(q("rte"))
         
-        if len(tracks) <= 1:
-            # Single track or no tracks, no need to split
+        # Check if we need to split
+        total_elements = len(tracks) + len(routes)
+        if total_elements <= 1:
+            # Single track/route or no tracks/routes, no need to split
             return []
         
-        print(f"Splitting {gpx_path.name}: found {len(tracks)} tracks")
+        element_type = "tracks" if tracks else "routes"
+        if tracks and routes:
+            element_type = f"{len(tracks)} tracks and {len(routes)} routes"
+        else:
+            element_type = f"{total_elements} {element_type}"
+        
+        print(f"Splitting {gpx_path.name}: found {element_type}")
         
         created_files = []
         parent_dir = gpx_path.parent
         
+        # Process tracks
         for idx, trk in enumerate(tracks, 1):
             # Try to get track name
             name_elem = trk.find(q("name"))
@@ -108,6 +153,44 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
             
             created_files.append(new_path)
             print(f"  Created: {new_path.name}")
+        
+        # Process routes (convert to tracks)
+        for idx, rte in enumerate(routes, len(tracks) + 1):
+            # Try to get route name
+            name_elem = rte.find(q("name"))
+            if name_elem is not None and name_elem.text:
+                route_name = sanitize_filename(name_elem.text)
+                new_filename = f"{route_name}.gpx"
+            else:
+                new_filename = f"{country_code}_{idx:03d}.gpx"
+            
+            # Ensure unique filename
+            new_path = parent_dir / new_filename
+            counter = 1
+            while new_path.exists():
+                stem = new_filename.rsplit('.', 1)[0]
+                new_path = parent_dir / f"{stem}_{counter}.gpx"
+                counter += 1
+            
+            # Create new GPX with route converted to track
+            new_root = ET.Element(root.tag, root.attrib)
+            
+            # Copy metadata if exists
+            metadata = root.find(q("metadata"))
+            if metadata is not None:
+                new_root.append(metadata)
+            
+            # Convert route to track and add it
+            trk = convert_route_to_track(rte, ns)
+            new_root.append(trk)
+            
+            # Write to file
+            new_tree = ET.ElementTree(new_root)
+            ET.indent(new_tree, space="  ")
+            new_tree.write(new_path, encoding="utf-8", xml_declaration=True)
+            
+            created_files.append(new_path)
+            print(f"  Created: {new_path.name} (converted from route)")
         
         # Delete original multi-track file
         gpx_path.unlink()
@@ -320,7 +403,7 @@ def parse_gpx_points(gpx_path: Path, include_elevation: bool = True):
     return pts
 
 def get_gpx_track_name(gpx_path: Path) -> Optional[str]:
-    """Extract track name from GPX file."""
+    """Extract track or route name from GPX file."""
     try:
         tree = ET.parse(gpx_path)
         root = tree.getroot()
@@ -331,6 +414,12 @@ def get_gpx_track_name(gpx_path: Path) -> Optional[str]:
         # Try track name first
         for trk in root.findall(q("trk")):
             name_elem = trk.find(q("name"))
+            if name_elem is not None and name_elem.text:
+                return name_elem.text
+        
+        # Try route name
+        for rte in root.findall(q("rte")):
+            name_elem = rte.find(q("name"))
             if name_elem is not None and name_elem.text:
                 return name_elem.text
         
