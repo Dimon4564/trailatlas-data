@@ -27,6 +27,9 @@ COUNTRY_FOLDERS = {
     "gpx_poland": "pl",
 }
 
+# Reverse mapping for efficiency
+COUNTRY_CODE_TO_FOLDER = {v: k for k, v in COUNTRY_FOLDERS.items()}
+
 # ------------------ helpers ------------------
 def today_yyyy_mm_dd():
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -393,7 +396,7 @@ def translate_text(text: str, target_lang: str) -> str:
         target = lang_map.get(target_lang, target_lang)
         translator = GoogleTranslator(source='auto', target=target)
         result = translator.translate(text)
-        time.sleep(0.1)  # Rate limiting
+        time.sleep(0.05)  # Reduced delay for better performance
         return result if result else text
     except Exception as e:
         # Silently fail and return original text
@@ -407,8 +410,8 @@ def auto_translate_i18n(source_text: str, source_lang: str = "ru") -> Dict[str, 
             result[lang] = source_text
         else:
             translated = translate_text(source_text, lang)
-            # If translation failed, use source text as fallback
-            result[lang] = translated if translated != source_text or not TRANSLATOR_AVAILABLE else source_text
+            # If translation is available and successful, use it; otherwise use source
+            result[lang] = translated if TRANSLATOR_AVAILABLE and translated else source_text
     return result
 
 def default_i18n(text: str):
@@ -655,7 +658,7 @@ def upsert_file(gpx_dir: Path, json_path: Path, gpx_folder_name: str, raw_base: 
 
         # Construct GPX URL based on location
         if country_code:
-            folder_name = [k for k, v in COUNTRY_FOLDERS.items() if v == country_code][0]
+            folder_name = COUNTRY_CODE_TO_FOLDER.get(country_code, f"gpx_{country_code}")
             gpx_url = f"{raw_base}/{gpx_folder_name}/{folder_name}/{p.name}"
         else:
             gpx_url = f"{raw_base}/{gpx_folder_name}/{p.name}"
@@ -677,7 +680,7 @@ def upsert_file(gpx_dir: Path, json_path: Path, gpx_folder_name: str, raw_base: 
         
         # Construct GPX URL based on location
         if country_code:
-            folder_name = [k for k, v in COUNTRY_FOLDERS.items() if v == country_code][0]
+            folder_name = COUNTRY_CODE_TO_FOLDER.get(country_code, f"gpx_{country_code}")
             gpx_url = f"{raw_base}/{gpx_folder_name}/{folder_name}/{p.name}"
         else:
             gpx_url = f"{raw_base}/{gpx_folder_name}/{p.name}"
