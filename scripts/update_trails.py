@@ -262,24 +262,20 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
 def calculate_elevation_stats(points: List[Tuple[float, float, Optional[float]]]) -> Dict[str, float]:
     """
     Calculate elevation statistics from points with elevation data.
-    Returns dict with elevation_gain, elevation_loss, avg_gradient, etc.
+    Returns dict with elevation_gain, elevation_loss, avg_gradient, total_distance, etc.
+    Always calculates total_distance even without elevation data.
     """
     if not points:
-        return {"elevation_gain": 0, "elevation_loss": 0, "avg_gradient": 0, "has_elevation": False}
+        return {"elevation_gain": 0, "elevation_loss": 0, "avg_gradient": 0, "total_distance": 0, "has_elevation": False}
     
     # Filter points with elevation data
     points_with_ele = [(lat, lon, ele) for lat, lon, ele in points if ele is not None]
     
-    if len(points_with_ele) < 2:
-        return {"elevation_gain": 0, "elevation_loss": 0, "avg_gradient": 0, "has_elevation": False}
-    
-    elevation_gain = 0
-    elevation_loss = 0
+    # Calculate total distance using all points (even without elevation)
     total_distance = 0
-    
-    for i in range(1, len(points_with_ele)):
-        prev_lat, prev_lon, prev_ele = points_with_ele[i-1]
-        curr_lat, curr_lon, curr_ele = points_with_ele[i]
+    for i in range(1, len(points)):
+        prev_lat, prev_lon = points[i-1][0], points[i-1][1]
+        curr_lat, curr_lon = points[i][0], points[i][1]
         
         # Calculate distance (Haversine formula)
         lat1, lon1 = math.radians(prev_lat), math.radians(prev_lon)
@@ -291,6 +287,17 @@ def calculate_elevation_stats(points: List[Tuple[float, float, Optional[float]]]
         distance = 6371000 * c  # Earth radius in meters
         
         total_distance += distance
+    
+    # If we have no elevation data, return early with distance only
+    if len(points_with_ele) < 2:
+        return {"elevation_gain": 0, "elevation_loss": 0, "avg_gradient": 0, "total_distance": total_distance, "has_elevation": False}
+    
+    elevation_gain = 0
+    elevation_loss = 0
+    
+    for i in range(1, len(points_with_ele)):
+        prev_ele = points_with_ele[i-1][2]
+        curr_ele = points_with_ele[i][2]
         
         # Calculate elevation change
         ele_change = curr_ele - prev_ele
@@ -827,7 +834,7 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                 
                 if osm_name:
                     name = auto_translate_i18n(osm_name, "en")
-                elif is_unverified and stats.get("has_elevation", False):
+                elif is_unverified and stats.get("total_distance", 0) > 0:
                     # Priority 3: Generate smart name from geolocation + characteristics
                     trail_type = determine_trail_type(gpx_path, stats) if gpx_path else "xc"
                     smart_name = generate_smart_name(gpx_path, stats, trail_type)
@@ -857,7 +864,7 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
             
             if osm_name:
                 name = auto_translate_i18n(osm_name, "en")
-            elif is_unverified and stats.get("has_elevation", False):
+            elif is_unverified and stats.get("total_distance", 0) > 0:
                 # Priority 3: Generate smart name from geolocation + characteristics
                 trail_type = determine_trail_type(gpx_path, stats) if gpx_path else "xc"
                 smart_name = generate_smart_name(gpx_path, stats, trail_type)
