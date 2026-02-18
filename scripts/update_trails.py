@@ -5,6 +5,7 @@ import math
 import re
 import hashlib
 import time
+from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
 import xml.etree.ElementTree as ET
@@ -68,7 +69,7 @@ def convert_route_to_track(rte_elem, ns: str):
     for child in rte_elem:
         if child.tag in [q("name"), q("rtept")]:
             continue  # Skip name (already copied) and route points (will be converted)
-        trk.append(child)
+        trk.append(deepcopy(child))
     
     # Create track segment
     trkseg = ET.SubElement(trk, q("trkseg"))
@@ -78,7 +79,7 @@ def convert_route_to_track(rte_elem, ns: str):
         trkpt = ET.SubElement(trkseg, q("trkpt"), rtept.attrib)
         # Copy all children (ele, time, etc.)
         for child in rtept:
-            trkpt.append(child)
+            trkpt.append(deepcopy(child))
     
     return trk
 
