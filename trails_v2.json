@@ -393,6 +393,33 @@
       "startLat": 47.13581666119788,
       "startLon": 28.632730301668573,
       "countryId": "md"
+    },
+    {
+      "id": "trail_park_codru",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "New file 2",
+        "ro": "Fișier nou 2",
+        "uk": "Новий файл 2",
+        "en": "New file 2"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": "",
+        "en": ""
+      },
+      "difficulty": "green",
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": "",
+        "en": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_park_codru.gpx",
+      "startLat": 46.977926,
+      "startLon": 28.837567
     }
   ]
 }
