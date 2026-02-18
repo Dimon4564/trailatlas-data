@@ -142,7 +142,7 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
             # Copy metadata if exists
             metadata = root.find(q("metadata"))
             if metadata is not None:
-                new_root.append(metadata)
+                new_root.append(deepcopy(metadata))
             
             # Add the single track
             new_root.append(trk)
@@ -156,6 +156,7 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
             print(f"  Created: {new_path.name}")
         
         # Process routes (convert to tracks)
+        # Note: idx starts after tracks for fallback filename numbering (e.g., ro_003.gpx if routes have no names)
         for idx, rte in enumerate(routes, len(tracks) + 1):
             # Try to get route name
             name_elem = rte.find(q("name"))
@@ -179,7 +180,7 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
             # Copy metadata if exists
             metadata = root.find(q("metadata"))
             if metadata is not None:
-                new_root.append(metadata)
+                new_root.append(deepcopy(metadata))
             
             # Convert route to track and add it
             trk = convert_route_to_track(rte, ns)
