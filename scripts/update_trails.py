@@ -31,6 +31,40 @@ COUNTRY_FOLDERS = {
 # Reverse mapping for efficiency
 COUNTRY_CODE_TO_FOLDER = {v: k for k, v in COUNTRY_FOLDERS.items()}
 
+# Trail type names in all languages
+TRAIL_TYPE_NAMES = {
+    "xc": {"ru": "XC трейл", "ro": "Traseu XC", "uk": "XC трейл", "en": "XC Trail"},
+    "trail": {"ru": "Трейл", "ro": "Traseu", "uk": "Трейл", "en": "Trail"},
+    "enduro": {"ru": "Эндуро", "ro": "Enduro", "uk": "Ендуро", "en": "Enduro"},
+    "dh": {"ru": "Даунхилл", "ro": "Downhill", "uk": "Даунхіл", "en": "Downhill"},
+    "flow": {"ru": "Флоу", "ro": "Flow", "uk": "Флоу", "en": "Flow"}
+}
+
+# Trail type descriptions in Russian
+TRAIL_TYPE_DESCRIPTIONS = {
+    "xc": "Кросс-кантри трейл с плавными подъемами",
+    "trail": "Трейловая трасса с техническими секциями",
+    "enduro": "Эндуро трасса с крутыми спусками и техническими участками",
+    "dh": "Даунхилл трасса с интенсивным спуском",
+    "flow": "Флоу-трейл с плавными виражами и прыжками"
+}
+
+# Surface type descriptions in Russian
+SURFACE_DESCRIPTIONS = {
+    "dirt": "грунтовое покрытие",
+    "gravel": "гравийное покрытие",
+    "paved": "асфальтированная поверхность",
+    "ground": "естественное покрытие"
+}
+
+# Difficulty recommendations in Russian
+DIFFICULTY_DESCRIPTIONS = {
+    "green": "Подходит для начинающих райдеров",
+    "blue": "Требует базовых навыков катания",
+    "red": "Рекомендуется для опытных райдеров",
+    "black": "Только для экспертов с отличной техникой"
+}
+
 # ------------------ helpers ------------------
 def today_yyyy_mm_dd():
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -97,10 +131,13 @@ def should_process_track(trk_elem, gpx_root, ns: str) -> Tuple[bool, str]:
     
     # Save to temp file
     import tempfile
+    temp_path = None
     try:
         with tempfile.NamedTemporaryFile(mode='w', suffix='.gpx', delete=False) as f:
-            temp_tree.write(f.name, encoding='utf-8', xml_declaration=True)
-            temp_path = Path(f.name)
+            temp_file_name = f.name
+        # Write after closing the file to avoid issues on some platforms
+        temp_path = Path(temp_file_name)
+        temp_tree.write(temp_path, encoding='utf-8', xml_declaration=True)
         
         # Check point count
         pts = parse_gpx_points(temp_path, include_elevation=True)
@@ -120,7 +157,7 @@ def should_process_track(trk_elem, gpx_root, ns: str) -> Tuple[bool, str]:
         return (True, "")
     
     finally:
-        if temp_path.exists():
+        if temp_path is not None and temp_path.exists():
             temp_path.unlink()
 
 def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
@@ -409,38 +446,16 @@ def generate_description(gpx_path: Path, stats: Dict[str, float], difficulty: st
         parts.append(f"Трейл протяженностью {distance_km:.1f} км")
     
     # 2. Trail type description
-    type_descriptions = {
-        "xc": "Кросс-кантри трейл с плавными подъемами",
-        "trail": "Трейловая трасса с техническими секциями",
-        "enduro": "Эндуро трасса с крутыми спусками и техническими участками",
-        "dh": "Даунхилл трасса с интенсивным спуском",
-        "flow": "Флоу-трейл с плавными виражами и прыжками"
-    }
-    
-    if trail_type in type_descriptions:
-        parts.append(type_descriptions[trail_type])
+    if trail_type in TRAIL_TYPE_DESCRIPTIONS:
+        parts.append(TRAIL_TYPE_DESCRIPTIONS[trail_type])
     
     # 3. Surface type if available
-    if surface:
-        surface_desc = {
-            "dirt": "грунтовое покрытие",
-            "gravel": "гравийное покрытие",
-            "paved": "асфальтированная поверхность",
-            "ground": "естественное покрытие"
-        }
-        if surface in surface_desc:
-            parts.append(f"Покрытие: {surface_desc[surface]}")
+    if surface and surface in SURFACE_DESCRIPTIONS:
+        parts.append(f"Покрытие: {SURFACE_DESCRIPTIONS[surface]}")
     
     # 4. Difficulty recommendation
-    difficulty_desc = {
-        "green": "Подходит для начинающих райдеров",
-        "blue": "Требует базовых навыков катания",
-        "red": "Рекомендуется для опытных райдеров",
-        "black": "Только для экспертов с отличной техникой"
-    }
-    
-    if difficulty in difficulty_desc:
-        parts.append(difficulty_desc[difficulty])
+    if difficulty in DIFFICULTY_DESCRIPTIONS:
+        parts.append(DIFFICULTY_DESCRIPTIONS[difficulty])
     
     # Join parts
     desc = ". ".join(parts) + "."
@@ -585,16 +600,8 @@ def generate_smart_name(gpx_path: Path, stats: Dict, trail_type: str) -> Optiona
         
         length_km = stats.get("total_distance", 0) / 1000
         
-        # Trail type names in all languages
-        type_names = {
-            "xc": {"ru": "XC трейл", "ro": "Traseu XC", "uk": "XC трейл", "en": "XC Trail"},
-            "trail": {"ru": "Трейл", "ro": "Traseu", "uk": "Трейл", "en": "Trail"},
-            "enduro": {"ru": "Эндуро", "ro": "Enduro", "uk": "Ендуро", "en": "Enduro"},
-            "dh": {"ru": "Даунхилл", "ro": "Downhill", "uk": "Даунхіл", "en": "Downhill"},
-            "flow": {"ru": "Флоу", "ro": "Flow", "uk": "Флоу", "en": "Flow"}
-        }
-        
-        type_name = type_names.get(trail_type, type_names["trail"])
+        # Get trail type names from constants
+        type_name = TRAIL_TYPE_NAMES.get(trail_type, TRAIL_TYPE_NAMES["trail"])
         
         return {
             "ru": f"{type_name['ru']} {region} {length_km:.1f} км",
