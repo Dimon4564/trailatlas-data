@@ -209,17 +209,20 @@ def detect_trail_styles(stats: Dict[str, float], points: List) -> List[str]:
 
 def generate_suitable_text(difficulty: str, styles: List[str]) -> str:
     """Generate suitable field based on difficulty and styles."""
+    # Convert styles list to tuple for dictionary key
+    styles_tuple = tuple(sorted(styles)) if styles else ()
+    
     style_map = {
-        ("green", ["MTB"]): "Cross Country / All Mountain",
-        ("blue", ["MTB"]): "All Mountain / Cross Country",
-        ("blue", ["MTB", "DH"]): "All Mountain / Enduro / Downhill",
-        ("red", ["MTB"]): "All Mountain / Enduro",
-        ("red", ["MTB", "DH"]): "Enduro / Downhill",
-        ("black", ["MTB", "DH"]): "Downhill / Freeride",
-        ("black", ["DH"]): "Downhill / Freeride"
+        ("green", ("MTB",)): "Cross Country / All Mountain",
+        ("blue", ("MTB",)): "All Mountain / Cross Country",
+        ("blue", ("DH", "MTB")): "All Mountain / Enduro / Downhill",
+        ("red", ("MTB",)): "All Mountain / Enduro",
+        ("red", ("DH", "MTB")): "Enduro / Downhill",
+        ("black", ("DH", "MTB")): "Downhill / Freeride",
+        ("black", ("DH",)): "Downhill / Freeride"
     }
     
-    key = (difficulty, styles)
+    key = (difficulty, styles_tuple)
     if key in style_map:
         return style_map[key]
     
