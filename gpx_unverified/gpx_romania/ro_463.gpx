@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:trkseg>
+      <ns0:trkpt lat="47.85319" lon="22.705234" />
+      <ns0:trkpt lat="47.853299" lon="22.705522" />
+      <ns0:trkpt lat="47.853539" lon="22.706133" />
+      <ns0:trkpt lat="47.853672" lon="22.706464" />
+      <ns0:trkpt lat="47.85414" lon="22.707632" />
+      <ns0:trkpt lat="47.854546" lon="22.708671" />
+      <ns0:trkpt lat="47.854697" lon="22.709108" />
+      <ns0:trkpt lat="47.854775" lon="22.7094" />
+      <ns0:trkpt lat="47.854836" lon="22.709731" />
+      <ns0:trkpt lat="47.854887" lon="22.71008" />
+      <ns0:trkpt lat="47.85491" lon="22.710348" />
+      <ns0:trkpt lat="47.854922" lon="22.710673" />
+      <ns0:trkpt lat="47.854906" lon="22.710988" />
+      <ns0:trkpt lat="47.854875" lon="22.711356" />
+      <ns0:trkpt lat="47.854611" lon="22.713838" />
+      <ns0:trkpt lat="47.854463" lon="22.715283" />
+      <ns0:trkpt lat="47.854444" lon="22.715371" />
+      <ns0:trkpt lat="47.8544248" lon="22.7154781" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

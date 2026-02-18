@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:trkseg>
+      <ns0:trkpt lat="46.9227417" lon="21.2867699" />
+      <ns0:trkpt lat="46.9226939" lon="21.286704" />
+      <ns0:trkpt lat="46.9225964" lon="21.2866692" />
+      <ns0:trkpt lat="46.9225792" lon="21.2864036" />
+      <ns0:trkpt lat="46.9225953" lon="21.2859206" />
+      <ns0:trkpt lat="46.92266" lon="21.285109" />
+      <ns0:trkpt lat="46.9227053" lon="21.2848721" />
+      <ns0:trkpt lat="46.9227685" lon="21.2846668" />
+      <ns0:trkpt lat="46.9227562" lon="21.2845167" />
+      <ns0:trkpt lat="46.9226924" lon="21.2844173" />
+      <ns0:trkpt lat="46.9226748" lon="21.284297" />
+      <ns0:trkpt lat="46.9228381" lon="21.2823425" />
+      <ns0:trkpt lat="46.9230267" lon="21.2798984" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

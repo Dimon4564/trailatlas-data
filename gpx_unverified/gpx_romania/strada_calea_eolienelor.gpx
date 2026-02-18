@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Strada Calea Eolienelor</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="44.5460622" lon="22.1701068" />
+      <ns0:trkpt lat="44.5462606" lon="22.1700539" />
+      <ns0:trkpt lat="44.5466716" lon="22.1699089" />
+      <ns0:trkpt lat="44.5472528" lon="22.169732" />
+      <ns0:trkpt lat="44.5476037" lon="22.1695894" />
+      <ns0:trkpt lat="44.5478694" lon="22.1694312" />
+      <ns0:trkpt lat="44.5481623" lon="22.1692765" />
+      <ns0:trkpt lat="44.5484106" lon="22.1691477" />
+      <ns0:trkpt lat="44.5485599" lon="22.169052" />
+      <ns0:trkpt lat="44.5487363" lon="22.1690037" />
+      <ns0:trkpt lat="44.5488916" lon="22.1689844" />
+      <ns0:trkpt lat="44.5490531" lon="22.1689188" />
+      <ns0:trkpt lat="44.5492072" lon="22.1688381" />
+      <ns0:trkpt lat="44.5493116" lon="22.1687744" />
+      <ns0:trkpt lat="44.5494205" lon="22.1687449" />
+      <ns0:trkpt lat="44.5496374" lon="22.16868" />
+      <ns0:trkpt lat="44.5497842" lon="22.1686528" />
+      <ns0:trkpt lat="44.5499305" lon="22.1686228" />
+      <ns0:trkpt lat="44.5502095" lon="22.1685343" />
+      <ns0:trkpt lat="44.5510415" lon="22.1682342" />
+      <ns0:trkpt lat="44.551081" lon="22.1682067" />
+      <ns0:trkpt lat="44.5511036" lon="22.1681765" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

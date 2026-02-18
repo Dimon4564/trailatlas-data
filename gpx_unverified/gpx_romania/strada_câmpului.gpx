@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Strada Câmpului</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="44.7747372" lon="22.4929968" />
+      <ns0:trkpt lat="44.7747277" lon="22.4928264" />
+      <ns0:trkpt lat="44.7747239" lon="22.4926575" />
+      <ns0:trkpt lat="44.7747248" lon="22.4925166" />
+      <ns0:trkpt lat="44.7747181" lon="22.4923436" />
+      <ns0:trkpt lat="44.7747124" lon="22.4922766" />
+      <ns0:trkpt lat="44.7746962" lon="22.4921867" />
+      <ns0:trkpt lat="44.7746743" lon="22.4921103" />
+      <ns0:trkpt lat="44.7746353" lon="22.4919789" />
+      <ns0:trkpt lat="44.7745953" lon="22.4918032" />
+      <ns0:trkpt lat="44.7745668" lon="22.491539" />
+      <ns0:trkpt lat="44.7745582" lon="22.4913472" />
+      <ns0:trkpt lat="44.7745563" lon="22.4912741" />
+      <ns0:trkpt lat="44.7745373" lon="22.4911916" />
+      <ns0:trkpt lat="44.7744878" lon="22.4911031" />
+      <ns0:trkpt lat="44.7744268" lon="22.4910629" />
+      <ns0:trkpt lat="44.7743126" lon="22.4909958" />
+      <ns0:trkpt lat="44.7741869" lon="22.4909529" />
+      <ns0:trkpt lat="44.7740327" lon="22.4908376" />
+      <ns0:trkpt lat="44.7738975" lon="22.4906284" />
+      <ns0:trkpt lat="44.7737908" lon="22.4903333" />
+      <ns0:trkpt lat="44.7737528" lon="22.4901992" />
+      <ns0:trkpt lat="44.7736804" lon="22.4898237" />
+      <ns0:trkpt lat="44.7736155" lon="22.4896351" />
+      <ns0:trkpt lat="44.7735662" lon="22.4895662" />
+      <ns0:trkpt lat="44.7734415" lon="22.4894736" />
+      <ns0:trkpt lat="44.7733739" lon="22.4893436" />
+      <ns0:trkpt lat="44.7733282" lon="22.4892256" />
+      <ns0:trkpt lat="44.773271" lon="22.4890271" />
+      <ns0:trkpt lat="44.7731873" lon="22.4888179" />
+      <ns0:trkpt lat="44.7731389" lon="22.4887068" />
+      <ns0:trkpt lat="44.773033" lon="22.4884638" />
+      <ns0:trkpt lat="44.772934" lon="22.4882305" />
+      <ns0:trkpt lat="44.772816" lon="22.4879569" />
+      <ns0:trkpt lat="44.772776" lon="22.487855" />
+      <ns0:trkpt lat="44.7726903" lon="22.4877772" />
+      <ns0:trkpt lat="44.7725722" lon="22.4877128" />
+      <ns0:trkpt lat="44.7723228" lon="22.4875331" />
+      <ns0:trkpt lat="44.7721076" lon="22.4873507" />
+      <ns0:trkpt lat="44.7719705" lon="22.4872273" />
+      <ns0:trkpt lat="44.7719248" lon="22.4871308" />
+      <ns0:trkpt lat="44.7719001" lon="22.487002" />
+      <ns0:trkpt lat="44.771881" lon="22.4868143" />
+      <ns0:trkpt lat="44.7718353" lon="22.4867043" />
+      <ns0:trkpt lat="44.7717592" lon="22.4865621" />
+      <ns0:trkpt lat="44.7716068" lon="22.4863073" />
+      <ns0:trkpt lat="44.7714964" lon="22.4860901" />
+      <ns0:trkpt lat="44.7715078" lon="22.4859157" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>
