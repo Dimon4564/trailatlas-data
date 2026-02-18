@@ -24,6 +24,10 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install dependencies
+        run: |
+          pip install deep-translator
+
       - name: Update Verified + Unverified JSON
         run: |
           python scripts/update_trails.py \
@@ -41,6 +45,6 @@ jobs:
           fi
           git config user.name "trailatlas-bot"
           git config user.email "trailatlas-bot@users.noreply.github.com"
-          git add trails_v2.json trails_unverified.json
+          git add trails_v2.json trails_unverified.json gpx_unverified/
           git commit -m "chore: auto-update trails JSON"
           git push
