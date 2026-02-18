@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>poland_trail</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Dojazd pożarowy 14</ns0:name>
+    <ns0:type>route</ns0:type>
+    <ns0:trkseg>
+      <ns0:trkpt lat="49.5959342" lon="19.2687979" />
+      <ns0:trkpt lat="49.5956761" lon="19.2685546" />
+      <ns0:trkpt lat="49.5955041" lon="19.2683997" />
+      <ns0:trkpt lat="49.5954761" lon="19.2683227" />
+      <ns0:trkpt lat="49.5954941" lon="19.2682563" />
+      <ns0:trkpt lat="49.5956554" lon="19.2681568" />
+      <ns0:trkpt lat="49.5962023" lon="19.2677115" />
+      <ns0:trkpt lat="49.5969909" lon="19.2670369" />
+      <ns0:trkpt lat="49.5974497" lon="19.2667493" />
+      <ns0:trkpt lat="49.5978081" lon="19.2664396" />
+      <ns0:trkpt lat="49.5978598" lon="19.2663466" />
+      <ns0:trkpt lat="49.5978942" lon="19.2662848" />
+      <ns0:trkpt lat="49.5978779" lon="19.2661595" />
+      <ns0:trkpt lat="49.5978655" lon="19.2660636" />
+      <ns0:trkpt lat="49.5976361" lon="19.2657539" />
+      <ns0:trkpt lat="49.5973207" lon="19.2653225" />
+      <ns0:trkpt lat="49.5967615" lon="19.2645372" />
+      <ns0:trkpt lat="49.596231" lon="19.2638847" />
+      <ns0:trkpt lat="49.5955858" lon="19.2631215" />
+      <ns0:trkpt lat="49.5952847" lon="19.2628893" />
+      <ns0:trkpt lat="49.5946251" lon="19.2625464" />
+      <ns0:trkpt lat="49.5937648" lon="19.2622809" />
+      <ns0:trkpt lat="49.5934279" lon="19.2622035" />
+      <ns0:trkpt lat="49.5931196" lon="19.262115" />
+      <ns0:trkpt lat="49.5929045" lon="19.261916" />
+      <ns0:trkpt lat="49.5927754" lon="19.261551" />
+      <ns0:trkpt lat="49.5926177" lon="19.261197" />
+      <ns0:trkpt lat="49.5924313" lon="19.2609205" />
+      <ns0:trkpt lat="49.5923022" lon="19.2604228" />
+      <ns0:trkpt lat="49.5922925" lon="19.260388" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>
