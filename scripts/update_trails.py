@@ -156,7 +156,8 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
             print(f"  Created: {new_path.name}")
         
         # Process routes (convert to tracks)
-        # Note: idx starts after tracks for fallback filename numbering (e.g., {country_code}_003.gpx if routes have no names)
+        # Note: idx starts after tracks (len(tracks) + 1) for continuous numbering in fallback filenames
+        # Example: if 2 tracks without names create ro_001.gpx and ro_002.gpx, routes will create ro_003.gpx, ro_004.gpx, etc.
         for idx, rte in enumerate(routes, len(tracks) + 1):
             # Try to get route name
             name_elem = rte.find(q("name"))
