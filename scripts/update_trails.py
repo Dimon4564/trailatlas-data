@@ -31,6 +31,40 @@ COUNTRY_FOLDERS = {
 # Reverse mapping for efficiency
 COUNTRY_CODE_TO_FOLDER = {v: k for k, v in COUNTRY_FOLDERS.items()}
 
+# Trail type names in all languages
+TRAIL_TYPE_NAMES = {
+    "xc": {"ru": "XC трейл", "ro": "Traseu XC", "uk": "XC трейл", "en": "XC Trail"},
+    "trail": {"ru": "Трейл", "ro": "Traseu", "uk": "Трейл", "en": "Trail"},
+    "enduro": {"ru": "Эндуро", "ro": "Enduro", "uk": "Ендуро", "en": "Enduro"},
+    "dh": {"ru": "Даунхилл", "ro": "Downhill", "uk": "Даунхіл", "en": "Downhill"},
+    "flow": {"ru": "Флоу", "ro": "Flow", "uk": "Флоу", "en": "Flow"}
+}
+
+# Trail type descriptions in Russian
+TRAIL_TYPE_DESCRIPTIONS = {
+    "xc": "Кросс-кантри трейл с плавными подъемами",
+    "trail": "Трейловая трасса с техническими секциями",
+    "enduro": "Эндуро трасса с крутыми спусками и техническими участками",
+    "dh": "Даунхилл трасса с интенсивным спуском",
+    "flow": "Флоу-трейл с плавными виражами и прыжками"
+}
+
+# Surface type descriptions in Russian
+SURFACE_DESCRIPTIONS = {
+    "dirt": "грунтовое покрытие",
+    "gravel": "гравийное покрытие",
+    "paved": "асфальтированная поверхность",
+    "ground": "естественное покрытие"
+}
+
+# Difficulty recommendations in Russian
+DIFFICULTY_DESCRIPTIONS = {
+    "green": "Подходит для начинающих райдеров",
+    "blue": "Требует базовых навыков катания",
+    "red": "Рекомендуется для опытных райдеров",
+    "black": "Только для экспертов с отличной техникой"
+}
+
 # ------------------ helpers ------------------
 def today_yyyy_mm_dd():
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -83,6 +117,49 @@ def convert_route_to_track(rte_elem, ns: str):
     
     return trk
 
+def should_process_track(trk_elem, gpx_root, ns: str) -> Tuple[bool, str]:
+    """
+    Check if track should be processed.
+    Returns (should_process, skip_reason)
+    """
+    def q(tag): return f"{{{ns}}}{tag}" if ns else tag
+    
+    # Create temp GPX to analyze
+    temp_root = ET.Element(gpx_root.tag, gpx_root.attrib)
+    temp_root.append(deepcopy(trk_elem))
+    temp_tree = ET.ElementTree(temp_root)
+    
+    # Save to temp file
+    import tempfile
+    temp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.gpx', delete=False) as f:
+            temp_file_name = f.name
+        # Write after closing the file to avoid issues on some platforms
+        temp_path = Path(temp_file_name)
+        temp_tree.write(temp_path, encoding='utf-8', xml_declaration=True)
+        
+        # Check point count
+        pts = parse_gpx_points(temp_path, include_elevation=True)
+        if len(pts) < 10:
+            return (False, f"too few points ({len(pts)})")
+        
+        # Check length
+        stats = calculate_elevation_stats(pts)
+        length = stats.get("total_distance", 0)
+        
+        if length < 200:
+            return (False, f"too short ({length:.0f}m)")
+        
+        if length > 50000:
+            return (False, f"too long ({length/1000:.1f}km)")
+        
+        return (True, "")
+    
+    finally:
+        if temp_path is not None and temp_path.exists():
+            temp_path.unlink()
+
 def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
     """
     Split a GPX file with multiple <trk> or <rte> elements into individual GPX files.
@@ -120,6 +197,12 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
         
         # Process tracks
         for idx, trk in enumerate(tracks, 1):
+            # Check if track should be processed
+            should_process, skip_reason = should_process_track(trk, root, ns)
+            if not should_process:
+                print(f"⚠️  Skipping track {idx}: {skip_reason}")
+                continue
+            
             # Try to get track name
             name_elem = trk.find(q("name"))
             if name_elem is not None and name_elem.text:
@@ -159,6 +242,15 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
         # Note: idx starts after tracks (len(tracks) + 1) for continuous numbering in fallback filenames
         # Example: if 2 tracks without names create ro_001.gpx and ro_002.gpx, routes will create ro_003.gpx, ro_004.gpx, etc.
         for idx, rte in enumerate(routes, len(tracks) + 1):
+            # Convert route to track first for quality checking
+            trk = convert_route_to_track(rte, ns)
+            
+            # Check if track should be processed
+            should_process, skip_reason = should_process_track(trk, root, ns)
+            if not should_process:
+                print(f"⚠️  Skipping route {idx}: {skip_reason}")
+                continue
+            
             # Try to get route name
             name_elem = rte.find(q("name"))
             if name_elem is not None and name_elem.text:
@@ -183,8 +275,7 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
             if metadata is not None:
                 new_root.append(deepcopy(metadata))
             
-            # Convert route to track and add it
-            trk = convert_route_to_track(rte, ns)
+            # Add the converted track (already done above)
             new_root.append(trk)
             
             # Write to file
@@ -208,24 +299,20 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
 def calculate_elevation_stats(points: List[Tuple[float, float, Optional[float]]]) -> Dict[str, float]:
     """
     Calculate elevation statistics from points with elevation data.
-    Returns dict with elevation_gain, elevation_loss, avg_gradient, etc.
+    Returns dict with elevation_gain, elevation_loss, avg_gradient, total_distance, etc.
+    Always calculates total_distance even without elevation data.
     """
     if not points:
-        return {"elevation_gain": 0, "elevation_loss": 0, "avg_gradient": 0, "has_elevation": False}
+        return {"elevation_gain": 0, "elevation_loss": 0, "avg_gradient": 0, "total_distance": 0, "has_elevation": False}
     
     # Filter points with elevation data
     points_with_ele = [(lat, lon, ele) for lat, lon, ele in points if ele is not None]
     
-    if len(points_with_ele) < 2:
-        return {"elevation_gain": 0, "elevation_loss": 0, "avg_gradient": 0, "has_elevation": False}
-    
-    elevation_gain = 0
-    elevation_loss = 0
+    # Calculate total distance using all points (even without elevation)
     total_distance = 0
-    
-    for i in range(1, len(points_with_ele)):
-        prev_lat, prev_lon, prev_ele = points_with_ele[i-1]
-        curr_lat, curr_lon, curr_ele = points_with_ele[i]
+    for i in range(1, len(points)):
+        prev_lat, prev_lon = points[i-1][0], points[i-1][1]
+        curr_lat, curr_lon = points[i][0], points[i][1]
         
         # Calculate distance (Haversine formula)
         lat1, lon1 = math.radians(prev_lat), math.radians(prev_lon)
@@ -237,6 +324,17 @@ def calculate_elevation_stats(points: List[Tuple[float, float, Optional[float]]]
         distance = 6371000 * c  # Earth radius in meters
         
         total_distance += distance
+    
+    # If we have no elevation data, return early with distance only
+    if len(points_with_ele) < 2:
+        return {"elevation_gain": 0, "elevation_loss": 0, "avg_gradient": 0, "total_distance": total_distance, "has_elevation": False}
+    
+    elevation_gain = 0
+    elevation_loss = 0
+    
+    for i in range(1, len(points_with_ele)):
+        prev_ele = points_with_ele[i-1][2]
+        curr_ele = points_with_ele[i][2]
         
         # Calculate elevation change
         ele_change = curr_ele - prev_ele
@@ -325,30 +423,42 @@ def generate_suitable_text(difficulty: str, styles: List[str]) -> str:
     else:
         return "Downhill / Freeride"
 
-def generate_description(stats: Dict[str, float], difficulty: str, country_code: str) -> str:
-    """Generate a basic description in Russian based on trail characteristics."""
+def generate_description(gpx_path: Path, stats: Dict[str, float], difficulty: str, 
+                        country_code: str, trail_type: str) -> str:
+    """Generate detailed, unique description based on trail characteristics"""
     distance_km = stats.get("total_distance", 0) / 1000
     elevation_gain = stats.get("elevation_gain", 0)
+    elevation_loss = stats.get("elevation_loss", 0)
     
-    country_names = {
-        "ro": "Румынии",
-        "de": "Германии",
-        "pl": "Польши",
-        "md": "Молдове"
-    }
+    # Extract OSM surface info if available
+    surface = extract_surface_type(gpx_path) if gpx_path else None
     
-    country_name = country_names.get(country_code, "")
+    # Build description parts
+    parts = []
     
+    # 1. Basic length and elevation
     if stats.get("has_elevation", False):
-        desc = f"Трейл протяженностью {distance_km:.1f} км с набором высоты {elevation_gain:.0f} м"
-        if country_name:
-            desc += f" в {country_name}"
-        desc += "."
+        if elevation_loss > elevation_gain:
+            parts.append(f"Трейл протяженностью {distance_km:.1f} км с перепадом высоты {elevation_loss:.0f} м")
+        else:
+            parts.append(f"Трейл протяженностью {distance_km:.1f} км с набором высоты {elevation_gain:.0f} м")
     else:
-        desc = f"Трейл"
-        if country_name:
-            desc += f" в {country_name}"
-        desc += "."
+        parts.append(f"Трейл протяженностью {distance_km:.1f} км")
+    
+    # 2. Trail type description
+    if trail_type in TRAIL_TYPE_DESCRIPTIONS:
+        parts.append(TRAIL_TYPE_DESCRIPTIONS[trail_type])
+    
+    # 3. Surface type if available
+    if surface and surface in SURFACE_DESCRIPTIONS:
+        parts.append(f"Покрытие: {SURFACE_DESCRIPTIONS[surface]}")
+    
+    # 4. Difficulty recommendation
+    if difficulty in DIFFICULTY_DESCRIPTIONS:
+        parts.append(DIFFICULTY_DESCRIPTIONS[difficulty])
+    
+    # Join parts
+    desc = ". ".join(parts) + "."
     
     return desc
 
@@ -432,6 +542,144 @@ def get_gpx_track_name(gpx_path: Path) -> Optional[str]:
             name_elem = metadata.find(q("name"))
             if name_elem is not None and name_elem.text:
                 return name_elem.text
+        
+        return None
+    except Exception:
+        return None
+
+def extract_osm_name(gpx_path: Path) -> Optional[str]:
+    """Extract name from OSM extensions (ogr:name or ogr:ref)"""
+    try:
+        tree = ET.parse(gpx_path)
+        root = tree.getroot()
+        m = re.match(r"\{(.+)\}", root.tag)
+        ns = m.group(1) if m else ""
+        
+        # Check for ogr:ref (e.g., "DC49")
+        for ext in root.findall('.//{*}extensions'):
+            ref_elem = ext.find('.//{*}ref')
+            if ref_elem is not None and ref_elem.text:
+                return f"Route {ref_elem.text}"
+            
+            name_elem = ext.find('.//{*}name')
+            if name_elem is not None and name_elem.text:
+                return name_elem.text
+        
+        return None
+    except Exception:
+        return None
+
+def detect_region_from_coords(lat: float, lon: float) -> str:
+    """Simple region detection for Romania based on coordinates"""
+    # Approximate regions based on lat/lon ranges
+    if 45.4 <= lat <= 45.9 and 21.2 <= lon <= 21.8:
+        return "Timiș"
+    elif 44.7 <= lat <= 45.2 and 22.5 <= lon <= 23.0:
+        return "Caraș-Severin"
+    elif 47.0 <= lat <= 47.8 and 23.5 <= lon <= 24.5:
+        return "Cluj"
+    elif 46.0 <= lat <= 46.5 and 24.5 <= lon <= 25.5:
+        return "Brașov"
+    elif 45.0 <= lat <= 45.5 and 25.5 <= lon <= 26.5:
+        return "Prahova"
+    # Add more regions as needed
+    return "Romania"
+
+def generate_smart_name(gpx_path: Path, stats: Dict, trail_type: str) -> Optional[Dict[str, str]]:
+    """Generate smart name based on location and trail characteristics"""
+    try:
+        # Get start coordinates
+        pts = parse_gpx_points(gpx_path, include_elevation=False)
+        if not pts:
+            return None
+        
+        start_lat, start_lon = pts[0]
+        
+        # Simple location-based naming (without external API to avoid rate limits)
+        region = detect_region_from_coords(start_lat, start_lon)
+        
+        length_km = stats.get("total_distance", 0) / 1000
+        
+        # Get trail type names from constants
+        type_name = TRAIL_TYPE_NAMES.get(trail_type, TRAIL_TYPE_NAMES["trail"])
+        
+        return {
+            "ru": f"{type_name['ru']} {region} {length_km:.1f} км",
+            "ro": f"{type_name['ro']} {region} {length_km:.1f} km",
+            "uk": f"{type_name['uk']} {region} {length_km:.1f} км",
+            "en": f"{type_name['en']} {region} {length_km:.1f} km"
+        }
+    except Exception:
+        return None
+
+def determine_trail_type(gpx_path: Path, stats: Dict[str, float]) -> str:
+    """Determine trail type from OSM tags or characteristics"""
+    try:
+        tree = ET.parse(gpx_path)
+        root = tree.getroot()
+        
+        # Extract OSM tags from extensions
+        osm_tags = {}
+        for ext in root.findall('.//{*}extensions'):
+            for child in ext:
+                # Extract tag name (remove namespace)
+                tag_name = child.tag.split('}')[-1] if '}' in child.tag else child.tag
+                if child.text:
+                    osm_tags[tag_name] = child.text
+        
+        # Check mtb:scale
+        if 'mtb:scale' in osm_tags:
+            try:
+                scale = int(osm_tags['mtb:scale'])
+                if scale >= 4:
+                    return "dh"
+                elif scale >= 2:
+                    return "enduro"
+                elif scale >= 1:
+                    return "trail"
+                else:
+                    return "xc"
+            except ValueError:
+                pass
+        
+        # Check highway type
+        if 'highway' in osm_tags:
+            highway = osm_tags['highway']
+            if highway == 'path' and 'mtb:scale:uphill' in osm_tags:
+                return "enduro"
+            elif highway == 'path':
+                return "trail"
+        
+        # Fallback to gradient-based detection
+        if not stats.get("has_elevation", False):
+            return "xc"
+        
+        avg_gradient = stats.get("avg_gradient", 0)
+        elevation_loss = stats.get("elevation_loss", 0)
+        elevation_gain = stats.get("elevation_gain", 0)
+        
+        # Check if primarily downhill
+        if elevation_loss > elevation_gain * 2 and elevation_loss > 100:
+            return "dh"
+        elif avg_gradient > 10:
+            return "enduro"
+        elif avg_gradient > 5:
+            return "trail"
+        else:
+            return "xc"
+    except Exception:
+        return "xc"
+
+def extract_surface_type(gpx_path: Path) -> Optional[str]:
+    """Extract surface type from OSM tags"""
+    try:
+        tree = ET.parse(gpx_path)
+        root = tree.getroot()
+        
+        for ext in root.findall('.//{*}extensions'):
+            surface_elem = ext.find('.//{*}surface')
+            if surface_elem is not None and surface_elem.text:
+                return surface_elem.text
         
         return None
     except Exception:
@@ -564,7 +812,7 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
     else:
         styles = []
 
-    # Handle name - try to get from GPX if not set
+    # Handle name - smart generation with priority order
     prev_name = prev.get("name")
     if isinstance(prev_name, dict):
         # Check if we have any existing values
@@ -579,7 +827,8 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                     # Fill missing language with Russian or first available
                     name[lang] = prev_name.get("ru") or next((v for v in prev_name.values() if v), tid)
         else:
-            # No existing values, try GPX name
+            # No existing values, try smart generation
+            # Priority 1: Try GPX <name> tag
             gpx_name = None
             if gpx_path and gpx_path.exists():
                 gpx_name = get_gpx_track_name(gpx_path)
@@ -587,9 +836,29 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
             if gpx_name:
                 name = auto_translate_i18n(gpx_name, "ru")
             else:
-                name = default_i18n(tid)
+                # Priority 2: Try OSM ref
+                osm_name = extract_osm_name(gpx_path) if gpx_path else None
+                
+                if osm_name:
+                    name = auto_translate_i18n(osm_name, "en")
+                elif is_unverified and stats.get("total_distance", 0) > 0:
+                    # Priority 3: Generate smart name from geolocation + characteristics
+                    trail_type = determine_trail_type(gpx_path, stats) if gpx_path else "xc"
+                    smart_name = generate_smart_name(gpx_path, stats, trail_type)
+                    
+                    if smart_name:
+                        name = smart_name
+                    else:
+                        # Priority 4: Fallback to cleaned filename
+                        cleaned = tid.replace("_", " ").title()
+                        name = auto_translate_i18n(f"{cleaned} Trail", "en")
+                else:
+                    # Fallback
+                    cleaned = tid.replace("_", " ").title()
+                    name = default_i18n(cleaned)
     else:
-        # Try to extract name from GPX
+        # Try smart generation
+        # Priority 1: Try GPX <name> tag
         gpx_name = None
         if gpx_path and gpx_path.exists():
             gpx_name = get_gpx_track_name(gpx_path)
@@ -597,7 +866,25 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
         if gpx_name:
             name = auto_translate_i18n(gpx_name, "ru")
         else:
-            name = default_i18n(tid)
+            # Priority 2: Try OSM ref
+            osm_name = extract_osm_name(gpx_path) if gpx_path else None
+            
+            if osm_name:
+                name = auto_translate_i18n(osm_name, "en")
+            elif is_unverified and stats.get("total_distance", 0) > 0:
+                # Priority 3: Generate smart name from geolocation + characteristics
+                trail_type = determine_trail_type(gpx_path, stats) if gpx_path else "xc"
+                smart_name = generate_smart_name(gpx_path, stats, trail_type)
+                
+                if smart_name:
+                    name = smart_name
+                else:
+                    # Priority 4: Fallback to cleaned filename
+                    cleaned = tid.replace("_", " ").title()
+                    name = auto_translate_i18n(f"{cleaned} Trail", "en")
+            else:
+                # Fallback
+                name = default_i18n(tid)
     
     # Handle suitable field
     prev_suitable = prev.get("suitable")
@@ -624,7 +911,7 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
     else:
         suitable = default_i18n("")
     
-    # Handle description
+    # Handle description - enhanced generation
     prev_desc = prev.get("desc")
     if isinstance(prev_desc, dict):
         has_existing = any(v for v in prev_desc.values() if v)
@@ -637,14 +924,16 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                     # Fill missing language with Russian or first available
                     desc[lang] = prev_desc.get("ru") or next((v for v in prev_desc.values() if v), "")
         elif is_unverified and country_id:
-            # Auto-generate description for unverified trails
-            desc_text = generate_description(stats, difficulty, country_id)
+            # Auto-generate enhanced description for unverified trails
+            trail_type = determine_trail_type(gpx_path, stats) if gpx_path else "xc"
+            desc_text = generate_description(gpx_path, stats, difficulty, country_id, trail_type)
             desc = auto_translate_i18n(desc_text, "ru")
         else:
             desc = default_i18n("")
     elif is_unverified and country_id:
-        # Auto-generate description for unverified trails
-        desc_text = generate_description(stats, difficulty, country_id)
+        # Auto-generate enhanced description for unverified trails
+        trail_type = determine_trail_type(gpx_path, stats) if gpx_path else "xc"
+        desc_text = generate_description(gpx_path, stats, difficulty, country_id, trail_type)
         desc = auto_translate_i18n(desc_text, "ru")
     else:
         desc = default_i18n("")
