@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Strada Iepurani</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="44.8423874" lon="22.5754461" />
+      <ns0:trkpt lat="44.8421075" lon="22.5756058" />
+      <ns0:trkpt lat="44.8420771" lon="22.5756263" />
+      <ns0:trkpt lat="44.8418127" lon="22.5758043" />
+      <ns0:trkpt lat="44.8415768" lon="22.5759599" />
+      <ns0:trkpt lat="44.8414118" lon="22.5760426" />
+      <ns0:trkpt lat="44.8413258" lon="22.576051" />
+      <ns0:trkpt lat="44.8411741" lon="22.5760641" />
+      <ns0:trkpt lat="44.8409759" lon="22.5760403" />
+      <ns0:trkpt lat="44.8407596" lon="22.5760404" />
+      <ns0:trkpt lat="44.8404281" lon="22.5759975" />
+      <ns0:trkpt lat="44.8401599" lon="22.5759894" />
+      <ns0:trkpt lat="44.84001" lon="22.5759789" />
+      <ns0:trkpt lat="44.8398861" lon="22.5758875" />
+      <ns0:trkpt lat="44.839807" lon="22.5757781" />
+      <ns0:trkpt lat="44.8397098" lon="22.5755808" />
+      <ns0:trkpt lat="44.8396693" lon="22.5754583" />
+      <ns0:trkpt lat="44.8395792" lon="22.5752079" />
+      <ns0:trkpt lat="44.8395199" lon="22.5750882" />
+      <ns0:trkpt lat="44.8394158" lon="22.5749494" />
+      <ns0:trkpt lat="44.8392214" lon="22.5747703" />
+      <ns0:trkpt lat="44.8390634" lon="22.5746248" />
+      <ns0:trkpt lat="44.83888" lon="22.5745001" />
+      <ns0:trkpt lat="44.8387059" lon="22.5744203" />
+      <ns0:trkpt lat="44.8386088" lon="22.5743706" />
+      <ns0:trkpt lat="44.8385262" lon="22.5743237" />
+      <ns0:trkpt lat="44.8383706" lon="22.574207" />
+      <ns0:trkpt lat="44.8381135" lon="22.5739723" />
+      <ns0:trkpt lat="44.8378729" lon="22.5737296" />
+      <ns0:trkpt lat="44.8376361" lon="22.5735057" />
+      <ns0:trkpt lat="44.8373242" lon="22.5732267" />
+      <ns0:trkpt lat="44.8371244" lon="22.573047" />
+      <ns0:trkpt lat="44.8369433" lon="22.5728205" />
+      <ns0:trkpt lat="44.8366963" lon="22.5724456" />
+      <ns0:trkpt lat="44.8365691" lon="22.5721904" />
+      <ns0:trkpt lat="44.8365161" lon="22.5721181" />
+      <ns0:trkpt lat="44.8364892" lon="22.5720814" />
+      <ns0:trkpt lat="44.8363674" lon="22.5719741" />
+      <ns0:trkpt lat="44.8362329" lon="22.5718558" />
+      <ns0:trkpt lat="44.8360849" lon="22.5716776" />
+      <ns0:trkpt lat="44.8360232" lon="22.5715584" />
+      <ns0:trkpt lat="44.8357588" lon="22.5709146" />
+      <ns0:trkpt lat="44.8356799" lon="22.5707016" />
+      <ns0:trkpt lat="44.8354778" lon="22.5703112" />
+      <ns0:trkpt lat="44.8353359" lon="22.5700616" />
+      <ns0:trkpt lat="44.835249" lon="22.5699276" />
+      <ns0:trkpt lat="44.83517" lon="22.5698262" />
+      <ns0:trkpt lat="44.835114" lon="22.5697774" />
+      <ns0:trkpt lat="44.8350465" lon="22.5697164" />
+      <ns0:trkpt lat="44.8348686" lon="22.5696169" />
+      <ns0:trkpt lat="44.834844" lon="22.5695983" />
+      <ns0:trkpt lat="44.8348265" lon="22.5695817" />
+      <ns0:trkpt lat="44.8347602" lon="22.5695186" />
+      <ns0:trkpt lat="44.8346501" lon="22.5693864" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

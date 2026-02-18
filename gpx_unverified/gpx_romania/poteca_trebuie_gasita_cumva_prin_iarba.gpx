@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>poteca trebuie gasita cumva prin iarba</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="46.658807" lon="25.879824" />
+      <ns0:trkpt lat="46.6581916" lon="25.8793164" />
+      <ns0:trkpt lat="46.657907" lon="25.8790485" />
+      <ns0:trkpt lat="46.6575246" lon="25.8786565" />
+      <ns0:trkpt lat="46.6564381" lon="25.8782079" />
+      <ns0:trkpt lat="46.6562266" lon="25.8782147" />
+      <ns0:trkpt lat="46.6560733" lon="25.8780292" />
+      <ns0:trkpt lat="46.6558002" lon="25.8782264" />
+      <ns0:trkpt lat="46.6554597" lon="25.8782371" />
+      <ns0:trkpt lat="46.6551973" lon="25.8783662" />
+      <ns0:trkpt lat="46.6545476" lon="25.8784155" />
+      <ns0:trkpt lat="46.6540486" lon="25.8784397" />
+      <ns0:trkpt lat="46.6537441" lon="25.8782735" />
+      <ns0:trkpt lat="46.6536188" lon="25.8774049" />
+      <ns0:trkpt lat="46.6531772" lon="25.8764699" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>
