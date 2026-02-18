@@ -1,6 +1,6 @@
 {
   "version": 10,
-  "updatedAt": "2026-01-30",
+  "updatedAt": "2026-02-18",
   "trails": [
     {
       "id": "chisinau_blue",
@@ -12,18 +12,21 @@
       "name": {
         "ru": "TrailPark Morilor 1",
         "ro": "TrailPark Morilor 1",
-        "uk": "TrailPark Morilor 1"
+        "uk": "TrailPark Morilor 1",
+        "en": "chisinau_blue"
       },
       "suitable": {
         "ru": "All Mountains",
         "ro": "All Mountains",
-        "uk": "All Mountains"
+        "uk": "All Mountains",
+        "en": "All Mountains"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Самая первая трасса в Кишиневе для MTB, всё ещё в рабочем состоянии. Есть трамплины — их можно объехать или прыгнуть.",
         "ro": "Primul traseu MTB din Chișinău, încă este într-o stare bună. Există trambuline — le poți ocoli sau sări.",
-        "uk": "Найперший трейл у Кишиневі для MTB, досі в робочому стані. Є трампліни — їх можна об’їхати або стрибнути."
+        "uk": "Найперший трейл у Кишиневі для MTB, досі в робочому стані. Є трампліни — їх можна об’їхати або стрибнути.",
+        "en": "Самая первая трасса в Кишиневе для MTB, всё ещё в рабочем состоянии. Есть трамплины — их можно объехать или прыгнуть."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/chisinau_blue.gpx",
       "startLat": 47.011792,
@@ -40,18 +43,21 @@
       "name": {
         "ru": "Велодорожка Morilor",
         "ro": "Pista de biciclete Morilor",
-        "uk": "Велодорожка Morilor"
+        "uk": "Велодорожка Morilor",
+        "en": "cycle_path_morilor"
       },
       "suitable": {
         "ru": "All Bikes",
         "ro": "All Bikes",
-        "uk": "All Bikes"
+        "uk": "All Bikes",
+        "en": "All Bikes"
       },
       "difficulty": "green",
       "desc": {
         "ru": "Отличная велодорожка для велосипедистов, можно наматывать круги часами.",
         "ro": "O pistă de biciclete excelentă pentru bicicliști, poți merge în jurul ei ore întregi.",
-        "uk": "Відмінна велодоріжка для велосипедистів, можна намотувати круги годинами."
+        "uk": "Відмінна велодоріжка для велосипедистів, можна намотувати круги годинами.",
+        "en": "Отличная велодорожка для велосипедистов, можно наматывать круги часами."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/cycle_path_morilor.gpx",
       "startLat": 47.019943,
@@ -67,18 +73,21 @@
       "name": {
         "ru": "TrailPark Morilor 2",
         "ro": "TrailPark Morilor 2",
-        "uk": "TrailPark Morilor 2"
+        "uk": "TrailPark Morilor 2",
+        "en": "morilor_trail_2"
       },
       "suitable": {
         "ru": "All Mountain / Enduro / Downhill",
         "ro": "All Mountain / Enduro / Downhill",
-        "uk": "All Mountain / Enduro / Downhill"
+        "uk": "All Mountain / Enduro / Downhill",
+        "en": "All Mountain / Enduro / Downhill"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Самый популярный трейл в Кишиневе, очень быстрый и приятный, есть маленькие и большие трамплины, которые можно обьехать, почти такая же как первая трасса.",
         "ro": "Cel mai popular traseu din Chișinău, foarte rapid și plăcut, cu sărituri mici și mari pe care le poți ocoli, aproape la fel ca primul traseu.",
-        "uk": "Найпопулярніший трейл у Кишиневі, дуже швидкий та приємний, є маленькі та великі трампліни, які можна об'їхати, майже така сама як перша траса."
+        "uk": "Найпопулярніший трейл у Кишиневі, дуже швидкий та приємний, є маленькі та великі трампліни, які можна об'їхати, майже така сама як перша траса.",
+        "en": "Самый популярный трейл в Кишиневе, очень быстрый и приятный, есть маленькие и большие трамплины, которые можно обьехать, почти такая же как первая трасса."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/morilor_trail_2.gpx",
       "startLat": 47.011795,
@@ -94,18 +103,21 @@
       "name": {
         "ru": "TrailPark Morilor 4",
         "ro": "TrailPark Morilor 4",
-        "uk": "TrailPark Morilor 4"
+        "uk": "TrailPark Morilor 4",
+        "en": "resita"
       },
       "suitable": {
         "ru": "Enduro / Downhill",
         "ro": "Enduro / Downhill",
-        "uk": "Enduro / Downhill"
+        "uk": "Enduro / Downhill",
+        "en": "Enduro / Downhill"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Считаеться отрывком третей части трейла, на данный момент ее можно катать но в конце все залило водой и глиной.",
         "ro": "Este considerată o secțiune din a treia parte a traseului; momentan este schiabilă, dar la final totul a fost inundat de apă și argilă.",
-        "uk": "Вважається уривком третьою частиною трейлу, на даний момент її можна катати, але в кінці все залило водою і глиною."
+        "uk": "Вважається уривком третьою частиною трейлу, на даний момент її можна катати, але в кінці все залило водою і глиною.",
+        "en": "Считаеться отрывком третей части трейла, на данный момент ее можно катать но в конце все залило водой и глиной."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/resita.gpx",
       "startLat": 47.01232,
@@ -121,18 +133,21 @@
       "name": {
         "ru": "SkatePark",
         "ro": "SkatePark",
-        "uk": "SkatePark"
+        "uk": "SkatePark",
+        "en": "scate_park"
       },
       "suitable": {
         "ru": "BMX / Dirt",
         "ro": "BMX / Dirt",
-        "uk": "BMX / Dirt"
+        "uk": "BMX / Dirt",
+        "en": "BMX / Dirt"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Самый крутой и развитый скейт парк для велосипедов в Молдове, здесь можно хорошо провести время с друзьями.",
         "ro": "Cel mai cool și mai dezvoltat skate park pentru biciclete din Moldova, unde te poți distra de minune cu prietenii.",
-        "uk": "Найкрутіший і найрозвиненіший скейт парк для велосипедів у Молдові, тут можна добре провести час із друзями."
+        "uk": "Найкрутіший і найрозвиненіший скейт парк для велосипедів у Молдові, тут можна добре провести час із друзями.",
+        "en": "Самый крутой и развитый скейт парк для велосипедов в Молдове, здесь можно хорошо провести время с друзьями."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/scate_park.gpx",
       "startLat": 47.005607,
@@ -147,18 +162,21 @@
       "name": {
         "ru": "Small Trail Butoiaș",
         "ro": "Small Trail Butoiaș",
-        "uk": "Small Trail Butoiaș"
+        "uk": "Small Trail Butoiaș",
+        "en": "trail_butoiash"
       },
       "suitable": {
         "ru": "All Mountains",
         "ro": "All Mountains",
-        "uk": "All Mountains"
+        "uk": "All Mountains",
+        "en": "All Mountains"
       },
       "difficulty": "green",
       "desc": {
         "ru": "Не сложный для начинающих трейл, есть маленькие трамплины которые можно обьехать.",
         "ro": "Traseul nu este dificil pentru începători; există mici sărituri care pot fi evitate.",
-        "uk": "Не складний для трейл-початківців, є маленькі трампліни які можна об'їхати."
+        "uk": "Не складний для трейл-початківців, є маленькі трампліни які можна об'їхати.",
+        "en": "Не сложный для начинающих трейл, есть маленькие трамплины которые можно обьехать."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_butoiash.gpx",
       "startLat": 47.03635947515713,
@@ -174,18 +192,21 @@
       "name": {
         "ru": "PumpTrack Парк Морилор",
         "ro": "PumpTrack Valea Morilor",
-        "uk": "PumpTrack Парк Морилор"
+        "uk": "PumpTrack Парк Морилор",
+        "en": "valea_morilor_pumptrack"
       },
       "suitable": {
         "ru": "All Mountains / Dirt",
         "ro": "All Mountains / Dirt",
-        "uk": "All Mountains / Dirt"
+        "uk": "All Mountains / Dirt",
+        "en": "All Mountains / Dirt"
       },
       "difficulty": "green",
       "desc": {
         "ru": "Самый популярный PumpTrack в Кишиневе, маловат но из земли.",
         "ro": "Cel mai popular PumpTrack din Chișinău, mic, dar construit din pământ.",
-        "uk": "Найпопулярніший PumpTrack у Кишиневі, замало але із землі."
+        "uk": "Найпопулярніший PumpTrack у Кишиневі, замало але із землі.",
+        "en": "Самый популярный PumpTrack в Кишиневе, маловат но из земли."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_morilor_pumptrack.gpx",
       "startLat": 47.01270585585567,
@@ -201,18 +222,21 @@
       "name": {
         "ru": "PumpTrack Долина Роз",
         "ro": "PumpTrack Valea Trandafirilor",
-        "uk": "PumpTrack Долина Роз"
+        "uk": "PumpTrack Долина Роз",
+        "en": "valea_trandafirilor_pumptrack"
       },
       "suitable": {
         "ru": "All Bikes / Street / BMX / Dirt",
         "ro": "All Bikes / Street / BMX / Dirt",
-        "uk": "All Bikes / Street / BMX / Dirt"
+        "uk": "All Bikes / Street / BMX / Dirt",
+        "en": "All Bikes / Street / BMX / Dirt"
       },
       "difficulty": "green",
       "desc": {
         "ru": "Достаточно хороший PumpTrack, сделан из бетона.",
         "ro": "Un PumpTrack destul de bun, făcut din beton.",
-        "uk": "Досить хороший PumpTrack, зроблений із бетону."
+        "uk": "Досить хороший PumpTrack, зроблений із бетону.",
+        "en": "Достаточно хороший PumpTrack, сделан из бетона."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_trandafirilor_pumptrack.gpx",
       "startLat": 47.00560150561455,
@@ -228,18 +252,21 @@
       "name": {
         "ru": "Учебные трамплины Долина Роз",
         "ro": "Valea Trandafirilor antrenament sarituri cu schiurile",
-        "uk": "Навчальні трампліни Долина Роз"
+        "uk": "Навчальні трампліни Долина Роз",
+        "en": "valea_trandafirilor_small_skijumps"
       },
       "suitable": {
         "ru": "All Mountains / Dirt",
         "ro": "All Mountains / Dirt",
-        "uk": "All Mountains / Dirt"
+        "uk": "All Mountains / Dirt",
+        "en": "All Mountains / Dirt"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Начальные трамплины, не сложны в технике но требуют ее.",
         "ro": "Săriturile inițiale nu sunt dificile din punct de vedere tehnic, dar o necesită.",
-        "uk": "Початкові трампліни, не складні в техніці, але вимагають її."
+        "uk": "Початкові трампліни, не складні в техніці, але вимагають її.",
+        "en": "Начальные трамплины, не сложны в технике но требуют ее."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/valea_trandafirilor_small_skijumps.gpx",
       "startLat": 47.005535,
@@ -254,18 +281,21 @@
       "name": {
         "ru": "Dh Lux",
         "ro": "Dh Lux",
-        "uk": "Dh Lux"
+        "uk": "Dh Lux",
+        "en": "dh_lux"
       },
       "suitable": {
         "ru": "Downhill / Freeride",
         "ro": "Downhill / Freeride",
-        "uk": "Downhill / Freeride"
+        "uk": "Downhill / Freeride",
+        "en": "Downhill / Freeride"
       },
       "difficulty": "black",
       "desc": {
         "ru": "Трейл для самых серьезных, очень сложен в исполнении, есть корни камни и много еще чего.",
         "ro": "Această potecă este pentru cei mai experimentați drumeți, foarte dificil de parcurs, cu rădăcini, pietre și multe altele.",
-        "uk": "Трейл для найсерйозніших, дуже складний у виконанні, є коріння каміння та багато чого."
+        "uk": "Трейл для найсерйозніших, дуже складний у виконанні, є коріння каміння та багато чого.",
+        "en": "Трейл для самых серьезных, очень сложен в исполнении, есть корни камни и много еще чего."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/dh_lux.gpx",
       "startLat": 50.251812,
@@ -281,18 +311,21 @@
       "name": {
         "ru": "Kalifornia",
         "ro": "Kalifornia",
-        "uk": "Kalifornia"
+        "uk": "Kalifornia",
+        "en": "kalifornia"
       },
       "suitable": {
         "ru": "Freeride / Downhill",
         "ro": "Freeride / Downhill",
-        "uk": "Freeride / Downhill"
+        "uk": "Freeride / Downhill",
+        "en": "Freeride / Downhill"
       },
       "difficulty": "black",
       "desc": {
         "ru": "Почти такая же как и Dh Lux, но тут уже природные дропы сильные спуски корни и камни, идеально подойдет для Freeride.",
         "ro": "Aproape la fel ca Dh Lux, dar aici există prăpăstii naturale, coborâri puternice, rădăcini și stânci, ideale pentru Freeride.",
-        "uk": "Майже така ж як і Dh Lux, але тут вже природні дропи сильні спуски коріння та каміння, ідеально підійде для Freeride."
+        "uk": "Майже така ж як і Dh Lux, але тут вже природні дропи сильні спуски коріння та каміння, ідеально підійде для Freeride.",
+        "en": "Почти такая же как и Dh Lux, но тут уже природные дропы сильные спуски корни и камни, идеально подойдет для Freeride."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/kalifornia.gpx",
       "startLat": 50.251869,
@@ -309,18 +342,21 @@
       "name": {
         "ru": "Milkyway",
         "ro": "Milkyway",
-        "uk": "Milkyway"
+        "uk": "Milkyway",
+        "en": "milkyway"
       },
       "suitable": {
         "ru": "Cross Country / Downhill / Enduro",
         "ro": "Cross Country / Downhill / Enduro",
-        "uk": "Cross Country / Downhill / Enduro"
+        "uk": "Cross Country / Downhill / Enduro",
+        "en": "Cross Country / Downhill / Enduro"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Интересная и простая трасса, подойдет начинающим и тем кто уже хорошо катаеться.",
         "ro": "O pistă interesantă și simplă, potrivită atât pentru începători, cât și pentru cei care se pricep deja la schi.",
-        "uk": "Цікава і проста траса, підійде початківцям і тим, хто вже добре катається."
+        "uk": "Цікава і проста траса, підійде початківцям і тим, хто вже добре катається.",
+        "en": "Интересная и простая трасса, подойдет начинающим и тем кто уже хорошо катаеться."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/milkyway.gpx",
       "startLat": 50.252065,
@@ -337,23 +373,53 @@
       "name": {
         "ru": "Trail Park St",
         "ro": "Trail Park St",
-        "uk": "Trail Park St"
+        "uk": "Trail Park St",
+        "en": "trail_park_st"
       },
       "suitable": {
         "ru": "Enduro / Dirt / Downhill",
         "ro": "Enduro / Dirt / Downhill",
-        "uk": "Enduro / Dirt / Downhill"
+        "uk": "Enduro / Dirt / Downhill",
+        "en": "Enduro / Dirt / Downhill"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Отличный трейл в Страшенах, есть трейл и 2 небольших трамплина, единственный трейл на Страшенах.",
         "ro": "Traseu excelent în Strășeni, există o potecă și 2 sărituri mici, singurul traseu din Strășeni.",
-        "uk": "Відмінний трейл у Страшенах, є трейл і 2 невеликі трампліни, єдиний трейл на Страшенах."
+        "uk": "Відмінний трейл у Страшенах, є трейл і 2 невеликі трампліни, єдиний трейл на Страшенах.",
+        "en": "Отличный трейл в Страшенах, есть трейл и 2 небольших трамплина, единственный трейл на Страшенах."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_park_st.gpx",
       "startLat": 47.13581666119788,
       "startLon": 28.632730301668573,
       "countryId": "md"
+    },
+    {
+      "id": "trail_park_codru",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "New file 2",
+        "ro": "New file 2",
+        "uk": "New file 2",
+        "en": "New file 2"
+      },
+      "suitable": {
+        "ru": "",
+        "ro": "",
+        "uk": "",
+        "en": ""
+      },
+      "difficulty": "green",
+      "desc": {
+        "ru": "",
+        "ro": "",
+        "uk": "",
+        "en": ""
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx/trail_park_codru.gpx",
+      "startLat": 46.977926,
+      "startLon": 28.837567
     }
   ]
 }

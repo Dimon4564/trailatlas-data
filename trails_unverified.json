@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-01-30",
+  "updatedAt": "2026-02-18",
   "trails": [
     {
       "id": "morilor_down",
@@ -11,18 +11,21 @@
       "name": {
         "ru": "morilor down",
         "ro": "morilor down",
-        "uk": "morilor down"
+        "uk": "morilor down",
+        "en": "morilor_down"
       },
       "suitable": {
         "ru": "All Mountains",
         "ro": "All Mountains",
-        "uk": "All Mountains"
+        "uk": "All Mountains",
+        "en": "All Mountains"
       },
       "difficulty": "green",
       "desc": {
         "ru": "Обычная сьежалка возле парка Морилор.",
         "ro": "Un teleschi obișnuit lângă Parcul Morilor.",
-        "uk": "Звичайна сіджалка біля парку Морілор."
+        "uk": "Звичайна сіджалка біля парку Морілор.",
+        "en": "Обычная сьежалка возле парка Морилор."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/morilor_down.gpx",
       "startLat": 47.0042995,
@@ -36,18 +39,21 @@
       "name": {
         "ru": "Лес Восьмерка",
         "ro": "Pădurea Opt",
-        "uk": "Ліс Вісімка"
+        "uk": "Ліс Вісімка",
+        "en": "vosmerka"
       },
       "suitable": {
         "ru": "All Mountains",
         "ro": "All Mountains",
-        "uk": "All Mountains"
+        "uk": "All Mountains",
+        "en": "All Mountains"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Достаточно большой лес с разными тропинками, идеально подходит для Кросс Кантри.",
         "ro": "O pădure destul de mare cu diferite poteci, ideală pentru Cross Country.",
-        "uk": "Досить великий ліс з різними стежками, ідеально підходить для Крос Кантрі."
+        "uk": "Досить великий ліс з різними стежками, ідеально підходить для Крос Кантрі.",
+        "en": "Достаточно большой лес с разными тропинками, идеально подходит для Кросс Кантри."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/vosmerka.gpx",
       "startLat": 46.9612762,
@@ -63,18 +69,21 @@
       "name": {
         "ru": "Pasul Vulcan Flow Trail",
         "ro": "Pasul Vulcan Flow Trail",
-        "uk": "Pasul Vulcan Flow Trail"
+        "uk": "Pasul Vulcan Flow Trail",
+        "en": "pasul_vulcan_flow_trail"
       },
       "suitable": {
         "ru": "Downhill / Freeride",
         "ro": "Downhill / Freeride",
-        "uk": "Downhill / Freeride"
+        "uk": "Downhill / Freeride",
+        "en": "Downhill / Freeride"
       },
       "difficulty": "black",
       "desc": {
         "ru": "Отличный трейл возле вулкана, требуется отличная техника.",
         "ro": "Traseu minunat lângă vulcan, necesită echipament excelent.",
-        "uk": "Відмінний трейл біля вулкана, потрібна відмінна техніка."
+        "uk": "Відмінний трейл біля вулкана, потрібна відмінна техніка.",
+        "en": "Отличный трейл возле вулкана, требуется отличная техника."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/pasul_vulcan_flow_trail.gpx",
       "startLat": 45.32668,
@@ -90,18 +99,21 @@
       "name": {
         "ru": "Mtb Tour",
         "ro": "Mtb Tour",
-        "uk": "Mtb Tour"
+        "uk": "Mtb Tour",
+        "en": "mtb_tour"
       },
       "suitable": {
         "ru": "MTB / Cross Country",
         "ro": "MTB / Cross Country",
-        "uk": "MTB / Cross Country"
+        "uk": "MTB / Cross Country",
+        "en": "MTB / Cross Country"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Отличное место чтоб провести велосипедный тур, приятные тропинки в горах и многое другое.",
         "ro": "Un loc minunat pentru o excursie cu bicicleta, trasee montane plăcute și multe altele.",
-        "uk": "Відмінне місце щоб провести велосипедний тур, приємні стежки в горах та багато іншого."
+        "uk": "Відмінне місце щоб провести велосипедний тур, приємні стежки в горах та багато іншого.",
+        "en": "Отличное место чтоб провести велосипедный тур, приятные тропинки в горах и многое другое."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/mtb_tour.gpx",
       "startLat": 46.946979,
@@ -117,18 +129,21 @@
       "name": {
         "ru": "Waldfischbach Burgalben",
         "ro": "Waldfischbach Burgalben",
-        "uk": "Waldfischbach Burgalben"
+        "uk": "Waldfischbach Burgalben",
+        "en": "waldfischbach_burgalben"
       },
       "suitable": {
         "ru": "MTB / Cross Country",
         "ro": "MTB / Cross Country",
-        "uk": "MTB / Cross Country"
+        "uk": "MTB / Cross Country",
+        "en": "MTB / Cross Country"
       },
       "difficulty": "black",
       "desc": {
         "ru": "Одна из офизиальных трасс по кросс кантри в Германии, достаточно сложная.",
         "ro": "Una dintre traseele oficiale de schi fond din Germania, destul de dificilă.",
-        "uk": "Одна з офізіальних трас по крос кантрі в Німеччині, досить складна."
+        "uk": "Одна з офізіальних трас по крос кантрі в Німеччині, досить складна.",
+        "en": "Одна из офизиальных трасс по кросс кантри в Германии, достаточно сложная."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/waldfischbach_burgalben.gpx",
       "startLat": 49.288187,
@@ -144,18 +159,21 @@
       "name": {
         "ru": "Hochschwarzwald Seen und Bergen",
         "ro": "Hochschwarzwald Seen und Bergen",
-        "uk": "Hochschwarzwald Seen und Bergen"
+        "uk": "Hochschwarzwald Seen und Bergen",
+        "en": "hochschwarzwald_seen_und_bergen"
       },
       "suitable": {
         "ru": "All Mountains / Cross Country",
         "ro": "All Mountains / Cross Country",
-        "uk": "All Mountains / Cross Country"
+        "uk": "All Mountains / Cross Country",
+        "en": "All Mountains / Cross Country"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Отличный трейл для путешествия, можно посмотреть на горы повстречать животных и ручьи.",
         "ro": "O potecă minunată de parcurs, poți vedea munți, întâlni animale și pâraie.",
-        "uk": "Відмінний трейл для подорожі, можна подивитися на гори зустріти тварин та струмки."
+        "uk": "Відмінний трейл для подорожі, можна подивитися на гори зустріти тварин та струмки.",
+        "en": "Отличный трейл для путешествия, можно посмотреть на горы повстречать животных и ручьи."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/hochschwarzwald_seen_und_bergen.gpx",
       "startLat": 47.81691,
@@ -172,18 +190,21 @@
       "name": {
         "ru": "Trail Park Nisporeni",
         "ro": "Trail Park Nisporeni",
-        "uk": "Trail Park Nisporeni"
+        "uk": "Trail Park Nisporeni",
+        "en": "trail_park_nisporeni"
       },
       "suitable": {
         "ru": "Enduro / Cross Country / Downhill",
         "ro": "Enduro / Cross Country / Downhill",
-        "uk": "Enduro / Cross Country / Downhill"
+        "uk": "Enduro / Cross Country / Downhill",
+        "en": "Enduro / Cross Country / Downhill"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Отличный трейл в Ниспоренах, достаточно приятный трейл и долгий, есть разные по размерам трамплины, корни, камни, можно провести весело время с друзьями.",
         "ro": "Nisporeni are un traseu minunat, destul de frumos și lung, cu sărituri de diferite dimensiuni, rădăcini și pietre, perfect pentru a petrece timpul cu prietenii.",
-        "uk": "Відмінний трейл у Ніспоренах, досить приємний трейл та довгий, є різні за розмірами трампліни, коріння, каміння, можна провести весело час із друзями."
+        "uk": "Відмінний трейл у Ніспоренах, досить приємний трейл та довгий, є різні за розмірами трампліни, коріння, каміння, можна провести весело час із друзями.",
+        "en": "Отличный трейл в Ниспоренах, достаточно приятный трейл и долгий, есть разные по размерам трамплины, корни, камни, можно провести весело время с друзьями."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/trail_park_nisporeni.gpx",
       "startLat": 47.091038,
@@ -192,27 +213,34 @@
     },
     {
       "id": "trail_park_dealul_leului",
-      "countryId": "md",
-      "styles": ["MTB", "DH"],
+      "cityId": "chisinau",
+      "styles": [
+        "MTB",
+        "DH"
+      ],
       "name": {
         "ru": "Trail Park Dealul Leului",
         "ro": "Trail Park Dealul Leului",
-        "uk": "Trail Park Dealul Leului"
+        "uk": "Trail Park Dealul Leului",
+        "en": "trail_park_dealul_leului"
       },
       "suitable": {
         "ru": "Enduro / Cross Country / Downhill",
         "ro": "Enduro / Cross Country / Downhill",
-        "uk": "Enduro / Cross Country / Downhill"
+        "uk": "Enduro / Cross Country / Downhill",
+        "en": "Enduro / Cross Country / Downhill"
       },
       "difficulty": "blue",
       "desc": {
         "ru": "Интерестный лесной трейл, восновном мало трамплинов и они маленькие, поэтому подойдем всем кто любит каться на горном велике по спускам но в безопасности.",
         "ro": "O potecă forestieră interesantă, în mare parte cu puține sărituri și unele mici, deci potrivită pentru oricine se bucură de ciclismul montan la vale, dar în siguranță.",
-        "uk": "Цікавий лісовий трейл, в основному мало трамплінів і вони маленькі, тому підійдемо всім хто любить катися на гірському велику спусками але в безпеці."
+        "uk": "Цікавий лісовий трейл, в основному мало трамплінів і вони маленькі, тому підійдемо всім хто любить катися на гірському велику спусками але в безпеці.",
+        "en": "Интерестный лесной трейл, восновном мало трамплинов и они маленькие, поэтому подойдем всем кто любит каться на горном велике по спускам но в безопасности."
       },
       "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/trail_park_dealul_leului.gpx",
       "startLat": 46.90596257278116,
-      "startLon": 28.9648239567706
+      "startLon": 28.9648239567706,
+      "countryId": "md"
     }
   ]
 }
