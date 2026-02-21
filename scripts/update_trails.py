@@ -27,6 +27,7 @@ COUNTRY_FOLDERS = {
     "gpx_romania": "ro",
     "gpx_germany": "de",
     "gpx_poland": "pl",
+    "gpx_ukraine": "ua",
 }
 
 # Reverse mapping for efficiency
@@ -637,8 +638,8 @@ def extract_osm_name(gpx_path: Path) -> Optional[str]:
         return None
 
 def detect_region_from_coords(lat: float, lon: float) -> str:
-    """Simple region detection for Romania based on coordinates"""
-    # Approximate regions based on lat/lon ranges
+    """Region detection based on coordinates"""
+    # Romania regions
     if 45.4 <= lat <= 45.9 and 21.2 <= lon <= 21.8:
         return "Timiș"
     elif 44.7 <= lat <= 45.2 and 22.5 <= lon <= 23.0:
@@ -649,8 +650,56 @@ def detect_region_from_coords(lat: float, lon: float) -> str:
         return "Brașov"
     elif 45.0 <= lat <= 45.5 and 25.5 <= lon <= 26.5:
         return "Prahova"
-    # Add more regions as needed
-    return "Romania"
+
+    # Ukraine regions (approximate lat/lon ranges)
+    elif 48.2 <= lat <= 48.9 and 23.5 <= lon <= 25.0:
+        return "Carpathians"
+    elif 49.7 <= lat <= 50.0 and 23.5 <= lon <= 24.5:
+        return "Lviv"
+    elif 50.3 <= lat <= 50.6 and 30.2 <= lon <= 30.8:
+        return "Kyiv"
+    elif 48.4 <= lat <= 48.7 and 34.9 <= lon <= 35.3:
+        return "Dnipro"
+    elif 49.8 <= lat <= 50.1 and 36.1 <= lon <= 36.5:
+        return "Kharkiv"
+    elif 46.4 <= lat <= 46.7 and 30.6 <= lon <= 30.9:
+        return "Odesa"
+    elif 48.5 <= lat <= 49.0 and 24.0 <= lon <= 24.8:
+        return "Ivano-Frankivsk"
+    elif 48.0 <= lat <= 48.5 and 22.0 <= lon <= 23.0:
+        return "Zakarpattia"
+    elif 49.4 <= lat <= 49.9 and 23.8 <= lon <= 24.2:
+        return "Lviv Region"
+    elif 48.8 <= lat <= 49.3 and 25.0 <= lon <= 25.8:
+        return "Ternopil"
+
+    # Germany regions (approximate)
+    elif 47.5 <= lat <= 48.5 and 7.5 <= lon <= 9.0:
+        return "Black Forest"
+    elif 47.0 <= lat <= 47.8 and 10.5 <= lon <= 12.5:
+        return "Bavaria"
+    elif 49.0 <= lat <= 50.0 and 8.0 <= lon <= 10.0:
+        return "Baden-Württemberg"
+
+    # Poland regions (approximate)
+    elif 49.0 <= lat <= 49.6 and 19.0 <= lon <= 20.5:
+        return "Tatras"
+    elif 50.0 <= lat <= 50.5 and 19.5 <= lon <= 20.5:
+        return "Kraków"
+    elif 52.0 <= lat <= 52.5 and 20.5 <= lon <= 21.5:
+        return "Warsaw"
+
+    # Country-level fallback based on rough coordinate ranges
+    elif 44.0 <= lat <= 48.5 and 20.0 <= lon <= 30.0:
+        return "Romania"
+    elif 44.0 <= lat <= 52.5 and 22.0 <= lon <= 40.5:
+        return "Ukraine"
+    elif 47.0 <= lat <= 55.0 and 5.5 <= lon <= 15.5:
+        return "Germany"
+    elif 49.0 <= lat <= 55.0 and 14.0 <= lon <= 24.5:
+        return "Poland"
+
+    return "Unknown Region"
 
 def generate_smart_name(gpx_path: Path, stats: Dict, trail_type: str) -> Optional[Dict[str, str]]:
     """Generate smart name based on location and trail characteristics"""
