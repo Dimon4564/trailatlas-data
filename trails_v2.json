@@ -1,6 +1,6 @@
 {
   "version": 10,
-  "updatedAt": "2026-02-18",
+  "updatedAt": "2026-02-21",
   "trails": [
     {
       "id": "chisinau_blue",
@@ -101,10 +101,10 @@
         "DH"
       ],
       "name": {
-        "ru": "resita",
-        "ro": "resita",
-        "uk": "resita",
-        "en": "resita"
+        "ru": "\nResita\n",
+        "ro": "Resita",
+        "uk": "Повторити",
+        "en": "Resit"
       },
       "suitable": {
         "ru": "Enduro / Downhill",
@@ -279,10 +279,10 @@
         "DH"
       ],
       "name": {
-        "ru": "Dh Lux",
-        "ro": "Dh Lux",
-        "uk": "Dh Lux",
-        "en": "Dh Lux"
+        "ru": "DH Lux",
+        "ro": "DH Lux",
+        "uk": "DH Люкс",
+        "en": "DH Lux"
       },
       "suitable": {
         "ru": "Downhill / Freeride",
@@ -310,9 +310,9 @@
       ],
       "name": {
         "ru": "Kalifornia",
-        "ro": "Kalifornia",
-        "uk": "Kalifornia",
-        "en": "Kalifornia"
+        "ro": "California",
+        "uk": "Каліфорнія",
+        "en": "California"
       },
       "suitable": {
         "ru": "Freeride / Downhill",
@@ -341,8 +341,8 @@
       ],
       "name": {
         "ru": "Milkyway",
-        "ro": "Milkyway",
-        "uk": "Milkyway",
+        "ro": "Calea lactee",
+        "uk": "Чумацький шлях",
         "en": "Milkyway"
       },
       "suitable": {
@@ -371,10 +371,10 @@
         "DH"
       ],
       "name": {
-        "ru": "Trail Park St",
-        "ro": "Trail Park St",
-        "uk": "Trail Park St",
-        "en": "Trail Park St"
+        "ru": "New file 3",
+        "ro": "Fișier nou 3",
+        "uk": "Новий файл 3",
+        "en": "New file 3"
       },
       "suitable": {
         "ru": "Enduro / Dirt / Downhill",
