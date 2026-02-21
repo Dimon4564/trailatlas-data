@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>poland_trail</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:trkseg>
+      <ns0:trkpt lat="50.2385837" lon="19.3896433" />
+      <ns0:trkpt lat="50.238099" lon="19.3866149" />
+      <ns0:trkpt lat="50.2374656" lon="19.3826453" />
+      <ns0:trkpt lat="50.2366574" lon="19.3774085" />
+      <ns0:trkpt lat="50.2363613" lon="19.375576" />
+      <ns0:trkpt lat="50.2363356" lon="19.3751942" />
+      <ns0:trkpt lat="50.2363302" lon="19.3748126" />
+      <ns0:trkpt lat="50.2363464" lon="19.3744109" />
+      <ns0:trkpt lat="50.2363881" lon="19.3740245" />
+      <ns0:trkpt lat="50.2364704" lon="19.3735421" />
+      <ns0:trkpt lat="50.2365783" lon="19.3731242" />
+      <ns0:trkpt lat="50.2368142" lon="19.3724599" />
+      <ns0:trkpt lat="50.2369987" lon="19.3720793" />
+      <ns0:trkpt lat="50.2372196" lon="19.3717395" />
+      <ns0:trkpt lat="50.2375004" lon="19.3713858" />
+      <ns0:trkpt lat="50.2414842" lon="19.3665141" />
+      <ns0:trkpt lat="50.2441728" lon="19.3632517" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

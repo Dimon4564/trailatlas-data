@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>germany1_trail</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Negrellistraße</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="48.1700406" lon="11.4202062" />
+      <ns0:trkpt lat="48.1696816" lon="11.4208357" />
+      <ns0:trkpt lat="48.1682636" lon="11.4234433" />
+      <ns0:trkpt lat="48.1681396" lon="11.423691" />
+      <ns0:trkpt lat="48.1679318" lon="11.424144" />
+      <ns0:trkpt lat="48.1668671" lon="11.4260371" />
+      <ns0:trkpt lat="48.1663496" lon="11.4269623" />
+      <ns0:trkpt lat="48.1657243" lon="11.4281316" />
+      <ns0:trkpt lat="48.1650022" lon="11.4293748" />
+      <ns0:trkpt lat="48.1646539" lon="11.4300244" />
+      <ns0:trkpt lat="48.1643139" lon="11.4306824" />
+      <ns0:trkpt lat="48.1639056" lon="11.4314012" />
+      <ns0:trkpt lat="48.1636865" lon="11.4317945" />
+      <ns0:trkpt lat="48.1636113" lon="11.4320012" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

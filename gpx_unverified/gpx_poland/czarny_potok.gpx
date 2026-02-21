@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>poland_trail</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Czarny Potok</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="49.4107832" lon="20.9308361" />
+      <ns0:trkpt lat="49.4108502" lon="20.9307316" />
+      <ns0:trkpt lat="49.4108953" lon="20.9306614" />
+      <ns0:trkpt lat="49.4110397" lon="20.9304983" />
+      <ns0:trkpt lat="49.4115609" lon="20.9299803" />
+      <ns0:trkpt lat="49.4117814" lon="20.9297612" />
+      <ns0:trkpt lat="49.4119878" lon="20.9296118" />
+      <ns0:trkpt lat="49.4122051" lon="20.9294943" />
+      <ns0:trkpt lat="49.413896" lon="20.9287591" />
+      <ns0:trkpt lat="49.4139339" lon="20.9287426" />
+      <ns0:trkpt lat="49.4142451" lon="20.9286463" />
+      <ns0:trkpt lat="49.4158741" lon="20.9282034" />
+      <ns0:trkpt lat="49.4161392" lon="20.9281051" />
+      <ns0:trkpt lat="49.4169394" lon="20.927732" />
+      <ns0:trkpt lat="49.4184044" lon="20.9270488" />
+      <ns0:trkpt lat="49.4189116" lon="20.9268076" />
+      <ns0:trkpt lat="49.4189433" lon="20.926792" />
+      <ns0:trkpt lat="49.4195917" lon="20.926475" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>
