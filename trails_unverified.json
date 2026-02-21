@@ -9,10 +9,10 @@
         "mtb"
       ],
       "name": {
-        "ru": "morilor down",
-        "ro": "morilor down",
-        "uk": "morilor down",
-        "en": "morilor_down"
+        "ru": "Трейл Romania 0.6 км",
+        "ro": "Traseu Romania 0.6 km",
+        "uk": "Трейл Romania 0.6 км",
+        "en": "Trail Romania 0.6 km"
       },
       "suitable": {
         "ru": "All Mountains",
@@ -37,10 +37,10 @@
       "cityId": "chisinau",
       "styles": [],
       "name": {
-        "ru": "Лес Восьмерка",
-        "ro": "Pădurea Opt",
-        "uk": "Ліс Вісімка",
-        "en": "vosmerka"
+        "ru": "Трейл Romania 13.2 км",
+        "ro": "Traseu Romania 13.2 km",
+        "uk": "Трейл Romania 13.2 км",
+        "en": "Trail Romania 13.2 km"
       },
       "suitable": {
         "ru": "All Mountains",
@@ -67,10 +67,10 @@
         "DH"
       ],
       "name": {
-        "ru": "Pasul Vulcan Flow Trail",
-        "ro": "Pasul Vulcan Flow Trail",
-        "uk": "Pasul Vulcan Flow Trail",
-        "en": "pasul_vulcan_flow_trail"
+        "ru": "Pasul Vulcan Flow trail",
+        "ro": "Traseu Pasul Vulcan Flow",
+        "uk": "Стежка Pasul Vulcan Flow",
+        "en": "Pasul Vulcan Flow trail"
       },
       "suitable": {
         "ru": "Downhill / Freeride",
@@ -97,10 +97,10 @@
         "MTB"
       ],
       "name": {
-        "ru": "Mtb Tour",
-        "ro": "Mtb Tour",
-        "uk": "Mtb Tour",
-        "en": "mtb_tour"
+        "ru": "Bratca MTB Tour",
+        "ro": "Bratca MTB Tour",
+        "uk": "Bratca MTB Tour",
+        "en": "Bratca MTB Tour"
       },
       "suitable": {
         "ru": "MTB / Cross Country",
@@ -127,10 +127,10 @@
         "MTB"
       ],
       "name": {
-        "ru": "Waldfischbach Burgalben",
-        "ro": "Waldfischbach Burgalben",
-        "uk": "Waldfischbach Burgalben",
-        "en": "waldfischbach_burgalben"
+        "ru": "Waldfischbach-Burgalben",
+        "ro": "Waldfischbach-Burgalben",
+        "uk": "Вальдфішбах-Бургальбен",
+        "en": "Waldfischbach-Burgalben"
       },
       "suitable": {
         "ru": "MTB / Cross Country",
@@ -158,9 +158,9 @@
       ],
       "name": {
         "ru": "Hochschwarzwald Seen und Bergen",
-        "ro": "Hochschwarzwald Seen und Bergen",
-        "uk": "Hochschwarzwald Seen und Bergen",
-        "en": "hochschwarzwald_seen_und_bergen"
+        "ro": "Lacuri și munți înalți din Pădurea Neagră",
+        "uk": "Високі озера і гори Шварцвальда",
+        "en": "High Black Forest lakes and mountains"
       },
       "suitable": {
         "ru": "All Mountains / Cross Country",
@@ -188,10 +188,10 @@
         "DH"
       ],
       "name": {
-        "ru": "Trail Park Nisporeni",
-        "ro": "Trail Park Nisporeni",
-        "uk": "Trail Park Nisporeni",
-        "en": "trail_park_nisporeni"
+        "ru": "New file 1",
+        "ro": "Fișier nou 1",
+        "uk": "Новий файл 1",
+        "en": "New file 1"
       },
       "suitable": {
         "ru": "Enduro / Cross Country / Downhill",
@@ -219,10 +219,10 @@
         "DH"
       ],
       "name": {
-        "ru": "Trail Park Dealul Leului",
-        "ro": "Trail Park Dealul Leului",
-        "uk": "Trail Park Dealul Leului",
-        "en": "trail_park_dealul_leului"
+        "ru": "New file 1",
+        "ro": "Fișier nou 1",
+        "uk": "Новий файл 1",
+        "en": "New file 1"
       },
       "suitable": {
         "ru": "Enduro / Cross Country / Downhill",
