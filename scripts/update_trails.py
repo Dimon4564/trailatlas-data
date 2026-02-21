@@ -189,6 +189,10 @@ def should_process_track(trk_elem, gpx_root, ns: str) -> Tuple[bool, str]:
     """
     def q(tag): return f"{{{ns}}}{tag}" if ns else tag
     
+    # Check if track has a name - named tracks are always processed regardless of length
+    name_elem = trk_elem.find(q("name"))
+    has_name = name_elem is not None and name_elem.text and name_elem.text.strip()
+    
     # Create temp GPX to analyze
     temp_root = ET.Element(gpx_root.tag, gpx_root.attrib)
     temp_root.append(deepcopy(trk_elem))
@@ -213,7 +217,7 @@ def should_process_track(trk_elem, gpx_root, ns: str) -> Tuple[bool, str]:
         stats = calculate_elevation_stats(pts)
         length = stats.get("total_distance", 0)
         
-        if length < 700:
+        if not has_name and length < 700:
             return (False, f"too short ({length:.0f}m)")
         
         if length > 50000:
@@ -1028,7 +1032,8 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                     name = auto_translate_i18n(random_name, "en")
             else:
                 # Fallback
-                name = default_i18n(tid)
+                random_name = random.choice(RANDOM_TRAIL_NAMES)
+                name = auto_translate_i18n(random_name, "en")
     
     # Handle suitable field
     prev_suitable = prev.get("suitable")
