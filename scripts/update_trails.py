@@ -189,6 +189,10 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
     """
     Split a GPX file with multiple <trk> or <rte> elements into individual GPX files.
     Routes are automatically converted to tracks in output.
+
+    IMPORTANT: Only processes tracks/routes that have a valid <name> tag.
+    Tracks without names are skipped as they are usually low-quality data.
+
     Returns list of created file paths.
     """
     try:
@@ -219,22 +223,31 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
         
         created_files = []
         parent_dir = gpx_path.parent
+        skipped_no_name = 0
+        skipped_quality = 0
         
         # Process tracks
         for idx, trk in enumerate(tracks, 1):
-            # Check if track should be processed
+            # Try to get track name - REQUIRED!
+            name_elem = trk.find(q("name"))
+
+            # Skip if no name or empty name
+            if name_elem is None or not name_elem.text or not name_elem.text.strip():
+                skipped_no_name += 1
+                print(f"  ⚠️  Skipping track {idx}: no name (likely garbage data)")
+                continue
+
+            track_name = name_elem.text.strip()
+
+            # Check if track should be processed (quality checks)
             should_process, skip_reason = should_process_track(trk, root, ns)
             if not should_process:
-                print(f"⚠️  Skipping track {idx}: {skip_reason}")
+                skipped_quality += 1
+                print(f"  ⚠️  Skipping '{track_name}': {skip_reason}")
                 continue
             
-            # Try to get track name
-            name_elem = trk.find(q("name"))
-            if name_elem is not None and name_elem.text:
-                track_name = sanitize_filename(name_elem.text)
-                new_filename = f"{track_name}.gpx"
-            else:
-                new_filename = f"{country_code}_{idx:03d}.gpx"
+            sanitized_name = sanitize_filename(track_name)
+            new_filename = f"{sanitized_name}.gpx"
             
             # Ensure unique filename
             new_path = parent_dir / new_filename
@@ -261,28 +274,33 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
             new_tree.write(new_path, encoding="utf-8", xml_declaration=True)
             
             created_files.append(new_path)
-            print(f"  Created: {new_path.name}")
+            print(f"  ✅ Created: {new_path.name} ({track_name})")
         
         # Process routes (convert to tracks)
-        # Note: idx starts after tracks (len(tracks) + 1) for continuous numbering in fallback filenames
-        # Example: if 2 tracks without names create ro_001.gpx and ro_002.gpx, routes will create ro_003.gpx, ro_004.gpx, etc.
         for idx, rte in enumerate(routes, len(tracks) + 1):
+            # Try to get route name - REQUIRED!
+            name_elem = rte.find(q("name"))
+
+            # Skip if no name or empty name
+            if name_elem is None or not name_elem.text or not name_elem.text.strip():
+                skipped_no_name += 1
+                print(f"  ⚠️  Skipping route {idx}: no name (likely garbage data)")
+                continue
+
+            route_name = name_elem.text.strip()
+
             # Convert route to track first for quality checking
             trk = convert_route_to_track(rte, ns)
             
-            # Check if track should be processed
+            # Check if track should be processed (quality checks)
             should_process, skip_reason = should_process_track(trk, root, ns)
             if not should_process:
-                print(f"⚠️  Skipping route {idx}: {skip_reason}")
+                skipped_quality += 1
+                print(f"  ⚠️  Skipping route '{route_name}': {skip_reason}")
                 continue
             
-            # Try to get route name
-            name_elem = rte.find(q("name"))
-            if name_elem is not None and name_elem.text:
-                route_name = sanitize_filename(name_elem.text)
-                new_filename = f"{route_name}.gpx"
-            else:
-                new_filename = f"{country_code}_{idx:03d}.gpx"
+            sanitized_name = sanitize_filename(route_name)
+            new_filename = f"{sanitized_name}.gpx"
             
             # Ensure unique filename
             new_path = parent_dir / new_filename
@@ -309,16 +327,22 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
             new_tree.write(new_path, encoding="utf-8", xml_declaration=True)
             
             created_files.append(new_path)
-            print(f"  Created: {new_path.name} (converted from route)")
+            print(f"  ✅ Created: {new_path.name} ({route_name} [route])")
         
+        # Print summary
+        print(f"\n  📊 Summary for {gpx_path.name}:")
+        print(f"     Created: {len(created_files)} trails")
+        print(f"     Skipped (no name): {skipped_no_name}")
+        print(f"     Skipped (quality): {skipped_quality}")
+
         # Delete original multi-track file
         gpx_path.unlink()
-        print(f"  Deleted original: {gpx_path.name}")
+        print(f"  🗑️  Deleted original: {gpx_path.name}")
         
         return created_files
         
     except Exception as e:
-        print(f"Error splitting {gpx_path}: {e}")
+        print(f"❌ Error splitting {gpx_path}: {e}")
         return []
 
 def calculate_elevation_stats(points: List[Tuple[float, float, Optional[float]]]) -> Dict[str, float]:
