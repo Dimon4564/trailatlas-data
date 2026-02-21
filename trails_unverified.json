@@ -70885,6 +70885,230 @@
       "startLat": 44.6496334,
       "startLon": 22.451165,
       "countryId": "ro"
+    },
+    {
+      "id": "ua_001",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "ukraine1_trail",
+        "ro": "ucraine1_trail",
+        "uk": "ukraine1_trail",
+        "en": "ukraine1_trail"
+      },
+      "suitable": {
+        "ru": "Кросс-кантри / олл-маунтин",
+        "ro": "Cross Country / All Mountain",
+        "uk": "Cross Country / All Mountain",
+        "en": "Cross Country / All Mountain"
+      },
+      "difficulty": "green",
+      "desc": {
+        "ru": "Трейл протяженностью 1.1 км. Лесная тропа с несложными участками. Подходит для начинающих райдеров.",
+        "ro": "Traseul are o lungime de 1,1 km. Traseu forestier cu porțiuni ușoare. Potrivit pentru călăreți începători.",
+        "uk": "Трейл завдовжки 1.1 км. Лісова стежка з нескладними ділянками. Підходить для райдерів-початківців.",
+        "en": "The trail is 1.1 km long. Forest trail with easy sections. Suitable for beginner riders."
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/gpx_ukraine/ua_001.gpx",
+      "startLat": 48.1629892,
+      "startLon": 24.4554935,
+      "countryId": "ua"
+    },
+    {
+      "id": "ua_002",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "ukraine1_trail",
+        "ro": "ucraine1_trail",
+        "uk": "ukraine1_trail",
+        "en": "ukraine1_trail"
+      },
+      "suitable": {
+        "ru": "Олл Маунтин / Эндуро",
+        "ro": "All Mountain / Enduro",
+        "uk": "All Mountain / Ендуро",
+        "en": "All Mountain / Enduro"
+      },
+      "difficulty": "red",
+      "desc": {
+        "ru": "Трейл протяженностью 3.9 км. Эндуро трасса с крутыми спусками и техническими участками. Рекомендуется для опытных райдеров с хорошей технической подготовкой.",
+        "ro": "Traseul are o lungime de 3,9 km. Pista de enduro cu coborâri abrupte și porțiuni tehnice. Recomandat pentru călăreți experimentați cu o bună pregătire tehnică.",
+        "uk": "Трейл завдовжки 3.9 км. Ендуро траса з крутими спусками та технічними ділянками. Рекомендується для досвідчених райдерів із гарною технічною підготовкою.",
+        "en": "The trail is 3.9 km long. Enduro track with steep descents and technical sections. Recommended for experienced riders with good technical training."
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/gpx_ukraine/ua_002.gpx",
+      "startLat": 48.4857966,
+      "startLon": 24.278385,
+      "countryId": "ua"
+    },
+    {
+      "id": "ua_003",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "ukraine1_trail",
+        "ro": "ucraine1_trail",
+        "uk": "ukraine1_trail",
+        "en": "ukraine1_trail"
+      },
+      "suitable": {
+        "ru": "Олл Маунтин / Эндуро",
+        "ro": "All Mountain / Enduro",
+        "uk": "All Mountain / Ендуро",
+        "en": "All Mountain / Enduro"
+      },
+      "difficulty": "red",
+      "desc": {
+        "ru": "Трейл протяженностью 1.4 км. Эндуро трасса с крутыми спусками и техническими участками. Рекомендуется для опытных райдеров с хорошей технической подготовкой.",
+        "ro": "Traseul are o lungime de 1,4 km. Pista de enduro cu coborâri abrupte și porțiuni tehnice. Recomandat pentru călăreți experimentați cu o bună pregătire tehnică.",
+        "uk": "Трейл завдовжки 1.4 км. Ендуро траса з крутими спусками та технічними ділянками. Рекомендується для досвідчених райдерів із гарною технічною підготовкою.",
+        "en": "The trail is 1.4 km long. Enduro track with steep descents and technical sections. Recommended for experienced riders with good technical training."
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/gpx_ukraine/ua_003.gpx",
+      "startLat": 49.0171177,
+      "startLon": 23.5087745,
+      "countryId": "ua"
+    },
+    {
+      "id": "ua_005",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "ukraine1_trail",
+        "ro": "ucraine1_trail",
+        "uk": "ukraine1_trail",
+        "en": "ukraine1_trail"
+      },
+      "suitable": {
+        "ru": "Все горные / кросс-кантри",
+        "ro": "All Mountain / Cross Country",
+        "uk": "All Mountain / Cross Country",
+        "en": "All Mountain / Cross Country"
+      },
+      "difficulty": "blue",
+      "desc": {
+        "ru": "Трейл протяженностью 1.5 км. Трейловая трасса с техническими секциями. Требует базовых навыков катания и хорошей физической подготовки.",
+        "ro": "Traseul are o lungime de 1,5 km. Curs de traseu cu secțiuni tehnice. Necesită abilități de bază de călărie și o bună condiție fizică.",
+        "uk": "Трейл завдовжки 1.5 км. Трейлова траса із технічними секціями. Потребує базових навичок катання та хорошої фізичної підготовки.",
+        "en": "The trail is 1.5 km long. Trail course with technical sections. Requires basic riding skills and good physical fitness."
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/gpx_ukraine/ua_005.gpx",
+      "startLat": 49.8325822,
+      "startLon": 24.0939091,
+      "countryId": "ua"
+    },
+    {
+      "id": "ua_007",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "ukraine1_trail",
+        "ro": "ucraine1_trail",
+        "uk": "ukraine1_trail",
+        "en": "ukraine1_trail"
+      },
+      "suitable": {
+        "ru": "Все горные / кросс-кантри",
+        "ro": "All Mountain / Cross Country",
+        "uk": "All Mountain / Cross Country",
+        "en": "All Mountain / Cross Country"
+      },
+      "difficulty": "blue",
+      "desc": {
+        "ru": "Трейл протяженностью 2.2 км. Трейловая трасса с техническими секциями. Требует базовых навыков катания и хорошей физической подготовки.",
+        "ro": "Traseul are 2,2 km lungime. Curs de traseu cu secțiuni tehnice. Necesită abilități de bază de călărie și o bună condiție fizică.",
+        "uk": "Трейл завдовжки 2.2 км. Трейлова траса із технічними секціями. Потребує базових навичок катання та хорошої фізичної підготовки.",
+        "en": "The trail is 2.2 km long. Trail course with technical sections. Requires basic riding skills and good physical fitness."
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/gpx_ukraine/ua_007.gpx",
+      "startLat": 48.5867151,
+      "startLon": 23.5830703,
+      "countryId": "ua"
+    },
+    {
+      "id": "ua_008",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "ukraine1_trail",
+        "ro": "ucraine1_trail",
+        "uk": "ukraine1_trail",
+        "en": "ukraine1_trail"
+      },
+      "suitable": {
+        "ru": "Все горные / кросс-кантри",
+        "ro": "All Mountain / Cross Country",
+        "uk": "All Mountain / Cross Country",
+        "en": "All Mountain / Cross Country"
+      },
+      "difficulty": "blue",
+      "desc": {
+        "ru": "Трейл протяженностью 1.0 км. Трейловая трасса с техническими секциями. Требует базовых навыков катания и хорошей физической подготовки.",
+        "ro": "Traseul are o lungime de 1,0 km. Curs de traseu cu secțiuni tehnice. Necesită abilități de bază de călărie și o bună condiție fizică.",
+        "uk": "Трейл завдовжки 1.0 км. Трейлова траса із технічними секціями. Потребує базових навичок катання та хорошої фізичної підготовки.",
+        "en": "The trail is 1.0 km long. Trail course with technical sections. Requires basic riding skills and good physical fitness."
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/gpx_ukraine/ua_008.gpx",
+      "startLat": 48.5813079,
+      "startLon": 23.5745398,
+      "countryId": "ua"
+    },
+    {
+      "id": "ua_012",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "ukraine1_trail",
+        "ro": "ucraine1_trail",
+        "uk": "ukraine1_trail",
+        "en": "ukraine1_trail"
+      },
+      "suitable": {
+        "ru": "Все горные / кросс-кантри",
+        "ro": "All Mountain / Cross Country",
+        "uk": "All Mountain / Cross Country",
+        "en": "All Mountain / Cross Country"
+      },
+      "difficulty": "blue",
+      "desc": {
+        "ru": "Трейл протяженностью 1.5 км. Трейловая трасса с техническими секциями. Требует базовых навыков катания и хорошей физической подготовки.",
+        "ro": "Traseul are o lungime de 1,5 km. Curs de traseu cu secțiuni tehnice. Necesită abilități de bază de călărie și o bună condiție fizică.",
+        "uk": "Трейл завдовжки 1.5 км. Трейлова траса із технічними секціями. Потребує базових навичок катання та хорошої фізичної підготовки.",
+        "en": "The trail is 1.5 km long. Trail course with technical sections. Requires basic riding skills and good physical fitness."
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/gpx_ukraine/ua_012.gpx",
+      "startLat": 48.5633546,
+      "startLon": 23.5953455,
+      "countryId": "ua"
+    },
+    {
+      "id": "ua_016",
+      "cityId": "chisinau",
+      "styles": [],
+      "name": {
+        "ru": "ukraine1_trail",
+        "ro": "ucraine1_trail",
+        "uk": "ukraine1_trail",
+        "en": "ukraine1_trail"
+      },
+      "suitable": {
+        "ru": "Олл Маунтин / Эндуро",
+        "ro": "All Mountain / Enduro",
+        "uk": "All Mountain / Ендуро",
+        "en": "All Mountain / Enduro"
+      },
+      "difficulty": "red",
+      "desc": {
+        "ru": "Трейл протяженностью 1.2 км. Эндуро трасса с крутыми спусками и техническими участками. Рекомендуется для опытных райдеров с хорошей технической подготовкой.",
+        "ro": "Traseul are o lungime de 1,2 km. Pista de enduro cu coborâri abrupte și porțiuni tehnice. Recomandat pentru călăreți experimentați cu o bună pregătire tehnică.",
+        "uk": "Трейл завдовжки 1.2 км. Ендуро траса з крутими спусками та технічними ділянками. Рекомендується для досвідчених райдерів із гарною технічною підготовкою.",
+        "en": "The trail is 1.2 km long. Enduro track with steep descents and technical sections. Recommended for experienced riders with good technical training."
+      },
+      "gpxUrl": "https://raw.githubusercontent.com/Dimon4564/trailatlas-data/main/gpx_unverified/gpx_ukraine/ua_016.gpx",
+      "startLat": 49.0219084,
+      "startLon": 23.4967981,
+      "countryId": "ua"
     }
   ]
 }
