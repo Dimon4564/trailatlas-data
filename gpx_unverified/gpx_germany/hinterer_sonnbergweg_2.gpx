@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>germany1_trail</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Hinterer Sonnbergweg</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="47.5956754" lon="12.0331586" />
+      <ns0:trkpt lat="47.59557" lon="12.032848" />
+      <ns0:trkpt lat="47.5953347" lon="12.0322616" />
+      <ns0:trkpt lat="47.5953089" lon="12.0321372" />
+      <ns0:trkpt lat="47.5952843" lon="12.0320606" />
+      <ns0:trkpt lat="47.5952731" lon="12.0320251" />
+      <ns0:trkpt lat="47.5950777" lon="12.0314061" />
+      <ns0:trkpt lat="47.595063" lon="12.0310896" />
+      <ns0:trkpt lat="47.5949635" lon="12.0309068" />
+      <ns0:trkpt lat="47.5948888" lon="12.0305609" />
+      <ns0:trkpt lat="47.5949858" lon="12.0298162" />
+      <ns0:trkpt lat="47.5949344" lon="12.0295866" />
+      <ns0:trkpt lat="47.5946076" lon="12.0291946" />
+      <ns0:trkpt lat="47.5944541" lon="12.0289086" />
+      <ns0:trkpt lat="47.5943751" lon="12.0286918" />
+      <ns0:trkpt lat="47.5943041" lon="12.0282183" />
+      <ns0:trkpt lat="47.5942726" lon="12.0277521" />
+      <ns0:trkpt lat="47.5942508" lon="12.0273344" />
+      <ns0:trkpt lat="47.5940125" lon="12.0262863" />
+      <ns0:trkpt lat="47.5939394" lon="12.0257731" />
+      <ns0:trkpt lat="47.5939068" lon="12.0249979" />
+      <ns0:trkpt lat="47.5938911" lon="12.024283" />
+      <ns0:trkpt lat="47.5938612" lon="12.0235396" />
+      <ns0:trkpt lat="47.5937711" lon="12.0227649" />
+      <ns0:trkpt lat="47.5936877" lon="12.0217278" />
+      <ns0:trkpt lat="47.5936989" lon="12.0215008" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

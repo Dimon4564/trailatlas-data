@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>germany1_trail</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:trkseg>
+      <ns0:trkpt lat="48.0500451" lon="11.8965251" />
+      <ns0:trkpt lat="48.0500311" lon="11.8962737" />
+      <ns0:trkpt lat="48.0497997" lon="11.892111" />
+      <ns0:trkpt lat="48.0497972" lon="11.8920181" />
+      <ns0:trkpt lat="48.0498022" lon="11.891898" />
+      <ns0:trkpt lat="48.049837" lon="11.8917171" />
+      <ns0:trkpt lat="48.0498552" lon="11.8915746" />
+      <ns0:trkpt lat="48.0498668" lon="11.8914557" />
+      <ns0:trkpt lat="48.0498676" lon="11.8910841" />
+      <ns0:trkpt lat="48.0499245" lon="11.8896827" />
+      <ns0:trkpt lat="48.0499438" lon="11.8893238" />
+      <ns0:trkpt lat="48.0499405" lon="11.8891058" />
+      <ns0:trkpt lat="48.049914" lon="11.8888159" />
+      <ns0:trkpt lat="48.049935" lon="11.8884306" />
+      <ns0:trkpt lat="48.050082" lon="11.8871697" />
+      <ns0:trkpt lat="48.0501326" lon="11.8864127" />
+      <ns0:trkpt lat="48.0501475" lon="11.8857586" />
+      <ns0:trkpt lat="48.0501542" lon="11.8848221" />
+      <ns0:trkpt lat="48.0501807" lon="11.8846437" />
+      <ns0:trkpt lat="48.0502785" lon="11.8841276" />
+      <ns0:trkpt lat="48.0502949" lon="11.8839575" />
+      <ns0:trkpt lat="48.0502904" lon="11.8838138" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

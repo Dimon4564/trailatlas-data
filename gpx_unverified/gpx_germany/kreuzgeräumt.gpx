@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>germany1_trail</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Kreuzgeräumt</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="48.2148588" lon="12.8085114" />
+      <ns0:trkpt lat="48.2147749" lon="12.8085045" />
+      <ns0:trkpt lat="48.2146705" lon="12.8086345" />
+      <ns0:trkpt lat="48.2145667" lon="12.8086794" />
+      <ns0:trkpt lat="48.2138596" lon="12.8090077" />
+      <ns0:trkpt lat="48.2132423" lon="12.8093332" />
+      <ns0:trkpt lat="48.2115161" lon="12.8100441" />
+      <ns0:trkpt lat="48.209572" lon="12.8109101" />
+      <ns0:trkpt lat="48.2088474" lon="12.8112333" />
+      <ns0:trkpt lat="48.2059455" lon="12.8125487" />
+      <ns0:trkpt lat="48.2055398" lon="12.8127088" />
+      <ns0:trkpt lat="48.2035583" lon="12.8135901" />
+      <ns0:trkpt lat="48.2030121" lon="12.8138242" />
+      <ns0:trkpt lat="48.2021541" lon="12.8141969" />
+      <ns0:trkpt lat="48.2002584" lon="12.8150475" />
+      <ns0:trkpt lat="48.1978917" lon="12.8160822" />
+      <ns0:trkpt lat="48.1967289" lon="12.816539" />
+      <ns0:trkpt lat="48.1961219" lon="12.8168435" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>
