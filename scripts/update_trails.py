@@ -2,6 +2,7 @@
 import argparse
 import json
 import math
+import random
 import re
 import hashlib
 import time
@@ -39,6 +40,44 @@ TRAIL_TYPE_NAMES = {
     "dh": {"ru": "Даунхилл", "ro": "Downhill", "uk": "Даунхіл", "en": "Downhill"},
     "flow": {"ru": "Флоу", "ro": "Flow", "uk": "Флоу", "en": "Flow"}
 }
+
+# Random trail names used as fallback when no name can be determined
+RANDOM_TRAIL_NAMES = [
+    "Hidden Valley Trail",
+    "Sunset Ridge Path",
+    "Eagle's Nest Loop",
+    "Wildflower Meadow Trail",
+    "Silver Creek Route",
+    "Thunder Peak Trail",
+    "Misty Mountain Path",
+    "Golden Oak Loop",
+    "Falcon Ridge Trail",
+    "Pinecone Valley Route",
+    "Stony Brook Path",
+    "Crimson Ridge Trail",
+    "Whispering Pines Loop",
+    "Bear Creek Trail",
+    "Moonlit Ridge Path",
+    "Cedar Canyon Route",
+    "Maple Hollow Trail",
+    "Rocky Summit Path",
+    "Deer Crossing Loop",
+    "Sapphire Lake Trail",
+    "Timber Wolf Path",
+    "Copper Creek Route",
+    "Birchwood Trail",
+    "Aspen Grove Loop",
+    "Coyote Ridge Trail",
+    "Crystal Springs Path",
+    "Shadow Canyon Route",
+    "Ironwood Trail",
+    "Fox Meadow Loop",
+    "Granite Peak Path",
+    "Lone Pine Trail",
+    "Rushing Waters Route",
+    "Amber Hillside Path",
+    "Ravine Ridge Loop",
+]
 
 # Trail type descriptions in Russian
 TRAIL_TYPE_DESCRIPTIONS = {
@@ -173,7 +212,7 @@ def should_process_track(trk_elem, gpx_root, ns: str) -> Tuple[bool, str]:
         stats = calculate_elevation_stats(pts)
         length = stats.get("total_distance", 0)
         
-        if length < 900:
+        if length < 700:
             return (False, f"too short ({length:.0f}m)")
         
         if length > 50000:
@@ -905,13 +944,13 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                     if smart_name:
                         name = smart_name
                     else:
-                        # Priority 4: Fallback to cleaned filename
-                        cleaned = tid.replace("_", " ").title()
-                        name = auto_translate_i18n(f"{cleaned} Trail", "en")
+                        # Priority 4: Fallback to random name
+                        random_name = random.choice(RANDOM_TRAIL_NAMES)
+                        name = auto_translate_i18n(random_name, "en")
                 else:
                     # Fallback
-                    cleaned = tid.replace("_", " ").title()
-                    name = default_i18n(cleaned)
+                    random_name = random.choice(RANDOM_TRAIL_NAMES)
+                    name = auto_translate_i18n(random_name, "en")
     else:
         # Try smart generation
         # Priority 1: Try GPX <name> tag
@@ -935,9 +974,9 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                 if smart_name:
                     name = smart_name
                 else:
-                    # Priority 4: Fallback to cleaned filename
-                    cleaned = tid.replace("_", " ").title()
-                    name = auto_translate_i18n(f"{cleaned} Trail", "en")
+                    # Priority 4: Fallback to random name
+                    random_name = random.choice(RANDOM_TRAIL_NAMES)
+                    name = auto_translate_i18n(random_name, "en")
             else:
                 # Fallback
                 name = default_i18n(tid)
