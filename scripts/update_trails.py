@@ -21,30 +21,20 @@ except ImportError:
 
 LANGS = ("ru", "ro", "uk", "en")
 def is_filename_based_name(name_dict, trail_id):
-    """Check if the name was auto-generated from the file ID rather than being a real trail name."""
+    """
+    Возвращает True, если имя техническое: ukraine1_trail, ua_003, ua_003 trail и прочие файлоподобные
+    """
     if not isinstance(name_dict, dict):
         return True
     en_name = name_dict.get("en", "")
-    if not en_name:
-        return True
-    en_lower = en_name.lower().strip()
-    tid_clean = trail_id.replace("_", " ").lower().strip()
-    if en_lower == tid_clean or en_lower == trail_id.lower():
-        return True
-    if en_lower == f"{tid_clean} trail" or en_lower == f"{trail_id.lower()} trail":
-        return True
-    import re as _re
-    if _re.match(r'^[a-z]{2}[ _]\d{3}( trail)?$', en_lower):
-        return True
-    tid_variants = [
-        tid_clean,
-        tid_clean + " trail",
-        tid_clean.replace(" ", "_"),
-        tid_clean.replace(" ", "_") + " trail",
-        trail_id.lower(),
-        trail_id.lower() + " trail",
+    base_variants = [
+        trail_id,
+        trail_id + "_trail",
+        trail_id + " trail",
+        "ukraine1_trail",
+        "ukraine1 trail"
     ]
-    if en_lower in tid_variants:
+    if en_name.lower() in base_variants:
         return True
     return False
 DIFFICULTIES = ["green", "blue", "red", "black"]
@@ -988,13 +978,13 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
         styles = []
 
         # Handle name - smart generation with priority order
-    prev_name = prev.get("name")
+        prev_name = prev.get("name")
     needs_new_name = True
 
     if isinstance(prev_name, dict):
         has_existing = any(v for v in prev_name.values() if v)
         if has_existing and not is_filename_based_name(prev_name, tid):
-            # Существующее человекоподобное имя — сохраняем!
+            # Если имя ручное/человеческое — сохраняем
             needs_new_name = False
             name = {}
             for lang in LANGS:
@@ -1004,21 +994,20 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                     name[lang] = prev_name.get("ru") or next((v for v in prev_name.values() if v), tid)
 
     if needs_new_name:
+        # Генерируем красивое имя автоматически
+        # Используется логика по порядку: имя из GPX -> имя из OSM -> smart_name -> случайное
         gpx_name = None
         if gpx_path and gpx_path.exists():
             gpx_name = get_gpx_track_name(gpx_path)
-
         if gpx_name:
             name = auto_translate_i18n(gpx_name, "ru")
         else:
             osm_name = extract_osm_name(gpx_path) if gpx_path else None
-
             if osm_name:
                 name = auto_translate_i18n(osm_name, "en")
             elif is_unverified and stats.get("total_distance", 0) > 0:
                 trail_type = determine_trail_type(gpx_path, stats, difficulty) if gpx_path else "xc"
                 smart_name = generate_smart_name(gpx_path, stats, trail_type)
-
                 if smart_name:
                     name = smart_name
                 else:
