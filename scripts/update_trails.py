@@ -987,8 +987,8 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
     else:
         styles = []
 
-    # Handle name - smart generation with priority order
-       prev_name = prev.get("name")
+        # Handle name - smart generation with priority order
+    prev_name = prev.get("name")
     needs_new_name = True
 
     if isinstance(prev_name, dict):
@@ -1004,7 +1004,6 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                     name[lang] = prev_name.get("ru") or next((v for v in prev_name.values() if v), tid)
 
     if needs_new_name:
-        # дальше обычная логика — ищем имя в GPX, потом в OSM, потом генерим умное, потом случайное
         gpx_name = None
         if gpx_path and gpx_path.exists():
             gpx_name = get_gpx_track_name(gpx_path)
@@ -1028,51 +1027,7 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
             else:
                 random_name = random.choice(RANDOM_TRAIL_NAMES)
                 name = auto_translate_i18n(random_name, "en")
-
-    needs_new_name = True
-
-    if isinstance(prev_name, dict):
-        has_existing = any(v for v in prev_name.values() if v)
-        if has_existing and not is_filename_based_name(prev_name, tid):
-            # Real existing name - keep it
-            needs_new_name = False
-            name = {}
-            for lang in LANGS:
-                if lang in prev_name and prev_name[lang]:
-                    name[lang] = prev_name[lang]
-                else:
-                    name[lang] = prev_name.get("ru") or next((v for v in prev_name.values() if v), tid)
-
-    if needs_new_name:
-        # Priority 1: Try GPX <name> tag
-        gpx_name = None
-        if gpx_path and gpx_path.exists():
-            gpx_name = get_gpx_track_name(gpx_path)
-
-        if gpx_name:
-            name = auto_translate_i18n(gpx_name, "ru")
-        else:
-            # Priority 2: Try OSM ref
-            osm_name = extract_osm_name(gpx_path) if gpx_path else None
-
-            if osm_name:
-                name = auto_translate_i18n(osm_name, "en")
-            elif is_unverified and stats.get("total_distance", 0) > 0:
-                # Priority 3: Generate smart name from geolocation + characteristics
-                trail_type = determine_trail_type(gpx_path, stats, difficulty) if gpx_path else "xc"
-                smart_name = generate_smart_name(gpx_path, stats, trail_type)
-
-                if smart_name:
-                    name = smart_name
-                else:
-                    # Priority 4: Fallback to random name
-                    random_name = random.choice(RANDOM_TRAIL_NAMES)
-                    name = auto_translate_i18n(random_name, "en")
-            else:
-                # Fallback to random name
-                random_name = random.choice(RANDOM_TRAIL_NAMES)
-                name = auto_translate_i18n(random_name, "en")
-    
+                
     # Handle suitable field
     prev_suitable = prev.get("suitable")
     if isinstance(prev_suitable, dict):
