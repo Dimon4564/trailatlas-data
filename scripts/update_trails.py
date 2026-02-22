@@ -976,9 +976,9 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
         styles = detect_trail_styles(stats, pts_with_ele)
     else:
         styles = []
-
+        
         # Handle name - smart generation with priority order
-        prev_name = prev.get("name")
+    prev_name = prev.get("name")
     needs_new_name = True
 
     if isinstance(prev_name, dict):
