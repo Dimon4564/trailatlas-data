@@ -20,6 +20,33 @@ except ImportError:
     print("Warning: deep-translator not available. Translations will be skipped.")
 
 LANGS = ("ru", "ro", "uk", "en")
+def is_filename_based_name(name_dict, trail_id):
+    """Check if the name was auto-generated from the file ID rather than being a real trail name."""
+    if not isinstance(name_dict, dict):
+        return True
+    en_name = name_dict.get("en", "")
+    if not en_name:
+        return True
+    en_lower = en_name.lower().strip()
+    tid_clean = trail_id.replace("_", " ").lower().strip()
+    if en_lower == tid_clean or en_lower == trail_id.lower():
+        return True
+    if en_lower == f"{tid_clean} trail" or en_lower == f"{trail_id.lower()} trail":
+        return True
+    import re as _re
+    if _re.match(r'^[a-z]{2}[ _]\d{3}( trail)?$', en_lower):
+        return True
+    tid_variants = [
+        tid_clean,
+        tid_clean + " trail",
+        tid_clean.replace(" ", "_"),
+        tid_clean.replace(" ", "_") + " trail",
+        trail_id.lower(),
+        trail_id.lower() + " trail",
+    ]
+    if en_lower in tid_variants:
+        return True
+    return False
 DIFFICULTIES = ["green", "blue", "red", "black"]
 
 # Country folder name to countryId mapping (extensible)
@@ -961,32 +988,46 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
         styles = []
 
     # Handle name - smart generation with priority order
-    prev_name = prev.get("name")
+       prev_name = prev.get("name")
+    needs_new_name = True
 
-    def is_filename_based_name(name_dict, trail_id):
-        """Check if the name was auto-generated from the file ID rather than being a real trail name."""
-        if not isinstance(name_dict, dict):
-            return True
-        en_name = name_dict.get("en", "")
-        if not en_name:
-            return True
-        en_lower = en_name.lower().strip()
-        tid_clean = trail_id.replace("_", " ").lower().strip()
-        if en_lower == tid_clean or en_lower == trail_id.lower():
-            return True
-        if en_lower == f"{tid_clean} trail" or en_lower == f"{trail_id.lower()} trail":
-            return True
-        if re.match(r'^[a-z]{2}[\s_]\d{3}(\s+trail)?$', en_lower):
-            return True
-        tid_variants = [
-            tid_clean,
-            tid_clean + " trail",
-            trail_id.lower(),
-            trail_id.lower() + " trail",
-        ]
-        if en_lower in tid_variants:
-            return True
-        return False
+    if isinstance(prev_name, dict):
+        has_existing = any(v for v in prev_name.values() if v)
+        if has_existing and not is_filename_based_name(prev_name, tid):
+            # Существующее человекоподобное имя — сохраняем!
+            needs_new_name = False
+            name = {}
+            for lang in LANGS:
+                if lang in prev_name and prev_name[lang]:
+                    name[lang] = prev_name[lang]
+                else:
+                    name[lang] = prev_name.get("ru") or next((v for v in prev_name.values() if v), tid)
+
+    if needs_new_name:
+        # дальше обычная логика — ищем имя в GPX, потом в OSM, потом генерим умное, потом случайное
+        gpx_name = None
+        if gpx_path and gpx_path.exists():
+            gpx_name = get_gpx_track_name(gpx_path)
+
+        if gpx_name:
+            name = auto_translate_i18n(gpx_name, "ru")
+        else:
+            osm_name = extract_osm_name(gpx_path) if gpx_path else None
+
+            if osm_name:
+                name = auto_translate_i18n(osm_name, "en")
+            elif is_unverified and stats.get("total_distance", 0) > 0:
+                trail_type = determine_trail_type(gpx_path, stats, difficulty) if gpx_path else "xc"
+                smart_name = generate_smart_name(gpx_path, stats, trail_type)
+
+                if smart_name:
+                    name = smart_name
+                else:
+                    random_name = random.choice(RANDOM_TRAIL_NAMES)
+                    name = auto_translate_i18n(random_name, "en")
+            else:
+                random_name = random.choice(RANDOM_TRAIL_NAMES)
+                name = auto_translate_i18n(random_name, "en")
 
     needs_new_name = True
 
