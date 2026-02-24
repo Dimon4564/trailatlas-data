@@ -15,7 +15,7 @@
         "en": "High Black Forest lakes and mountains"
       },
       "suitable": {
-        "ru": "Кросс-кантри / олл-маунтин",
+        "ru": "Cross Country / All Mountain",
         "ro": "Cross Country / All Mountain",
         "uk": "Cross Country / All Mountain",
         "en": "Cross Country / All Mountain"
@@ -162,7 +162,7 @@
       "suitable": {
         "ru": "Даунхилл / Фрирайд",
         "ro": "Downhill / Freeride",
-        "uk": "Спуск / Фрірайд",
+        "uk": "Downhill / Freeride",
         "en": "Downhill / Freeride"
       },
       "difficulty": "black",
@@ -187,9 +187,9 @@
         "en": "Downhill Romania 13.2 km"
       },
       "suitable": {
-        "ru": "Даунхилл / Фрирайд",
+        "ru": "Downhill / Freeride",
         "ro": "Downhill / Freeride",
-        "uk": "Спуск / Фрірайд",
+        "uk": "Downhill / Freeride",
         "en": "Downhill / Freeride"
       },
       "difficulty": "black",
@@ -216,7 +216,7 @@
         "en": "Waldfischbach-Burgalben"
       },
       "suitable": {
-        "ru": "Кросс-кантри / олл-маунтин",
+        "ru": "Cross Country / All Mountain",
         "ro": "Cross Country / All Mountain",
         "uk": "Cross Country / All Mountain",
         "en": "Cross Country / All Mountain"
@@ -243,9 +243,9 @@
         "en": "Trail Romania 1.1 km"
       },
       "suitable": {
-        "ru": "Кросс-кантри / олл-маунтин",
+        "ru": "Cross Country / All Mountain",
         "ro": "Cross Country / All Mountain",
-        "uk": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+        "uk": "Cross Country / All Mountain",
         "en": "Cross Country / All Mountain"
       },
       "difficulty": "green",
@@ -265,10 +265,10 @@
       "cityId": "chisinau",
       "styles": [],
       "name": {
-        "ru": "Эндуро Carpathians 3.9 км",
-        "ro": "Enduro Carpathians 3.9 km",
-        "uk": "Ендуро Carpathians 3.9 км",
-        "en": "Enduro Carpathians 3.9 km"
+        "ru": "Enduro Carpathians",
+        "ro": "Enduro Carpathians",
+        "uk": "Enduro Carpathians",
+        "en": "Enduro Carpathians"
       },
       "suitable": {
         "ru": "Олл Маунтин / Эндуро",
