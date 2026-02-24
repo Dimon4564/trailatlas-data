@@ -44,7 +44,7 @@
         "ru": "Велодорожка Morilor",
         "ro": "Pista de biciclete Morilor",
         "uk": "Велодорожка Morilor",
-        "en": "Сycle Зath Ьorilor"
+        "en": "Сycle Path Ьorilor"
       },
       "suitable": {
         "ru": "All Bikes",
@@ -101,10 +101,10 @@
         "DH"
       ],
       "name": {
-        "ru": "\nResita\n",
+        "ru": "Resita",
         "ro": "Resita",
-        "uk": "Повторити",
-        "en": "Resit"
+        "uk": "Resita",
+        "en": "Resita"
       },
       "suitable": {
         "ru": "Enduro / Downhill",
@@ -281,7 +281,7 @@
       "name": {
         "ru": "DH Lux",
         "ro": "DH Lux",
-        "uk": "DH Люкс",
+        "uk": "DH Lux",
         "en": "DH Lux"
       },
       "suitable": {
@@ -311,7 +311,7 @@
       "name": {
         "ru": "Kalifornia",
         "ro": "California",
-        "uk": "Каліфорнія",
+        "uk": "Kalifornia",
         "en": "California"
       },
       "suitable": {
@@ -341,8 +341,8 @@
       ],
       "name": {
         "ru": "Milkyway",
-        "ro": "Calea lactee",
-        "uk": "Чумацький шлях",
+        "ro": "Milkyway",
+        "uk": "Milkyway",
         "en": "Milkyway"
       },
       "suitable": {
