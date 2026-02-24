@@ -1,6 +1,6 @@
 {
   "version": 10,
-  "updatedAt": "2026-02-21",
+  "updatedAt": "2026-02-24",
   "trails": [
     {
       "id": "chisinau_blue",
@@ -101,10 +101,10 @@
         "DH"
       ],
       "name": {
-        "ru": "Resita",
+        "ru": "\nResita\n",
         "ro": "Resita",
-        "uk": "Resita",
-        "en": "Resita"
+        "uk": "Повторити",
+        "en": "Resit"
       },
       "suitable": {
         "ru": "Enduro / Downhill",
