@@ -34,7 +34,9 @@
     {
       "id": "morilor_down",
       "cityId": "chisinau",
-      "styles": ["MTB"],
+      "styles": [
+        "MTB"
+      ],
       "name": {
         "ru": "Morilor Down",
         "ro": "Morilor Down",
