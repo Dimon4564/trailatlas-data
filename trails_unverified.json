@@ -11,7 +11,7 @@
       "name": {
         "ru": "Hochschwarzwald Seen und Bergen",
         "ro": "Lacuri și munți înalți din Pădurea Neagră",
-        "uk": "Високі озера і гори Шварцвальда",
+        "uk": "Hochschwarzwald Seen und Bergen",
         "en": "High Black Forest lakes and mountains"
       },
       "suitable": {
@@ -20,7 +20,7 @@
         "uk": "Cross Country / All Mountain",
         "en": "Cross Country / All Mountain"
       },
-      "difficulty": "green",
+      "difficulty": "blue",
       "desc": {
         "ru": "",
         "ro": "",
@@ -34,12 +34,12 @@
     {
       "id": "morilor_down",
       "cityId": "chisinau",
-      "styles": [],
+      "styles": ["MTB"],
       "name": {
-        "ru": "Эндуро Romania 0.6 км",
-        "ro": "Enduro Romania 0.6 km",
-        "uk": "Ендуро Romania 0.6 км",
-        "en": "Enduro Romania 0.6 km"
+        "ru": "Morilor Down",
+        "ro": "Morilor Down",
+        "uk": "Morilor Down",
+        "en": "Morilor Down"
       },
       "suitable": {
         "ru": "Олл Маунтин / Эндуро",
@@ -47,7 +47,7 @@
         "uk": "All Mountain / Ендуро",
         "en": "All Mountain / Enduro"
       },
-      "difficulty": "red",
+      "difficulty": "green",
       "desc": {
         "ru": "",
         "ro": "",
@@ -71,12 +71,12 @@
         "en": "Bratca MTB Tour"
       },
       "suitable": {
-        "ru": "Кросс-кантри / олл-маунтин",
+        "ru": "Cross Country / All Mountain",
         "ro": "Cross Country / All Mountain",
         "uk": "Cross Country / All Mountain",
         "en": "Cross Country / All Mountain"
       },
-      "difficulty": "green",
+      "difficulty": "blue",
       "desc": {
         "ru": "",
         "ro": "",
@@ -97,7 +97,7 @@
       "name": {
         "ru": "Pasul Vulcan Flow trail",
         "ro": "Traseu Pasul Vulcan Flow",
-        "uk": "Стежка Pasul Vulcan Flow",
+        "uk": "Pasul Vulcan Flow trail",
         "en": "Pasul Vulcan Flow trail"
       },
       "suitable": {
@@ -124,13 +124,13 @@
         "MTB"
       ],
       "name": {
-        "ru": "New file 1",
-        "ro": "Fișier nou 1",
-        "uk": "Новий файл 1",
-        "en": "New file 1"
+        "ru": "trail_park_dealul_leului",
+        "ro": "trail_park_dealul_leului",
+        "uk": "trail_park_dealul_leului",
+        "en": "trail_park_dealul_leului"
       },
       "suitable": {
-        "ru": "Все горные / кросс-кантри",
+        "ru": "All Mountain / Cross Country",
         "ro": "All Mountain / Cross Country",
         "uk": "All Mountain / Cross Country",
         "en": "All Mountain / Cross Country"
@@ -154,18 +154,18 @@
         "DH"
       ],
       "name": {
-        "ru": "New file 1",
-        "ro": "Fișier nou 1",
-        "uk": "Новий файл 1",
-        "en": "New file 1"
+        "ru": "Trail Park Nisporeni",
+        "ro": "Trail Park Nisporeni",
+        "uk": "Trail Park Nisporeni",
+        "en": "Trail Park Nisporeni"
       },
       "suitable": {
-        "ru": "Даунхилл / Фрирайд",
+        "ru": "Downhill / Freeride",
         "ro": "Downhill / Freeride",
         "uk": "Downhill / Freeride",
         "en": "Downhill / Freeride"
       },
-      "difficulty": "black",
+      "difficulty": "blue",
       "desc": {
         "ru": "",
         "ro": "",
@@ -181,10 +181,10 @@
       "cityId": "chisinau",
       "styles": [],
       "name": {
-        "ru": "Даунхилл Romania 13.2 км",
-        "ro": "Downhill Romania 13.2 km",
-        "uk": "Даунхіл Romania 13.2 км",
-        "en": "Downhill Romania 13.2 km"
+        "ru": "Vosmerka",
+        "ro": "Vosmerka",
+        "uk": "Vosmerka",
+        "en": "Vosmerka"
       },
       "suitable": {
         "ru": "Downhill / Freeride",
@@ -192,7 +192,7 @@
         "uk": "Downhill / Freeride",
         "en": "Downhill / Freeride"
       },
-      "difficulty": "black",
+      "difficulty": "green",
       "desc": {
         "ru": "",
         "ro": "",
@@ -212,7 +212,7 @@
       "name": {
         "ru": "Waldfischbach-Burgalben",
         "ro": "Waldfischbach-Burgalben",
-        "uk": "Вальдфішбах-Бургальбен",
+        "uk": "Waldfischbach-Burgalben",
         "en": "Waldfischbach-Burgalben"
       },
       "suitable": {
