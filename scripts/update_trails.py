@@ -68,14 +68,6 @@ COUNTRY_FOLDERS = {
 
 COUNTRY_CODE_TO_FOLDER = {v: k for k, v in COUNTRY_FOLDERS.items()}
 
-TRAIL_TYPE_NAMES = {
-    "xc": {"ru": "XC трейл", "ro": "Traseu XC", "uk": "XC трейл", "en": "XC Trail"},
-    "trail": {"ru": "Трейл", "ro": "Traseu", "uk": "Трейл", "en": "Trail"},
-    "enduro": {"ru": "Эндуро", "ro": "Enduro", "uk": "Ендуро", "en": "Enduro"},
-    "dh": {"ru": "Даунхилл", "ro": "Downhill", "uk": "Даунхіл", "en": "Downhill"},
-    "flow": {"ru": "Флоу", "ro": "Flow", "uk": "Флоу", "en": "Flow"}
-}
-
 RANDOM_TRAIL_NAMES = [
     "Hidden Valley Trail", "Sunset Ridge Path", "Eagle's Nest Loop", "Wildflower Meadow Trail",
     "Silver Creek Route", "Thunder Peak Trail", "Misty Mountain Path", "Golden Oak Loop",
@@ -487,51 +479,6 @@ def extract_osm_name(gpx_path: Path) -> Optional[str]:
     except Exception:
         return None
 
-def detect_region_from_coords(lat: float, lon: float) -> str:
-    if 45.4 <= lat <= 45.9 and 21.2 <= lon <= 21.8: return "Timiș"
-    elif 44.7 <= lat <= 45.2 and 22.5 <= lon <= 23.0: return "Caraș-Severin"
-    elif 47.0 <= lat <= 47.8 and 23.5 <= lon <= 24.5: return "Cluj"
-    elif 46.0 <= lat <= 46.5 and 24.5 <= lon <= 25.5: return "Brașov"
-    elif 45.0 <= lat <= 45.5 and 25.5 <= lon <= 26.5: return "Prahova"
-    elif 48.2 <= lat <= 48.9 and 23.5 <= lon <= 25.0: return "Carpathians"
-    elif 49.7 <= lat <= 50.0 and 23.5 <= lon <= 24.5: return "Lviv"
-    elif 50.3 <= lat <= 50.6 and 30.2 <= lon <= 30.8: return "Kyiv"
-    elif 48.4 <= lat <= 48.7 and 34.9 <= lon <= 35.3: return "Dnipro"
-    elif 49.8 <= lat <= 50.1 and 36.1 <= lon <= 36.5: return "Kharkiv"
-    elif 46.4 <= lat <= 46.7 and 30.6 <= lon <= 30.9: return "Odesa"
-    elif 48.5 <= lat <= 49.0 and 24.0 <= lon <= 24.8: return "Ivano-Frankivsk"
-    elif 48.0 <= lat <= 48.5 and 22.0 <= lon <= 23.0: return "Zakarpattia"
-    elif 49.4 <= lat <= 49.9 and 23.8 <= lon <= 24.2: return "Lviv Region"
-    elif 48.8 <= lat <= 49.3 and 25.0 <= lon <= 25.8: return "Ternopil"
-    elif 47.5 <= lat <= 48.5 and 7.5 <= lon <= 9.0: return "Black Forest"
-    elif 47.0 <= lat <= 47.8 and 10.5 <= lon <= 12.5: return "Bavaria"
-    elif 49.0 <= lat <= 50.0 and 8.0 <= lon <= 10.0: return "Baden-Württemberg"
-    elif 49.0 <= lat <= 49.6 and 19.0 <= lon <= 20.5: return "Tatras"
-    elif 50.0 <= lat <= 50.5 and 19.5 <= lon <= 20.5: return "Kraków"
-    elif 52.0 <= lat <= 52.5 and 20.5 <= lon <= 21.5: return "Warsaw"
-    elif 44.0 <= lat <= 48.5 and 20.0 <= lon <= 30.0: return "Romania"
-    elif 44.0 <= lat <= 52.5 and 22.0 <= lon <= 40.5: return "Ukraine"
-    elif 47.0 <= lat <= 55.0 and 5.5 <= lon <= 15.5: return "Germany"
-    elif 49.0 <= lat <= 55.0 and 14.0 <= lon <= 24.5: return "Poland"
-    return "Unknown Region"
-
-def generate_smart_name(gpx_path: Path, stats: Dict, trail_type: str) -> Optional[Dict[str, str]]:
-    """Генерирует умное название только на английском языке"""
-    try:
-        pts = parse_gpx_points(gpx_path, include_elevation=False)
-        if not pts: return None
-        
-        start_lat, start_lon = pts[0]
-        region = detect_region_from_coords(start_lat, start_lon)
-        length_km = stats.get("total_distance", 0) / 1000
-        type_name = TRAIL_TYPE_NAMES.get(trail_type, TRAIL_TYPE_NAMES["trail"])
-        
-        return {
-            "en": f"{type_name['en']} {region} {length_km:.1f} km"
-        }
-    except Exception:
-        return None
-
 def determine_trail_type(gpx_path: Path, stats: Dict[str, float], difficulty: str = "green") -> str:
     try:
         tree = ET.parse(gpx_path)
@@ -628,6 +575,7 @@ def auto_translate_i18n(source_text: str, source_lang: str = "ru") -> Dict[str, 
     return result
 
 def default_i18n(text: str):
+    """Возвращает словарь со всеми языками, заполненными одним текстом"""
     return {k: text for k in LANGS}
 
 def roots_equal(a, b):
@@ -659,44 +607,33 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
     else:
         styles = []
 
-    # Генерация имени (ТОЛЬКО на английском)
-    gpx_name = None
+    # Генерация имени (ищем в GPX или OSM, иначе случайное. Никаких упоминаний стран!)
+    final_name = None
     if gpx_path and gpx_path.exists():
         raw_gpx_name = get_gpx_track_name(gpx_path)
         if raw_gpx_name and not is_technical_name(raw_gpx_name, tid):
-            gpx_name = raw_gpx_name
+            final_name = raw_gpx_name
             
-    if gpx_name:
-        name = {"en": gpx_name}
-    else:
-        osm_name = None
+    if not final_name:
         if gpx_path and gpx_path.exists():
             raw_osm = extract_osm_name(gpx_path)
             if raw_osm and not is_technical_name(raw_osm, tid):
-                osm_name = raw_osm
+                final_name = raw_osm
                 
-        if osm_name:
-            name = {"en": osm_name}
-        elif is_unverified and stats.get("total_distance", 0) > 0:
-            trail_type = determine_trail_type(gpx_path, stats, difficulty) if gpx_path else "xc"
-            smart_name = generate_smart_name(gpx_path, stats, trail_type)
-            if smart_name:
-                name = smart_name
-            else:
-                random_name = random.choice(RANDOM_TRAIL_NAMES)
-                name = {"en": random_name}
-        else:
-            random_name = random.choice(RANDOM_TRAIL_NAMES)
-            name = {"en": random_name}
+    if not final_name:
+        final_name = random.choice(RANDOM_TRAIL_NAMES)
+
+    # Заполняем ВСЕ языки (ru, ro, uk, en) ОДНИМ английским текстом (именем трейла)
+    name = default_i18n(final_name)
             
-    # Подходящие стили катания (ТОЛЬКО на английском)
+    # Подходящие стили катания (заполняем ВСЕ языки (ru, ro, uk, en) ОДНИМ английским текстом)
     if is_unverified:
         suitable_text = generate_suitable_text(difficulty, styles)
-        suitable = {"en": suitable_text}
+        suitable = default_i18n(suitable_text)
     else:
-        suitable = {"en": ""}
+        suitable = default_i18n("")
     
-    # Описание
+    # Описание (оставили с нормальным переводом)
     if is_unverified and country_id:
         trail_type = determine_trail_type(gpx_path, stats, difficulty) if gpx_path else "xc"
         desc_text = generate_description(gpx_path, stats, difficulty, country_id, trail_type)
