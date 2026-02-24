@@ -516,6 +516,7 @@ def detect_region_from_coords(lat: float, lon: float) -> str:
     return "Unknown Region"
 
 def generate_smart_name(gpx_path: Path, stats: Dict, trail_type: str) -> Optional[Dict[str, str]]:
+    """Генерирует умное название только на английском языке"""
     try:
         pts = parse_gpx_points(gpx_path, include_elevation=False)
         if not pts: return None
@@ -526,9 +527,6 @@ def generate_smart_name(gpx_path: Path, stats: Dict, trail_type: str) -> Optiona
         type_name = TRAIL_TYPE_NAMES.get(trail_type, TRAIL_TYPE_NAMES["trail"])
         
         return {
-            "ru": f"{type_name['ru']} {region} {length_km:.1f} км",
-            "ro": f"{type_name['ro']} {region} {length_km:.1f} km",
-            "uk": f"{type_name['uk']} {region} {length_km:.1f} км",
             "en": f"{type_name['en']} {region} {length_km:.1f} km"
         }
     except Exception:
@@ -643,7 +641,6 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
     """
     Генерирует объект трейла с нуля (вызывается ТОЛЬКО для новых файлов).
     """
-    city_id = prev.get("cityId", "chisinau")
 
     stats = {"has_elevation": False}
     pts_with_ele = []
@@ -662,7 +659,7 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
     else:
         styles = []
 
-    # Генерация имени
+    # Генерация имени (ТОЛЬКО на английском)
     gpx_name = None
     if gpx_path and gpx_path.exists():
         raw_gpx_name = get_gpx_track_name(gpx_path)
@@ -670,7 +667,7 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
             gpx_name = raw_gpx_name
             
     if gpx_name:
-        name = auto_translate_i18n(gpx_name, "ru")
+        name = {"en": gpx_name}
     else:
         osm_name = None
         if gpx_path and gpx_path.exists():
@@ -679,7 +676,7 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                 osm_name = raw_osm
                 
         if osm_name:
-            name = auto_translate_i18n(osm_name, "en")
+            name = {"en": osm_name}
         elif is_unverified and stats.get("total_distance", 0) > 0:
             trail_type = determine_trail_type(gpx_path, stats, difficulty) if gpx_path else "xc"
             smart_name = generate_smart_name(gpx_path, stats, trail_type)
@@ -687,17 +684,17 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
                 name = smart_name
             else:
                 random_name = random.choice(RANDOM_TRAIL_NAMES)
-                name = auto_translate_i18n(random_name, "en")
+                name = {"en": random_name}
         else:
             random_name = random.choice(RANDOM_TRAIL_NAMES)
-            name = auto_translate_i18n(random_name, "en")
+            name = {"en": random_name}
             
-    # Подходящие стили катания
+    # Подходящие стили катания (ТОЛЬКО на английском)
     if is_unverified:
         suitable_text = generate_suitable_text(difficulty, styles)
-        suitable = auto_translate_i18n(suitable_text, "en")
+        suitable = {"en": suitable_text}
     else:
-        suitable = default_i18n("")
+        suitable = {"en": ""}
     
     # Описание
     if is_unverified and country_id:
@@ -707,9 +704,9 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
     else:
         desc = default_i18n("")
 
+    # Собираем объект (без cityId)
     obj = {
         "id": tid,
-        "cityId": city_id,
         "styles": styles,
         "name": name,
         "suitable": suitable,
@@ -769,15 +766,12 @@ def upsert_file(gpx_dir: Path, json_path: Path, gpx_folder_name: str, raw_base: 
     # 1. СНАЧАЛА ОБРАБАТЫВАЕМ СУЩЕСТВУЮЩИЕ ТРЕЙЛЫ (ЧТОБЫ НЕ ТРОГАТЬ ИХ)
     for tid in order:
         if tid not in file_by_id:
-            # Если файла gpx больше нет, пропускаем (удаляем из базы)
             continue
         
         p, country_code = file_by_id[tid]
         
-        # Берем твой настроенный трейл из базы целиком! Ничего не пересчитываем.
         existing_trail = deepcopy(existing_by_id[tid])
         
-        # Единственное что обновляем - ссылку на файл (вдруг ты перенес gpx в другую папку)
         if country_code:
             folder_name = COUNTRY_CODE_TO_FOLDER.get(country_code, f"gpx_{country_code}")
             existing_trail["gpxUrl"] = f"{raw_base}/{gpx_folder_name}/{folder_name}/{p.name}"
@@ -789,7 +783,6 @@ def upsert_file(gpx_dir: Path, json_path: Path, gpx_folder_name: str, raw_base: 
     # 2. ЗАТЕМ ДОБАВЛЯЕМ ТОЛЬКО НОВЫЕ ТРЕЙЛЫ, КОТОРЫХ ЕЩЕ НЕТ В БАЗЕ
     for tid in sorted(file_by_id.keys()):
         if tid in existing_by_id:
-            # Если трейл уже был в базе, мы его добавили в цикле выше
             continue
         
         p, country_code = file_by_id[tid]
@@ -803,17 +796,10 @@ def upsert_file(gpx_dir: Path, json_path: Path, gpx_folder_name: str, raw_base: 
         else:
             gpx_url = f"{raw_base}/{gpx_folder_name}/{p.name}"
         
-        # А вот для новых файлов генерируем все с нуля
         new_trails.append(build_trail_object(
             {}, tid, gpx_url, start_lat, start_lon,
             gpx_path=p, country_id=country_code, is_unverified=is_unverified
         ))
-
-    # На всякий случай убеждаемся, что у всех есть cityId
-    for t in new_trails:
-        if isinstance(t, dict):
-            if "cityId" not in t:
-                t["cityId"] = "chisinau"
 
     new_root = {
         "version": version,
