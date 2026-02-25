@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Strada Mihai Viteazu</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="44.833086" lon="22.561318" />
+      <ns0:trkpt lat="44.8330733" lon="22.5611355" />
+      <ns0:trkpt lat="44.8330503" lon="22.5608439" />
+      <ns0:trkpt lat="44.833033" lon="22.5606875" />
+      <ns0:trkpt lat="44.8330033" lon="22.560534" />
+      <ns0:trkpt lat="44.8328454" lon="22.5600016" />
+      <ns0:trkpt lat="44.8327209" lon="22.5594238" />
+      <ns0:trkpt lat="44.8325842" lon="22.5586955" />
+      <ns0:trkpt lat="44.8324853" lon="22.5581374" />
+      <ns0:trkpt lat="44.8322875" lon="22.5571039" />
+      <ns0:trkpt lat="44.8321425" lon="22.5563956" />
+      <ns0:trkpt lat="44.8319715" lon="22.5555329" />
+      <ns0:trkpt lat="44.8318766" lon="22.5549689" />
+      <ns0:trkpt lat="44.8316864" lon="22.5539711" />
+      <ns0:trkpt lat="44.8315723" lon="22.5533381" />
+      <ns0:trkpt lat="44.8314163" lon="22.552464" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

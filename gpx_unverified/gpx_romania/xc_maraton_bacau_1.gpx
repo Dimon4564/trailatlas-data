@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>XC Maraton Bacau</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="46.6087963" lon="26.8323358" />
+      <ns0:trkpt lat="46.6089626" lon="26.8321919" />
+      <ns0:trkpt lat="46.6115717" lon="26.8300032" />
+      <ns0:trkpt lat="46.6166273" lon="26.8257546" />
+      <ns0:trkpt lat="46.6203266" lon="26.8249392" />
+      <ns0:trkpt lat="46.6237456" lon="26.8229436" />
+      <ns0:trkpt lat="46.6252193" lon="26.8207335" />
+      <ns0:trkpt lat="46.6268256" lon="26.819446" />
+      <ns0:trkpt lat="46.6286528" lon="26.8189096" />
+      <ns0:trkpt lat="46.6302442" lon="26.8177723" />
+      <ns0:trkpt lat="46.6303768" lon="26.817193" />
+      <ns0:trkpt lat="46.6306715" lon="26.8157982" />
+      <ns0:trkpt lat="46.6311578" lon="26.8146824" />
+      <ns0:trkpt lat="46.6314083" lon="26.8141889" />
+      <ns0:trkpt lat="46.6317324" lon="26.8131375" />
+      <ns0:trkpt lat="46.6330585" lon="26.8110131" />
+      <ns0:trkpt lat="46.6341194" lon="26.8097686" />
+      <ns0:trkpt lat="46.635578" lon="26.8071937" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

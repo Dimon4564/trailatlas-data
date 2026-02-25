@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>підйом на Петрос</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="48.1629542" lon="24.3937441" />
+      <ns0:trkpt lat="48.1623947" lon="24.3939576" />
+      <ns0:trkpt lat="48.1619613" lon="24.3941802" />
+      <ns0:trkpt lat="48.1611823" lon="24.394112" />
+      <ns0:trkpt lat="48.1608795" lon="24.3940093" />
+      <ns0:trkpt lat="48.1605293" lon="24.3938905" />
+      <ns0:trkpt lat="48.1604241" lon="24.3936502" />
+      <ns0:trkpt lat="48.160661" lon="24.3929346" />
+      <ns0:trkpt lat="48.1606889" lon="24.39261" />
+      <ns0:trkpt lat="48.1605397" lon="24.3924292" />
+      <ns0:trkpt lat="48.1605346" lon="24.3922828" />
+      <ns0:trkpt lat="48.1606504" lon="24.3920619" />
+      <ns0:trkpt lat="48.1606392" lon="24.3919957" />
+      <ns0:trkpt lat="48.1605666" lon="24.3919518" />
+      <ns0:trkpt lat="48.1603774" lon="24.3920839" />
+      <ns0:trkpt lat="48.1602799" lon="24.3920732" />
+      <ns0:trkpt lat="48.1601079" lon="24.3921138" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

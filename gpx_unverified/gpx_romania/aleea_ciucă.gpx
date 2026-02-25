@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Aleea Ciucă</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="45.0055114" lon="22.7445739" />
+      <ns0:trkpt lat="45.005621" lon="22.7441825" />
+      <ns0:trkpt lat="45.0058448" lon="22.7435738" />
+      <ns0:trkpt lat="45.0059485" lon="22.7433542" />
+      <ns0:trkpt lat="45.0060922" lon="22.7431152" />
+      <ns0:trkpt lat="45.0062264" lon="22.742812" />
+      <ns0:trkpt lat="45.0063009" lon="22.7425514" />
+      <ns0:trkpt lat="45.00647" lon="22.7420704" />
+      <ns0:trkpt lat="45.0066184" lon="22.7417346" />
+      <ns0:trkpt lat="45.0066729" lon="22.7416225" />
+      <ns0:trkpt lat="45.0067587" lon="22.7415185" />
+      <ns0:trkpt lat="45.0069659" lon="22.7413562" />
+      <ns0:trkpt lat="45.0070522" lon="22.7412964" />
+      <ns0:trkpt lat="45.0071076" lon="22.7411552" />
+      <ns0:trkpt lat="45.0071166" lon="22.741043" />
+      <ns0:trkpt lat="45.0070925" lon="22.7409225" />
+      <ns0:trkpt lat="45.0069252" lon="22.7404535" />
+      <ns0:trkpt lat="45.0064447" lon="22.7392102" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>
