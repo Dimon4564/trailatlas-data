@@ -23,8 +23,7 @@ LANGS = ("ru", "ro", "uk", "en")
 
 def is_technical_name(name_str: str, trail_id: str) -> bool:
     """
-    Возвращает True, если имя техническое и его нужно заменить 
-    (например, ua_003, ukraine1_trail, Track 1 и т.д.).
+    Возвращает True, если имя техническое или осталось от старой кривой генерации.
     """
     if not name_str:
         return True
@@ -53,6 +52,10 @@ def is_technical_name(name_str: str, trail_id: str) -> bool:
         return True
         
     if re.match(r"^\d{4}[-/]\d{2}[-/]\d{2}", text):
+        return True
+        
+    # Отлавливаем старые кривые имена (например "Trail Romania 1.1 km", "XC Trail 5.0 км")
+    if re.search(r'\d+\.\d+\s*(km|км)', text):
         return True
         
     return False
@@ -700,7 +703,7 @@ def upsert_file(gpx_dir: Path, json_path: Path, gpx_folder_name: str, raw_base: 
 
     new_trails = []
 
-    # 1. СНАЧАЛА ОБРАБАТЫВАЕМ СУЩЕСТВУЮЩИЕ ТРЕЙЛЫ (ЧТОБЫ НЕ ТРОГАТЬ ИХ)
+    # 1. СНАЧАЛА ОБРАБАТЫВАЕМ СУЩЕСТВУЮЩИЕ ТРЕЙЛЫ
     for tid in order:
         if tid not in file_by_id:
             continue
@@ -709,11 +712,31 @@ def upsert_file(gpx_dir: Path, json_path: Path, gpx_folder_name: str, raw_base: 
         
         existing_trail = deepcopy(existing_by_id[tid])
         
+        # Обновляем пути к файлам
         if country_code:
             folder_name = COUNTRY_CODE_TO_FOLDER.get(country_code, f"gpx_{country_code}")
             existing_trail["gpxUrl"] = f"{raw_base}/{gpx_folder_name}/{folder_name}/{p.name}"
         else:
             existing_trail["gpxUrl"] = f"{raw_base}/{gpx_folder_name}/{p.name}"
+            
+        # УМНАЯ ПРОВЕРКА: Если в JSON сохранилось старое кривое имя ("Trail Romania 1.1 km") 
+        # или системное, то принудительно даем ему нормальное красивое имя!
+        current_name = existing_trail.get("name", {}).get("en", "")
+        if not current_name or is_technical_name(current_name, tid):
+            final_name = None
+            if p and p.exists():
+                raw_gpx_name = get_gpx_track_name(p)
+                if raw_gpx_name and not is_technical_name(raw_gpx_name, tid):
+                    final_name = raw_gpx_name
+            if not final_name and p and p.exists():
+                raw_osm = extract_osm_name(p)
+                if raw_osm and not is_technical_name(raw_osm, tid):
+                    final_name = raw_osm
+            if not final_name:
+                final_name = random.choice(RANDOM_TRAIL_NAMES)
+            
+            # Перезаписываем имя во всех ключах
+            existing_trail["name"] = default_i18n(final_name)
             
         new_trails.append(existing_trail)
 
