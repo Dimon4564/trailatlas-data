@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Na Stawach</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="50.0125904" lon="19.4870633" />
+      <ns0:trkpt lat="50.012876" lon="19.4874675" />
+      <ns0:trkpt lat="50.012991" lon="19.4876775" />
+      <ns0:trkpt lat="50.0130446" lon="19.4878478" />
+      <ns0:trkpt lat="50.0131216" lon="19.4882832" />
+      <ns0:trkpt lat="50.0131348" lon="19.4885481" />
+      <ns0:trkpt lat="50.0131241" lon="19.4888778" />
+      <ns0:trkpt lat="50.0131082" lon="19.4892242" />
+      <ns0:trkpt lat="50.0131043" lon="19.4893788" />
+      <ns0:trkpt lat="50.0131203" lon="19.4894979" />
+      <ns0:trkpt lat="50.0132217" lon="19.4896843" />
+      <ns0:trkpt lat="50.0134819" lon="19.4901138" />
+      <ns0:trkpt lat="50.0136296" lon="19.4904333" />
+      <ns0:trkpt lat="50.0138916" lon="19.4911825" />
+      <ns0:trkpt lat="50.013956" lon="19.4913668" />
+      <ns0:trkpt lat="50.0140123" lon="19.4915959" />
+      <ns0:trkpt lat="50.0140452" lon="19.4917642" />
+      <ns0:trkpt lat="50.0140867" lon="19.492135" />
+      <ns0:trkpt lat="50.0140756" lon="19.4925407" />
+      <ns0:trkpt lat="50.0140096" lon="19.4932893" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

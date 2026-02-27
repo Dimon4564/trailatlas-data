@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Dojazd pożarowy 15</ns0:name>
+    <ns0:type>route</ns0:type>
+    <ns0:trkseg>
+      <ns0:trkpt lat="49.5966683" lon="19.247615" />
+      <ns0:trkpt lat="49.596226" lon="19.2472328" />
+      <ns0:trkpt lat="49.5958002" lon="19.2467636" />
+      <ns0:trkpt lat="49.5954251" lon="19.2464195" />
+      <ns0:trkpt lat="49.5951108" lon="19.2460284" />
+      <ns0:trkpt lat="49.5946951" lon="19.2453246" />
+      <ns0:trkpt lat="49.5944315" lon="19.2448553" />
+      <ns0:trkpt lat="49.5940158" lon="19.2444017" />
+      <ns0:trkpt lat="49.5937116" lon="19.2441202" />
+      <ns0:trkpt lat="49.5935291" lon="19.243776" />
+      <ns0:trkpt lat="49.5934433" lon="19.2435609" />
+      <ns0:trkpt lat="49.5933973" lon="19.2434006" />
+      <ns0:trkpt lat="49.5933727" lon="19.2432429" />
+      <ns0:trkpt lat="49.5933618" lon="19.2430608" />
+      <ns0:trkpt lat="49.5933526" lon="19.2428742" />
+      <ns0:trkpt lat="49.5933418" lon="19.242613" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

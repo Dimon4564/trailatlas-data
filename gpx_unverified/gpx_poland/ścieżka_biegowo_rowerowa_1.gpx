@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Ścieżka biegowo rowerowa</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="49.5568228" lon="20.6227061" />
+      <ns0:trkpt lat="49.557353" lon="20.6234675" />
+      <ns0:trkpt lat="49.5576769" lon="20.6239835" />
+      <ns0:trkpt lat="49.5579291" lon="20.62414" />
+      <ns0:trkpt lat="49.5580241" lon="20.6242096" />
+      <ns0:trkpt lat="49.5585935" lon="20.6247591" />
+      <ns0:trkpt lat="49.5590455" lon="20.6251444" />
+      <ns0:trkpt lat="49.5599495" lon="20.6257936" />
+      <ns0:trkpt lat="49.5602938" lon="20.6258651" />
+      <ns0:trkpt lat="49.5606424" lon="20.6258223" />
+      <ns0:trkpt lat="49.5611659" lon="20.6258085" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

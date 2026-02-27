@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Bór</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="49.9298854" lon="18.9500804" />
+      <ns0:trkpt lat="49.9295126" lon="18.9498716" />
+      <ns0:trkpt lat="49.9287088" lon="18.9493843" />
+      <ns0:trkpt lat="49.92807" lon="18.9494762" />
+      <ns0:trkpt lat="49.9276153" lon="18.949559" />
+      <ns0:trkpt lat="49.9273259" lon="18.9496815" />
+      <ns0:trkpt lat="49.9270186" lon="18.950027" />
+      <ns0:trkpt lat="49.9266527" lon="18.9505336" />
+      <ns0:trkpt lat="49.9264049" lon="18.950865" />
+      <ns0:trkpt lat="49.9256744" lon="18.9514775" />
+      <ns0:trkpt lat="49.9254477" lon="18.9515884" />
+      <ns0:trkpt lat="49.9251264" lon="18.9517327" />
+      <ns0:trkpt lat="49.9250222" lon="18.9518076" />
+      <ns0:trkpt lat="49.9249952" lon="18.951884" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

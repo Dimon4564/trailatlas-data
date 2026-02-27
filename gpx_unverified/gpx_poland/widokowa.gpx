@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Widokowa</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="49.5165314" lon="19.947277" />
+      <ns0:trkpt lat="49.516384" lon="19.947255" />
+      <ns0:trkpt lat="49.51628" lon="19.947205" />
+      <ns0:trkpt lat="49.516061" lon="19.947009" />
+      <ns0:trkpt lat="49.515435" lon="19.946347" />
+      <ns0:trkpt lat="49.515107" lon="19.9459531" />
+      <ns0:trkpt lat="49.514663" lon="19.94542" />
+      <ns0:trkpt lat="49.51446" lon="19.945104" />
+      <ns0:trkpt lat="49.514236" lon="19.944531" />
+      <ns0:trkpt lat="49.513963" lon="19.94394" />
+      <ns0:trkpt lat="49.513886" lon="19.943688" />
+      <ns0:trkpt lat="49.5138492" lon="19.9435367" />
+      <ns0:trkpt lat="49.5137222" lon="19.9430756" />
+      <ns0:trkpt lat="49.5136475" lon="19.9428058" />
+      <ns0:trkpt lat="49.5136297" lon="19.9426871" />
+      <ns0:trkpt lat="49.5136287" lon="19.9425598" />
+      <ns0:trkpt lat="49.513696" lon="19.94238" />
+      <ns0:trkpt lat="49.513843" lon="19.941933" />
+      <ns0:trkpt lat="49.5139119" lon="19.9417281" />
+      <ns0:trkpt lat="49.514028" lon="19.941458" />
+      <ns0:trkpt lat="49.5141532" lon="19.9411173" />
+      <ns0:trkpt lat="49.5141725" lon="19.9410369" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

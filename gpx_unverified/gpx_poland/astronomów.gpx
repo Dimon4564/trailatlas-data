@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Astronomów</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="50.0542174" lon="19.836446" />
+      <ns0:trkpt lat="50.0544817" lon="19.8360681" />
+      <ns0:trkpt lat="50.0546573" lon="19.8358288" />
+      <ns0:trkpt lat="50.0547818" lon="19.8355895" />
+      <ns0:trkpt lat="50.0548039" lon="19.8355469" />
+      <ns0:trkpt lat="50.0550775" lon="19.8347023" />
+      <ns0:trkpt lat="50.0551153" lon="19.8345092" />
+      <ns0:trkpt lat="50.0551331" lon="19.8343112" />
+      <ns0:trkpt lat="50.0551587" lon="19.8342608" />
+      <ns0:trkpt lat="50.0551449" lon="19.8341429" />
+      <ns0:trkpt lat="50.055077" lon="19.8340067" />
+      <ns0:trkpt lat="50.0537062" lon="19.8328175" />
+      <ns0:trkpt lat="50.0526374" lon="19.8318883" />
+      <ns0:trkpt lat="50.0525838" lon="19.8317572" />
+      <ns0:trkpt lat="50.0525579" lon="19.831658" />
+      <ns0:trkpt lat="50.0525442" lon="19.8314917" />
+      <ns0:trkpt lat="50.0525631" lon="19.8312879" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

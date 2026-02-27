@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Hrabovská dolina</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="49.0699596" lon="19.2734645" />
+      <ns0:trkpt lat="49.0701984" lon="19.2737888" />
+      <ns0:trkpt lat="49.0702623" lon="19.2738828" />
+      <ns0:trkpt lat="49.0703633" lon="19.2740358" />
+      <ns0:trkpt lat="49.0706187" lon="19.274468" />
+      <ns0:trkpt lat="49.0707197" lon="19.2746222" />
+      <ns0:trkpt lat="49.0707821" lon="19.274698" />
+      <ns0:trkpt lat="49.0708968" lon="19.2748656" />
+      <ns0:trkpt lat="49.0710158" lon="19.2750621" />
+      <ns0:trkpt lat="49.0711151" lon="19.2752056" />
+      <ns0:trkpt lat="49.0712093" lon="19.2753005" />
+      <ns0:trkpt lat="49.0712561" lon="19.2753605" />
+      <ns0:trkpt lat="49.0713033" lon="19.2754252" />
+      <ns0:trkpt lat="49.071313" lon="19.2754406" />
+      <ns0:trkpt lat="49.0720203" lon="19.2765559" />
+      <ns0:trkpt lat="49.0722021" lon="19.2768466" />
+      <ns0:trkpt lat="49.0725378" lon="19.2776734" />
+      <ns0:trkpt lat="49.0726726" lon="19.2778755" />
+      <ns0:trkpt lat="49.0727431" lon="19.2781278" />
+      <ns0:trkpt lat="49.0727958" lon="19.2783692" />
+      <ns0:trkpt lat="49.0728626" lon="19.2787031" />
+      <ns0:trkpt lat="49.0729032" lon="19.2788802" />
+      <ns0:trkpt lat="49.0731279" lon="19.2794904" />
+      <ns0:trkpt lat="49.0732088" lon="19.279772" />
+      <ns0:trkpt lat="49.0733104" lon="19.2802199" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

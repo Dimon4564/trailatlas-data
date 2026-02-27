@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Pszczoła</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="50.1040156" lon="19.4075981" />
+      <ns0:trkpt lat="50.1042289" lon="19.407652" />
+      <ns0:trkpt lat="50.1044135" lon="19.4077599" />
+      <ns0:trkpt lat="50.1045317" lon="19.4080297" />
+      <ns0:trkpt lat="50.1046009" lon="19.4084208" />
+      <ns0:trkpt lat="50.1046557" lon="19.409122" />
+      <ns0:trkpt lat="50.1046989" lon="19.4095356" />
+      <ns0:trkpt lat="50.1046412" lon="19.4098998" />
+      <ns0:trkpt lat="50.1044682" lon="19.4105741" />
+      <ns0:trkpt lat="50.1042376" lon="19.4109697" />
+      <ns0:trkpt lat="50.104154" lon="19.411199" />
+      <ns0:trkpt lat="50.1042491" lon="19.4119902" />
+      <ns0:trkpt lat="50.1044942" lon="19.412597" />
+      <ns0:trkpt lat="50.1047249" lon="19.4131095" />
+      <ns0:trkpt lat="50.1049296" lon="19.4135771" />
+      <ns0:trkpt lat="50.1049769" lon="19.413693" />
+      <ns0:trkpt lat="50.1050617" lon="19.4137921" />
+      <ns0:trkpt lat="50.1049906" lon="19.4141084" />
+      <ns0:trkpt lat="50.1050173" lon="19.4142221" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

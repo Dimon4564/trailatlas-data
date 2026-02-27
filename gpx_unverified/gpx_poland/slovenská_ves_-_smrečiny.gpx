@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Slovenská Ves - Smrečiny</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="49.2699083" lon="20.3760727" />
+      <ns0:trkpt lat="49.2698671" lon="20.3763369" />
+      <ns0:trkpt lat="49.2698558" lon="20.3765139" />
+      <ns0:trkpt lat="49.2698207" lon="20.3767231" />
+      <ns0:trkpt lat="49.2698181" lon="20.3769833" />
+      <ns0:trkpt lat="49.2698216" lon="20.3771576" />
+      <ns0:trkpt lat="49.2698365" lon="20.377344" />
+      <ns0:trkpt lat="49.2698286" lon="20.3776807" />
+      <ns0:trkpt lat="49.2698286" lon="20.3779462" />
+      <ns0:trkpt lat="49.269798" lon="20.3780816" />
+      <ns0:trkpt lat="49.2697577" lon="20.3781889" />
+      <ns0:trkpt lat="49.2695696" lon="20.3783754" />
+      <ns0:trkpt lat="49.269455" lon="20.3785108" />
+      <ns0:trkpt lat="49.2692204" lon="20.3788702" />
+      <ns0:trkpt lat="49.2688459" lon="20.3793812" />
+      <ns0:trkpt lat="49.2686954" lon="20.379644" />
+      <ns0:trkpt lat="49.2684154" lon="20.3802891" />
+      <ns0:trkpt lat="49.2682867" lon="20.3805667" />
+      <ns0:trkpt lat="49.2680837" lon="20.3809892" />
+      <ns0:trkpt lat="49.2679936" lon="20.3811152" />
+      <ns0:trkpt lat="49.2678492" lon="20.3812775" />
+      <ns0:trkpt lat="49.267724" lon="20.3813781" />
+      <ns0:trkpt lat="49.2673049" lon="20.3815913" />
+      <ns0:trkpt lat="49.2671587" lon="20.3816839" />
+      <ns0:trkpt lat="49.2664901" lon="20.3819413" />
+      <ns0:trkpt lat="49.2660368" lon="20.3822431" />
+      <ns0:trkpt lat="49.2657944" lon="20.3824644" />
+      <ns0:trkpt lat="49.2655196" lon="20.3827943" />
+      <ns0:trkpt lat="49.2654172" lon="20.3828721" />
+      <ns0:trkpt lat="49.2653089" lon="20.3829219" />
+      <ns0:trkpt lat="49.2652576" lon="20.3829302" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

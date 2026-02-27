@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Dojazd pożarowy 8</ns0:name>
+    <ns0:type>route</ns0:type>
+    <ns0:trkseg>
+      <ns0:trkpt lat="49.5887246" lon="19.2359845" />
+      <ns0:trkpt lat="49.5885567" lon="19.2355366" />
+      <ns0:trkpt lat="49.5884391" lon="19.2353139" />
+      <ns0:trkpt lat="49.5883513" lon="19.235166" />
+      <ns0:trkpt lat="49.5882587" lon="19.2350542" />
+      <ns0:trkpt lat="49.5881633" lon="19.2349854" />
+      <ns0:trkpt lat="49.5880184" lon="19.2349093" />
+      <ns0:trkpt lat="49.587922" lon="19.2348447" />
+      <ns0:trkpt lat="49.5878582" lon="19.2347667" />
+      <ns0:trkpt lat="49.5877889" lon="19.2346122" />
+      <ns0:trkpt lat="49.5877298" lon="19.2344308" />
+      <ns0:trkpt lat="49.5876583" lon="19.2341565" />
+      <ns0:trkpt lat="49.5876084" lon="19.2340112" />
+      <ns0:trkpt lat="49.5875796" lon="19.2339275" />
+      <ns0:trkpt lat="49.5874873" lon="19.2337591" />
+      <ns0:trkpt lat="49.5874102" lon="19.2336526" />
+      <ns0:trkpt lat="49.5873046" lon="19.2335629" />
+      <ns0:trkpt lat="49.5871853" lon="19.2335303" />
+      <ns0:trkpt lat="49.5870292" lon="19.2334619" />
+      <ns0:trkpt lat="49.5869194" lon="19.2333814" />
+      <ns0:trkpt lat="49.5868397" lon="19.233324" />
+      <ns0:trkpt lat="49.5867462" lon="19.2332818" />
+      <ns0:trkpt lat="49.5866208" lon="19.2332838" />
+      <ns0:trkpt lat="49.5864506" lon="19.2333373" />
+      <ns0:trkpt lat="49.5861325" lon="19.2334722" />
+      <ns0:trkpt lat="49.5857012" lon="19.2336872" />
+      <ns0:trkpt lat="49.585472" lon="19.2338931" />
+      <ns0:trkpt lat="49.5853111" lon="19.2340171" />
+      <ns0:trkpt lat="49.5852252" lon="19.2340444" />
+      <ns0:trkpt lat="49.5850875" lon="19.234043" />
+      <ns0:trkpt lat="49.584974" lon="19.2339985" />
+      <ns0:trkpt lat="49.5849364" lon="19.2339723" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

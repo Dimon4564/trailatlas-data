@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Pod Sowińcem</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="50.0576583" lon="19.8384493" />
+      <ns0:trkpt lat="50.0571808" lon="19.839422" />
+      <ns0:trkpt lat="50.057125" lon="19.8396108" />
+      <ns0:trkpt lat="50.0570355" lon="19.8398226" />
+      <ns0:trkpt lat="50.0567556" lon="19.8402547" />
+      <ns0:trkpt lat="50.0565946" lon="19.8404986" />
+      <ns0:trkpt lat="50.0565068" lon="19.8406246" />
+      <ns0:trkpt lat="50.0564603" lon="19.8407292" />
+      <ns0:trkpt lat="50.0564035" lon="19.8409063" />
+      <ns0:trkpt lat="50.0562956" lon="19.8412511" />
+      <ns0:trkpt lat="50.0560966" lon="19.8419408" />
+      <ns0:trkpt lat="50.0556346" lon="19.8434688" />
+      <ns0:trkpt lat="50.0551928" lon="19.8449993" />
+      <ns0:trkpt lat="50.0549724" lon="19.8456527" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

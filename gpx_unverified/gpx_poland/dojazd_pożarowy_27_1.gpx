@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Dojazd pożarowy 27</ns0:name>
+    <ns0:type>route</ns0:type>
+    <ns0:trkseg>
+      <ns0:trkpt lat="49.5413944" lon="19.3446908" />
+      <ns0:trkpt lat="49.5418004" lon="19.3454584" />
+      <ns0:trkpt lat="49.5418393" lon="19.3455794" />
+      <ns0:trkpt lat="49.5418671" lon="19.3456957" />
+      <ns0:trkpt lat="49.5419139" lon="19.3460627" />
+      <ns0:trkpt lat="49.5419906" lon="19.3470787" />
+      <ns0:trkpt lat="49.5420091" lon="19.3477302" />
+      <ns0:trkpt lat="49.5420479" lon="19.3482339" />
+      <ns0:trkpt lat="49.5420552" lon="19.3486072" />
+      <ns0:trkpt lat="49.5420687" lon="19.3488646" />
+      <ns0:trkpt lat="49.5421026" lon="19.3490619" />
+      <ns0:trkpt lat="49.5422674" lon="19.3497954" />
+      <ns0:trkpt lat="49.5423608" lon="19.3501329" />
+      <ns0:trkpt lat="49.5425116" lon="19.3504823" />
+      <ns0:trkpt lat="49.5428015" lon="19.351042" />
+      <ns0:trkpt lat="49.5433725" lon="19.3519278" />
+      <ns0:trkpt lat="49.5437694" lon="19.3524803" />
+      <ns0:trkpt lat="49.5440723" lon="19.3529918" />
+      <ns0:trkpt lat="49.544247" lon="19.3535311" />
+      <ns0:trkpt lat="49.544426" lon="19.3539447" />
+      <ns0:trkpt lat="49.5445349" lon="19.3540984" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>
