@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>MBM 80km+</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="46.1353745" lon="24.5320415" />
+      <ns0:trkpt lat="46.1354381" lon="24.5320294" />
+      <ns0:trkpt lat="46.1355009" lon="24.5320174" />
+      <ns0:trkpt lat="46.1361644" lon="24.5309231" />
+      <ns0:trkpt lat="46.1364729" lon="24.5301586" />
+      <ns0:trkpt lat="46.1366272" lon="24.5295954" />
+      <ns0:trkpt lat="46.1370956" lon="24.5288658" />
+      <ns0:trkpt lat="46.1375286" lon="24.5284018" />
+      <ns0:trkpt lat="46.1379171" lon="24.5279753" />
+      <ns0:trkpt lat="46.1382479" lon="24.527691" />
+      <ns0:trkpt lat="46.1384969" lon="24.5276079" />
+      <ns0:trkpt lat="46.1389225" lon="24.5276803" />
+      <ns0:trkpt lat="46.1392682" lon="24.5275703" />
+      <ns0:trkpt lat="46.1396808" lon="24.5271063" />
+      <ns0:trkpt lat="46.1399346" lon="24.5270086" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

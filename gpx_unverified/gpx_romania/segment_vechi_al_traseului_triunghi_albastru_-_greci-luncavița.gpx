@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:name>romania_trail_fixxed</ns0:name>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Segment vechi al traseului Triunghi Albastru - Greci-Luncavița</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="45.2049942" lon="28.2634314" />
+      <ns0:trkpt lat="45.204935" lon="28.2639792" />
+      <ns0:trkpt lat="45.2049245" lon="28.2641183" />
+      <ns0:trkpt lat="45.2048544" lon="28.2644723" />
+      <ns0:trkpt lat="45.2048731" lon="28.2646786" />
+      <ns0:trkpt lat="45.2050017" lon="28.2648713" />
+      <ns0:trkpt lat="45.2050493" lon="28.2650407" />
+      <ns0:trkpt lat="45.2050285" lon="28.265262" />
+      <ns0:trkpt lat="45.2051099" lon="28.2654608" />
+      <ns0:trkpt lat="45.2051117" lon="28.2657545" />
+      <ns0:trkpt lat="45.2052158" lon="28.2658475" />
+      <ns0:trkpt lat="45.2052791" lon="28.2660906" />
+      <ns0:trkpt lat="45.2053553" lon="28.2662877" />
+      <ns0:trkpt lat="45.2053615" lon="28.2665048" />
+      <ns0:trkpt lat="45.2053171" lon="28.2667467" />
+      <ns0:trkpt lat="45.2052781" lon="28.2671186" />
+      <ns0:trkpt lat="45.2053369" lon="28.2673557" />
+      <ns0:trkpt lat="45.2054265" lon="28.2679608" />
+      <ns0:trkpt lat="45.2054866" lon="28.2681989" />
+      <ns0:trkpt lat="45.2055662" lon="28.2683861" />
+      <ns0:trkpt lat="45.2056601" lon="28.2684989" />
+      <ns0:trkpt lat="45.2058192" lon="28.2685102" />
+      <ns0:trkpt lat="45.2059175" lon="28.2685712" />
+      <ns0:trkpt lat="45.205991" lon="28.2687069" />
+      <ns0:trkpt lat="45.2061046" lon="28.269029" />
+      <ns0:trkpt lat="45.2063272" lon="28.2694199" />
+      <ns0:trkpt lat="45.2064182" lon="28.2697067" />
+      <ns0:trkpt lat="45.2066337" lon="28.2703321" />
+      <ns0:trkpt lat="45.2067524" lon="28.2706107" />
+      <ns0:trkpt lat="45.2069651" lon="28.2710004" />
+      <ns0:trkpt lat="45.2073196" lon="28.2713755" />
+      <ns0:trkpt lat="45.2073693" lon="28.2714989" />
+      <ns0:trkpt lat="45.2078105" lon="28.2726586" />
+      <ns0:trkpt lat="45.2078585" lon="28.2727721" />
+      <ns0:trkpt lat="45.2078782" lon="28.2729738" />
+      <ns0:trkpt lat="45.2079356" lon="28.2730751" />
+      <ns0:trkpt lat="45.2080588" lon="28.273217" />
+      <ns0:trkpt lat="45.2080975" lon="28.2734443" />
+      <ns0:trkpt lat="45.2081616" lon="28.273536" />
+      <ns0:trkpt lat="45.2082428" lon="28.2736723" />
+      <ns0:trkpt lat="45.2082465" lon="28.2738047" />
+      <ns0:trkpt lat="45.2081983" lon="28.2739593" />
+      <ns0:trkpt lat="45.2082289" lon="28.2741798" />
+      <ns0:trkpt lat="45.2081992" lon="28.2743393" />
+      <ns0:trkpt lat="45.2081404" lon="28.2744122" />
+      <ns0:trkpt lat="45.2080007" lon="28.2745522" />
+      <ns0:trkpt lat="45.207911" lon="28.2747001" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>
