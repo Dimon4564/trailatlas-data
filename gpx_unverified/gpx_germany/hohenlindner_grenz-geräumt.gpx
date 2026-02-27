@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Hohenlindner Grenz-Geräumt</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="48.1089866" lon="11.9329503" />
+      <ns0:trkpt lat="48.111768" lon="11.9339056" />
+      <ns0:trkpt lat="48.1157238" lon="11.9352794" />
+      <ns0:trkpt lat="48.1195311" lon="11.9366183" />
+      <ns0:trkpt lat="48.1233627" lon="11.9379443" />
+      <ns0:trkpt lat="48.1271174" lon="11.9392438" />
+      <ns0:trkpt lat="48.1297146" lon="11.9401142" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

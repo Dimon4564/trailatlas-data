@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Forsthausstraße</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="47.5888562" lon="12.0264334" />
+      <ns0:trkpt lat="47.5888145" lon="12.0263229" />
+      <ns0:trkpt lat="47.588786" lon="12.026128" />
+      <ns0:trkpt lat="47.5888255" lon="12.0259103" />
+      <ns0:trkpt lat="47.5888365" lon="12.0257543" />
+      <ns0:trkpt lat="47.5888058" lon="12.0256113" />
+      <ns0:trkpt lat="47.5884288" lon="12.0247372" />
+      <ns0:trkpt lat="47.5884244" lon="12.0246202" />
+      <ns0:trkpt lat="47.5884485" lon="12.0243115" />
+      <ns0:trkpt lat="47.5884529" lon="12.0240808" />
+      <ns0:trkpt lat="47.588414" lon="12.0239184" />
+      <ns0:trkpt lat="47.5883828" lon="12.0237884" />
+      <ns0:trkpt lat="47.5882754" lon="12.0233985" />
+      <ns0:trkpt lat="47.5881067" lon="12.023015" />
+      <ns0:trkpt lat="47.5880475" lon="12.0228168" />
+      <ns0:trkpt lat="47.5879774" lon="12.0223099" />
+      <ns0:trkpt lat="47.587962" lon="12.021816" />
+      <ns0:trkpt lat="47.587973" lon="12.0209777" />
+      <ns0:trkpt lat="47.5879379" lon="12.0202693" />
+      <ns0:trkpt lat="47.5878349" lon="12.0198404" />
+      <ns0:trkpt lat="47.5877297" lon="12.0195642" />
+      <ns0:trkpt lat="47.5876311" lon="12.0194114" />
+      <ns0:trkpt lat="47.587539" lon="12.0192425" />
+      <ns0:trkpt lat="47.5874908" lon="12.0190865" />
+      <ns0:trkpt lat="47.5874996" lon="12.0188395" />
+      <ns0:trkpt lat="47.5875347" lon="12.0185503" />
+      <ns0:trkpt lat="47.5875018" lon="12.0183099" />
+      <ns0:trkpt lat="47.5873834" lon="12.0180662" />
+      <ns0:trkpt lat="47.5872015" lon="12.0178225" />
+      <ns0:trkpt lat="47.5870678" lon="12.0175333" />
+      <ns0:trkpt lat="47.5869824" lon="12.0168769" />
+      <ns0:trkpt lat="47.5869667" lon="12.0165017" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

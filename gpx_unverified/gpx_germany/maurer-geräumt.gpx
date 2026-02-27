@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Maurer-Geräumt</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="48.0883601" lon="11.8766474" />
+      <ns0:trkpt lat="48.0890681" lon="11.872219" />
+      <ns0:trkpt lat="48.0899731" lon="11.8665092" />
+      <ns0:trkpt lat="48.0911426" lon="11.8592522" />
+      <ns0:trkpt lat="48.0912379" lon="11.858614" />
+      <ns0:trkpt lat="48.0914593" lon="11.8573352" />
+      <ns0:trkpt lat="48.0915124" lon="11.8570166" />
+      <ns0:trkpt lat="48.0918157" lon="11.855191" />
+      <ns0:trkpt lat="48.0927505" lon="11.8493136" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

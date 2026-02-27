@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Oberer Hochsteinersteig</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="47.714292" lon="12.7852321" />
+      <ns0:trkpt lat="47.7142155" lon="12.7847725" />
+      <ns0:trkpt lat="47.7142944" lon="12.7843817" />
+      <ns0:trkpt lat="47.7142944" lon="12.784043" />
+      <ns0:trkpt lat="47.7141717" lon="12.7838476" />
+      <ns0:trkpt lat="47.7141191" lon="12.7832744" />
+      <ns0:trkpt lat="47.7142243" lon="12.7827273" />
+      <ns0:trkpt lat="47.7140665" lon="12.7823104" />
+      <ns0:trkpt lat="47.714084" lon="12.7820759" />
+      <ns0:trkpt lat="47.7140139" lon="12.7819457" />
+      <ns0:trkpt lat="47.7142593" lon="12.7809426" />
+      <ns0:trkpt lat="47.7142593" lon="12.7804997" />
+      <ns0:trkpt lat="47.714645" lon="12.7802131" />
+      <ns0:trkpt lat="47.7151183" lon="12.7796008" />
+      <ns0:trkpt lat="47.7154338" lon="12.7793273" />
+      <ns0:trkpt lat="47.7157231" lon="12.7793663" />
+      <ns0:trkpt lat="47.7160912" lon="12.7791709" />
+      <ns0:trkpt lat="47.7163015" lon="12.778715" />
+      <ns0:trkpt lat="47.7166258" lon="12.7785326" />
+      <ns0:trkpt lat="47.7171429" lon="12.7783242" />
+      <ns0:trkpt lat="47.7177214" lon="12.7782069" />
+      <ns0:trkpt lat="47.7180534" lon="12.7779438" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

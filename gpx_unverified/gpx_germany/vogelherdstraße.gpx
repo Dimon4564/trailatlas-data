@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Vogelherdstraße</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="47.9374678" lon="11.1044464" />
+      <ns0:trkpt lat="47.9373542" lon="11.1045398" />
+      <ns0:trkpt lat="47.9372327" lon="11.1046127" />
+      <ns0:trkpt lat="47.9371321" lon="11.10463" />
+      <ns0:trkpt lat="47.9364714" lon="11.1046065" />
+      <ns0:trkpt lat="47.9360293" lon="11.1046218" />
+      <ns0:trkpt lat="47.9356506" lon="11.1046868" />
+      <ns0:trkpt lat="47.9345832" lon="11.1048468" />
+      <ns0:trkpt lat="47.9343703" lon="11.1048616" />
+      <ns0:trkpt lat="47.9341488" lon="11.1048751" />
+      <ns0:trkpt lat="47.9339693" lon="11.1048504" />
+      <ns0:trkpt lat="47.933668" lon="11.1047366" />
+      <ns0:trkpt lat="47.9333588" lon="11.1046073" />
+      <ns0:trkpt lat="47.9331517" lon="11.1045371" />
+      <ns0:trkpt lat="47.9330157" lon="11.1045023" />
+      <ns0:trkpt lat="47.9327955" lon="11.1044448" />
+      <ns0:trkpt lat="47.9326146" lon="11.1043897" />
+      <ns0:trkpt lat="47.9324747" lon="11.104328" />
+      <ns0:trkpt lat="47.9323601" lon="11.1042715" />
+      <ns0:trkpt lat="47.9322667" lon="11.1042576" />
+      <ns0:trkpt lat="47.9320092" lon="11.1041504" />
+      <ns0:trkpt lat="47.9319166" lon="11.1041306" />
+      <ns0:trkpt lat="47.9317787" lon="11.1041282" />
+      <ns0:trkpt lat="47.9315266" lon="11.1041952" />
+      <ns0:trkpt lat="47.9312826" lon="11.1042414" />
+      <ns0:trkpt lat="47.9310833" lon="11.104317" />
+      <ns0:trkpt lat="47.9309519" lon="11.1043932" />
+      <ns0:trkpt lat="47.9307914" lon="11.1044988" />
+      <ns0:trkpt lat="47.9304623" lon="11.1047711" />
+      <ns0:trkpt lat="47.930023" lon="11.1049982" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

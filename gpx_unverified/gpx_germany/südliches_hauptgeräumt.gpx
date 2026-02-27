@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Südliches Hauptgeräumt</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="48.2015804" lon="12.749118" />
+      <ns0:trkpt lat="48.2022969" lon="12.7526738" />
+      <ns0:trkpt lat="48.2025403" lon="12.7539918" />
+      <ns0:trkpt lat="48.2032108" lon="12.7570005" />
+      <ns0:trkpt lat="48.2032892" lon="12.7571861" />
+      <ns0:trkpt lat="48.2033807" lon="12.757403" />
+      <ns0:trkpt lat="48.2040037" lon="12.7581344" />
+      <ns0:trkpt lat="48.2042473" lon="12.7584645" />
+      <ns0:trkpt lat="48.2043505" lon="12.7586548" />
+      <ns0:trkpt lat="48.2044126" lon="12.7588453" />
+      <ns0:trkpt lat="48.204437" lon="12.7590917" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Aurachköpflweg</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="47.7116836" lon="11.9132329" />
+      <ns0:trkpt lat="47.7122341" lon="11.912897" />
+      <ns0:trkpt lat="47.712993" lon="11.9123258" />
+      <ns0:trkpt lat="47.7132877" lon="11.9121116" />
+      <ns0:trkpt lat="47.7134427" lon="11.9121817" />
+      <ns0:trkpt lat="47.7135897" lon="11.9122124" />
+      <ns0:trkpt lat="47.7140058" lon="11.9119199" />
+      <ns0:trkpt lat="47.7146343" lon="11.9119371" />
+      <ns0:trkpt lat="47.7150589" lon="11.9118733" />
+      <ns0:trkpt lat="47.7154522" lon="11.9114978" />
+      <ns0:trkpt lat="47.7158201" lon="11.9107985" />
+      <ns0:trkpt lat="47.7160334" lon="11.9106892" />
+      <ns0:trkpt lat="47.7162933" lon="11.910571" />
+      <ns0:trkpt lat="47.716481" lon="11.9104944" />
+      <ns0:trkpt lat="47.7165827" lon="11.91034" />
+      <ns0:trkpt lat="47.7167577" lon="11.9101742" />
+      <ns0:trkpt lat="47.7169856" lon="11.9102699" />
+      <ns0:trkpt lat="47.7173107" lon="11.9105572" />
+      <ns0:trkpt lat="47.7179813" lon="11.9109464" />
+      <ns0:trkpt lat="47.7181261" lon="11.9108632" />
+      <ns0:trkpt lat="47.7182435" lon="11.9106516" />
+      <ns0:trkpt lat="47.7183319" lon="11.910474" />
+      <ns0:trkpt lat="47.718391" lon="11.9102784" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

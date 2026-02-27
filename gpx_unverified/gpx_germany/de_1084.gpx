@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:trkseg>
+      <ns0:trkpt lat="47.9434677" lon="10.6827142" />
+      <ns0:trkpt lat="47.944044" lon="10.6829615" />
+      <ns0:trkpt lat="47.9448248" lon="10.6833039" />
+      <ns0:trkpt lat="47.9455434" lon="10.6836052" />
+      <ns0:trkpt lat="47.9462563" lon="10.6840021" />
+      <ns0:trkpt lat="47.9465503" lon="10.6840381" />
+      <ns0:trkpt lat="47.9469208" lon="10.6843388" />
+      <ns0:trkpt lat="47.9477223" lon="10.6847778" />
+      <ns0:trkpt lat="47.9478351" lon="10.6849161" />
+      <ns0:trkpt lat="47.948109" lon="10.6850604" />
+      <ns0:trkpt lat="47.9483225" lon="10.6853189" />
+      <ns0:trkpt lat="47.9484312" lon="10.6855474" />
+      <ns0:trkpt lat="47.9484634" lon="10.6857459" />
+      <ns0:trkpt lat="47.9486849" lon="10.6859924" />
+      <ns0:trkpt lat="47.9491642" lon="10.6862209" />
+      <ns0:trkpt lat="47.9493762" lon="10.6864262" />
+      <ns0:trkpt lat="47.9496113" lon="10.6866538" />
+      <ns0:trkpt lat="47.9502919" lon="10.6873814" />
+      <ns0:trkpt lat="47.9506388" lon="10.6876259" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

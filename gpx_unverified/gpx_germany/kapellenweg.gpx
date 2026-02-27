@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:name>Kapellenweg</ns0:name>
+    <ns0:trkseg>
+      <ns0:trkpt lat="48.1761666" lon="11.7898456" />
+      <ns0:trkpt lat="48.1761173" lon="11.7896202" />
+      <ns0:trkpt lat="48.1758775" lon="11.7887439" />
+      <ns0:trkpt lat="48.1755796" lon="11.787698" />
+      <ns0:trkpt lat="48.17512" lon="11.7861018" />
+      <ns0:trkpt lat="48.17447" lon="11.7838601" />
+      <ns0:trkpt lat="48.1742652" lon="11.7830954" />
+      <ns0:trkpt lat="48.1739308" lon="11.7819318" />
+      <ns0:trkpt lat="48.1735786" lon="11.7807064" />
+      <ns0:trkpt lat="48.1735389" lon="11.7805318" />
+      <ns0:trkpt lat="48.1735373" lon="11.7803915" />
+      <ns0:trkpt lat="48.1735472" lon="11.7801741" />
+      <ns0:trkpt lat="48.1735391" lon="11.7800829" />
+      <ns0:trkpt lat="48.1735276" lon="11.78002" />
+      <ns0:trkpt lat="48.1733639" lon="11.7793328" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>

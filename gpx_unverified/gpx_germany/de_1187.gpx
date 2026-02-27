@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:gpx xmlns:ns0="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GDAL 3.12.1" schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd">
+  <ns0:metadata>
+    <ns0:author>
+      <ns0:name>gpx.studio</ns0:name>
+      <ns0:link href="https://gpx.studio" />
+    </ns0:author>
+  </ns0:metadata>
+  <ns0:trk>
+    <ns0:trkseg>
+      <ns0:trkpt lat="47.8345757" lon="10.2656127" />
+      <ns0:trkpt lat="47.8349129" lon="10.2649523" />
+      <ns0:trkpt lat="47.8350717" lon="10.2644508" />
+      <ns0:trkpt lat="47.8355259" lon="10.2635711" />
+      <ns0:trkpt lat="47.83623" lon="10.2628944" />
+      <ns0:trkpt lat="47.8372269" lon="10.2622354" />
+      <ns0:trkpt lat="47.8377498" lon="10.2619478" />
+      <ns0:trkpt lat="47.8382058" lon="10.2615748" />
+      <ns0:trkpt lat="47.838482" lon="10.2614232" />
+      <ns0:trkpt lat="47.8390365" lon="10.2608171" />
+      <ns0:trkpt lat="47.8394284" lon="10.2603676" />
+      <ns0:trkpt lat="47.8396139" lon="10.2598154" />
+      <ns0:trkpt lat="47.840386" lon="10.2587835" />
+    </ns0:trkseg>
+  </ns0:trk>
+</ns0:gpx>
