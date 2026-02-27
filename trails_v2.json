@@ -1,6 +1,6 @@
 {
   "version": 10,
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-02-27",
   "trails": [
     {
       "id": "chisinau_blue",
@@ -101,10 +101,10 @@
         "DH"
       ],
       "name": {
-        "ru": "Resita",
-        "ro": "Resita",
-        "uk": "Resita",
-        "en": "Resita"
+        "ru": "Coyote Ridge Trail",
+        "ro": "Coyote Ridge Trail",
+        "uk": "Coyote Ridge Trail",
+        "en": "Coyote Ridge Trail"
       },
       "suitable": {
         "ru": "Enduro / Downhill",
@@ -340,10 +340,10 @@
         "DH"
       ],
       "name": {
-        "ru": "Milkyway",
-        "ro": "Milkyway",
-        "uk": "Milkyway",
-        "en": "Milkyway"
+        "ru": "Deer Crossing Loop",
+        "ro": "Deer Crossing Loop",
+        "uk": "Deer Crossing Loop",
+        "en": "Deer Crossing Loop"
       },
       "suitable": {
         "ru": "Cross Country / Downhill / Enduro",
