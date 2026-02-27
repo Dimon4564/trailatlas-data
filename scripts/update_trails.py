@@ -29,33 +29,48 @@ def is_technical_name(name_str: str, trail_id: str) -> bool:
         return True
     
     text = str(name_str).lower().strip()
+    # Убираем расширение, если оно вдруг приклеилось
+    text = re.sub(r'\.gpx$', '', text)
     
-    base_id = re.sub(r'_\d+$', '', trail_id.lower())
+    # Нормализуем строки (удаляем пробелы, тире и подчеркивания для жесткой проверки)
+    norm_text = re.sub(r'[\s_\-]+', '', text)
+    norm_tid = re.sub(r'[\s_\-]+', '', trail_id.lower())
     
-    if text in [
-        trail_id.lower(),
-        base_id,
-        f"{trail_id.lower()}_trail",
-        f"{trail_id.lower()} trail",
-        f"{base_id}_trail",
-        f"{base_id} trail",
+    # Базовый ID (ro001 -> ro)
+    norm_base = re.sub(r'\d+$', '', norm_tid)
+    
+    if norm_text in [
+        norm_tid,
+        norm_base,
+        norm_tid + "trail",
+        norm_base + "trail",
         "unnamed",
-        "ukraine1_trail",
-        "ukraine1 trail"
+        "ukraine1trail"
     ]:
         return True
         
-    if re.match(r"^[a-z]{2}_\d+.*", text):
+    # Типичный автосгенерированный мусор от навигаторов
+    if re.search(r'(export|garmin|strava|komoot|wikiloc|unnamed|untitled)', text):
         return True
         
+    # Форматы типа ro 001, ua_003, pl-04
+    if re.match(r"^[a-z]{2}[\s_\-]*\d+.*", text):
+        return True
+        
+    # Названия-пустышки
     if re.match(r"^(track|route|path|trail)\s*\d*$", text):
         return True
         
-    if re.match(r"^\d{4}[-/]\d{2}[-/]\d{2}", text):
+    # Даты
+    if re.search(r"\d{4}[-/]\d{2}[-/]\d{2}", text) or re.search(r"\d{2}[-/]\d{2}[-/]\d{4}", text):
         return True
         
-    # Отлавливаем старые кривые имена (например "Trail Romania 1.1 km", "XC Trail 5.0 км")
+    # Остатки от старых багованных названий с "km"
     if re.search(r'\d+\.\d+\s*(km|км)', text):
+        return True
+        
+    # Имя как название страны/папки (от большого файла сборника)
+    if text in ["romania", "ukraine", "germany", "poland", "gpx romania", "gpx ukraine"]:
         return True
         
     return False
@@ -242,9 +257,16 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
                 counter += 1
             
             new_root = ET.Element(root.tag, root.attrib)
+            
+            # ВАЖНО: Удаляем имя из метаданных большого файла, чтобы маленькие треки его не наследовали!
             metadata = root.find(q("metadata"))
             if metadata is not None:
-                new_root.append(deepcopy(metadata))
+                meta_copy = deepcopy(metadata)
+                meta_name = meta_copy.find(q("name"))
+                if meta_name is not None:
+                    meta_copy.remove(meta_name)
+                new_root.append(meta_copy)
+                
             new_root.append(trk)
             
             new_tree = ET.ElementTree(new_root)
@@ -273,9 +295,15 @@ def split_multi_track_gpx(gpx_path: Path, country_code: str) -> List[Path]:
                 counter += 1
             
             new_root = ET.Element(root.tag, root.attrib)
+            
             metadata = root.find(q("metadata"))
             if metadata is not None:
-                new_root.append(deepcopy(metadata))
+                meta_copy = deepcopy(metadata)
+                meta_name = meta_copy.find(q("name"))
+                if meta_name is not None:
+                    meta_copy.remove(meta_name)
+                new_root.append(meta_copy)
+                
             new_root.append(trk)
             
             new_tree = ET.ElementTree(new_root)
@@ -610,7 +638,7 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
     else:
         styles = []
 
-    # Генерация имени (ищем в GPX или OSM, иначе случайное. Никаких упоминаний стран!)
+    # Генерация имени (ищем в GPX или OSM, иначе случайное)
     final_name = None
     if gpx_path and gpx_path.exists():
         raw_gpx_name = get_gpx_track_name(gpx_path)
@@ -626,17 +654,17 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
     if not final_name:
         final_name = random.choice(RANDOM_TRAIL_NAMES)
 
-    # Заполняем ВСЕ языки (ru, ro, uk, en) ОДНИМ английским текстом (именем трейла)
+    # Заполняем ВСЕ языки ОДНИМ английским текстом
     name = default_i18n(final_name)
             
-    # Подходящие стили катания (заполняем ВСЕ языки (ru, ro, uk, en) ОДНИМ английским текстом)
+    # Подходящие стили катания 
     if is_unverified:
         suitable_text = generate_suitable_text(difficulty, styles)
         suitable = default_i18n(suitable_text)
     else:
         suitable = default_i18n("")
     
-    # Описание (оставили с нормальным переводом)
+    # Описание
     if is_unverified and country_id:
         trail_type = determine_trail_type(gpx_path, stats, difficulty) if gpx_path else "xc"
         desc_text = generate_description(gpx_path, stats, difficulty, country_id, trail_type)
@@ -644,7 +672,6 @@ def build_trail_object(prev: dict, tid: str, gpx_url: str, start_lat, start_lon,
     else:
         desc = default_i18n("")
 
-    # Собираем объект (без cityId)
     obj = {
         "id": tid,
         "styles": styles,
@@ -703,7 +730,7 @@ def upsert_file(gpx_dir: Path, json_path: Path, gpx_folder_name: str, raw_base: 
 
     new_trails = []
 
-    # 1. СНАЧАЛА ОБРАБАТЫВАЕМ СУЩЕСТВУЮЩИЕ ТРЕЙЛЫ
+    # 1. ОБРАБАТЫВАЕМ СУЩЕСТВУЮЩИЕ ТРЕЙЛЫ (очищаем их от мусорных имен, если они просочились ранее)
     for tid in order:
         if tid not in file_by_id:
             continue
@@ -712,15 +739,12 @@ def upsert_file(gpx_dir: Path, json_path: Path, gpx_folder_name: str, raw_base: 
         
         existing_trail = deepcopy(existing_by_id[tid])
         
-        # Обновляем пути к файлам
         if country_code:
             folder_name = COUNTRY_CODE_TO_FOLDER.get(country_code, f"gpx_{country_code}")
             existing_trail["gpxUrl"] = f"{raw_base}/{gpx_folder_name}/{folder_name}/{p.name}"
         else:
             existing_trail["gpxUrl"] = f"{raw_base}/{gpx_folder_name}/{p.name}"
             
-        # УМНАЯ ПРОВЕРКА: Если в JSON сохранилось старое кривое имя ("Trail Romania 1.1 km") 
-        # или системное, то принудительно даем ему нормальное красивое имя!
         current_name = existing_trail.get("name", {}).get("en", "")
         if not current_name or is_technical_name(current_name, tid):
             final_name = None
@@ -735,12 +759,11 @@ def upsert_file(gpx_dir: Path, json_path: Path, gpx_folder_name: str, raw_base: 
             if not final_name:
                 final_name = random.choice(RANDOM_TRAIL_NAMES)
             
-            # Перезаписываем имя во всех ключах
             existing_trail["name"] = default_i18n(final_name)
             
         new_trails.append(existing_trail)
 
-    # 2. ЗАТЕМ ДОБАВЛЯЕМ ТОЛЬКО НОВЫЕ ТРЕЙЛЫ, КОТОРЫХ ЕЩЕ НЕТ В БАЗЕ
+    # 2. ДОБАВЛЯЕМ НОВЫЕ ТРЕЙЛЫ
     for tid in sorted(file_by_id.keys()):
         if tid in existing_by_id:
             continue
